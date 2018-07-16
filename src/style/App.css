@@ -1,0 +1,907 @@
+@font-face {
+  font-family: "Gotham";
+  src: url("./fonts/Gotham-Book.otf") format("opentype"), url("./fonts/Gotham-Medium.otf") format("opentype"), url("./fonts/Gotham-Bold.ttf") format("truetype"), url("./fonts/Gotham-Ultra.ttf") format("truetype"); }
+
+@font-face {
+  font-family: "Inter UI";
+  src: url("./fonts/Inter-UI-Regular.otf") format("opentype"); }
+
+body {
+  margin: 0;
+  height: 100%;
+  font-family: "Gotham Medium";
+  background-color: #0004ad;
+  color: white; }
+
+.App a {
+  text-decoration: none;
+  outline: none;
+  color: white; }
+
+.App .navbar {
+  letter-spacing: .03em;
+  margin-top: 12px; }
+  .App .navbar .navbar-collapse .navbar-nav {
+    height: 100vh; }
+  .App .navbar .navbar-toggler:focus {
+    outline: none; }
+  .App .navbar .navbar-nav {
+    margin-top: 3.5em; }
+  .App .navbar .mobile-social {
+    margin: 0 auto;
+    margin-top: 6em;
+    margin-left: .75em; }
+    .App .navbar .mobile-social img {
+      margin-right: .5em;
+      width: 40px; }
+
+.App .navbar-dark .navbar-nav .nav-link {
+  color: rgba(255, 255, 255, 0.9); }
+
+.App .nav-link {
+  font-size: 32px;
+  line-height: 42px;
+  margin-left: .5em; }
+
+.App #tab {
+  font-size: 16px;
+  line-height: 32px;
+  color: #999ade;
+  font-family: "Gotham Medium";
+  letter-spacing: 0.03em;
+  margin-left: 2em; }
+
+.App .page-header {
+  margin-top: 3em; }
+  .App .page-header .page-headline {
+    margin-top: .5em;
+    margin-left: .75em;
+    font-size: 40px;
+    line-height: 48px;
+    font-family: "Gotham Medium";
+    letter-spacing: .02em; }
+    .App .page-header .page-headline .page-title {
+      color: white; }
+    .App .page-header .page-headline .page-subtitle {
+      color: #999ade; }
+
+.App .profile {
+  margin-top: 2em; }
+  .App .profile .backdrop-profile {
+    z-index: -2;
+    position: absolute;
+    margin-top: 3em; }
+    .App .profile .backdrop-profile img {
+      width: 320px;
+      height: 200px; }
+  .App .profile .self {
+    max-width: 85%;
+    float: right; }
+
+.App .about {
+  margin-top: 8em;
+  margin-bottom: 8em; }
+  .App .about a {
+    color: #1a1a1a; }
+  .App .about .about-text {
+    margin-left: 2em;
+    margin-top: 1em; }
+    .App .about .about-text .about-me {
+      font-size: 16px;
+      line-height: 32px;
+      font-family: 'Inter UI';
+      letter-spacing: .025em; }
+    .App .about .about-text .btn-primary {
+      background-color: white;
+      border-color: white;
+      color: #1a1a1a;
+      font-family: "Gotham Medium";
+      padding: 14px 24px 14px 20px;
+      margin-top: 1.5em; }
+
+.App .services {
+  padding-top: 8em;
+  padding-bottom: 5em;
+  background-color: white;
+  color: #1a1a1a; }
+  .App .services #tab {
+    color: #1a1a1a; }
+  .App .services .service-details {
+    margin-left: 2em;
+    margin-right: 2em;
+    margin-bottom: 3em;
+    font-size: 16px;
+    line-height: 32px;
+    font-family: 'Inter UI';
+    letter-spacing: .025em;
+    font-weight: 700; }
+  .App .services h1 {
+    font-size: 40px;
+    line-height: 48px;
+    font-family: "Gotham Bold";
+    margin-bottom: 1em;
+    margin-left: .75em;
+    margin-top: .5em; }
+  .App .services h3 {
+    margin-left: 1.35em;
+    margin-bottom: 1em;
+    margin-top: 4em;
+    font-size: 24px;
+    line-height: 32px; }
+  .App .services .service-item {
+    margin-left: 2em;
+    margin-right: 2em;
+    margin-bottom: 4em;
+    color: #7c7c7c;
+    line-height: 32px;
+    font-family: 'Inter UI'; }
+  .App .services .btn-primary {
+    background-color: #0d10b1;
+    border-color: #0d10b1;
+    color: white;
+    font-family: "Gotham Medium";
+    padding: 14px 24px 14px 20px;
+    margin-top: 0;
+    margin-left: 2em; }
+
+.App .work {
+  background-color: white;
+  background-clip: border-box; }
+  .App .work .backdrop-work {
+    position: absolute; }
+    .App .work .backdrop-work img {
+      width: 400px;
+      height: 300px; }
+  .App .work .backdrop-cases .cases {
+    max-width: 90%;
+    margin-top: 2em;
+    display: block;
+    margin-left: auto;
+    margin-right: auto; }
+
+.App .projects {
+  padding-top: 15em;
+  background-color: white;
+  color: #1a1a1a; }
+  .App .projects h1 {
+    font-size: 64px;
+    line-height: 72px;
+    font-family: "Gotham Bold";
+    letter-spacing: .02em; }
+  .App .projects .project-details {
+    margin-left: 4em;
+    margin-top: 3em;
+    margin-bottom: 3.5em;
+    font-size: 24px;
+    line-height: 36px;
+    font-family: 'Inter UI';
+    letter-spacing: .025em; }
+
+.App .work2 {
+  padding-top: 5em;
+  background-color: white;
+  padding-bottom: 10em; }
+  .App .work2 .carousel-control-prev, .App .work2 .carousel-control-next {
+    top: initial;
+    bottom: initial;
+    top: 110%;
+    width: 80%; }
+  .App .work2 .carousel-control-prev-icon {
+    background-image: url("../assets/arrow-left.svg"); }
+  .App .work2 .carousel-control-next-icon {
+    background-image: url("../assets/arrow-left.svg");
+    transform: rotate(180deg); }
+  .App .work2 .carousel-fade .carousel-item {
+    transition-duration: 1s; }
+
+.App .footer {
+  padding-top: 15em;
+  margin-bottom: 10em; }
+  .App .footer .contact-details {
+    margin-left: 4em;
+    margin-top: 3em;
+    margin-bottom: 3.5em;
+    font-size: 24px;
+    line-height: 36px;
+    font-family: 'Inter UI';
+    letter-spacing: .025em; }
+
+@media (min-width: 576px) {
+  .App a {
+    text-decoration: none;
+    outline: none;
+    color: white; }
+  .App .navbar {
+    letter-spacing: .03em; }
+    .App .navbar .navbar-collapse .navbar-nav {
+      height: 100vh; }
+    .App .navbar .navbar-toggler:focus {
+      outline: none; }
+    .App .navbar .navbar-nav {
+      margin-top: 3.5em; }
+    .App .navbar .mobile-social {
+      margin: 0 auto;
+      margin-top: 6em;
+      margin-left: .75em; }
+      .App .navbar .mobile-social img {
+        margin-right: .5em;
+        width: 40px; }
+  .App .navbar-dark .navbar-nav .nav-link {
+    color: rgba(255, 255, 255, 0.9); }
+  .App .nav-link {
+    font-size: 32px;
+    line-height: 42px;
+    margin-left: .5em; }
+  .App #tab {
+    font-size: 16px;
+    line-height: 32px;
+    color: #999ade;
+    font-family: "Gotham Medium";
+    letter-spacing: 0.03em;
+    margin-left: 10em; }
+  .App .page-header {
+    margin-top: 6em; }
+    .App .page-header .page-headline {
+      margin-top: 0;
+      font-size: 48px;
+      line-height: 56px;
+      font-family: "Gotham Medium"; }
+      .App .page-header .page-headline .page-title {
+        color: white; }
+      .App .page-header .page-headline .page-subtitle {
+        color: #999ade; }
+  .App .profile {
+    margin-top: 5em; }
+    .App .profile .backdrop-profile {
+      z-index: -1;
+      position: absolute;
+      margin-left: 22em;
+      margin-top: 8em; }
+      .App .profile .backdrop-profile img {
+        width: 800px;
+        height: 500px; }
+      .App .profile .backdrop-profile .self {
+        max-width: 85%;
+        float: right; }
+  .App .about {
+    margin-top: 20em;
+    margin-bottom: 10em; }
+    .App .about a {
+      color: #1a1a1a; }
+    .App .about .about-text {
+      margin-left: 6.5em; }
+      .App .about .about-text .about-me {
+        font-size: 24px;
+        line-height: 36px;
+        font-family: 'Inter UI';
+        letter-spacing: .025em; }
+      .App .about .about-text .btn-primary {
+        background-color: white;
+        border-color: white;
+        color: #1a1a1a;
+        font-family: "Gotham Medium";
+        padding: 20px 38px 20px 30px;
+        margin-top: 3em; }
+  .App .services {
+    padding-top: 10em;
+    padding-bottom: 5em;
+    background-color: white;
+    color: #1a1a1a; }
+    .App .services #tab {
+      color: #1a1a1a; }
+    .App .services .service-details {
+      margin-left: 4em;
+      margin-bottom: 3.5em;
+      font-size: 24px;
+      line-height: 36px;
+      font-family: 'Inter UI';
+      letter-spacing: .025em; }
+    .App .services h1 {
+      font-size: 64px;
+      line-height: 72px;
+      font-family: "Gotham Bold";
+      margin-bottom: 1em;
+      margin-left: -.5em; }
+    .App .services h3 {
+      margin-left: 3.5em;
+      margin-bottom: 1em; }
+    .App .services .service-item {
+      margin-left: 6em;
+      margin-bottom: 4em;
+      color: #7c7c7c;
+      line-height: 32px;
+      font-family: 'Inter UI'; }
+    .App .services .btn-primary {
+      background-color: #0d10b1;
+      border-color: #0d10b1;
+      color: white;
+      font-family: "Gotham Medium";
+      padding: 20px 38px 20px 30px;
+      margin-top: 1em;
+      margin-left: 5.8em; }
+  .App .work {
+    padding-top: 5em;
+    background-color: white; }
+    .App .work .backdrop-work {
+      width: 700px;
+      height: 500px;
+      background: #f6f6f6;
+      z-index: -1;
+      position: absolute;
+      margin-left: 22em;
+      margin-top: 8em; }
+  .App .projects {
+    padding-top: 15em;
+    background-color: white;
+    color: #1a1a1a; }
+    .App .projects h1 {
+      font-size: 64px;
+      line-height: 72px;
+      font-family: "Gotham Bold";
+      letter-spacing: .02em; }
+    .App .projects .project-details {
+      margin-left: 4em;
+      margin-top: 3em;
+      margin-bottom: 3.5em;
+      font-size: 24px;
+      line-height: 36px;
+      font-family: 'Inter UI';
+      letter-spacing: .025em; }
+  .App .work2 {
+    padding-top: 5em;
+    background-color: white;
+    padding-bottom: 10em; }
+    .App .work2 .carousel-control-prev, .App .work2 .carousel-control-next {
+      top: initial;
+      bottom: initial;
+      top: 110%;
+      width: 80%; }
+    .App .work2 .carousel-control-prev-icon {
+      background-image: url("../assets/arrow-left.svg"); }
+    .App .work2 .carousel-control-next-icon {
+      background-image: url("../assets/arrow-left.svg");
+      transform: rotate(180deg); }
+    .App .work2 .carousel-fade .carousel-item {
+      transition-duration: 1s; }
+  .App .footer {
+    padding-top: 15em;
+    margin-bottom: 10em; }
+    .App .footer .contact-details {
+      margin-left: 4em;
+      margin-top: 3em;
+      margin-bottom: 3.5em;
+      font-size: 24px;
+      line-height: 36px;
+      font-family: 'Inter UI';
+      letter-spacing: .025em; } }
+
+@media (min-width: 768px) {
+  .App a {
+    text-decoration: none;
+    outline: none;
+    color: white; }
+  .App .navbar {
+    letter-spacing: .03em; }
+    .App .navbar .navbar-collapse .navbar-nav {
+      height: 100vh; }
+    .App .navbar .navbar-toggler:focus {
+      outline: none; }
+    .App .navbar .navbar-nav {
+      margin-top: 3.5em; }
+    .App .navbar .mobile-social {
+      margin: 0 auto;
+      margin-top: 6em;
+      margin-left: .75em; }
+      .App .navbar .mobile-social img {
+        margin-right: .5em;
+        width: 40px; }
+  .App .navbar-dark .navbar-nav .nav-link {
+    color: rgba(255, 255, 255, 0.9); }
+  .App .nav-link {
+    font-size: 32px;
+    line-height: 42px;
+    margin-left: .5em; }
+  .App #tab {
+    font-size: 16px;
+    line-height: 32px;
+    color: #999ade;
+    font-family: "Gotham Medium";
+    letter-spacing: 0.03em;
+    margin-left: 10em; }
+  .App .page-header {
+    margin-top: 6em; }
+    .App .page-header .page-title {
+      font-size: 48px;
+      line-height: 56px;
+      color: #1a1a1a;
+      font-family: "Gotham Bold";
+      color: white; }
+    .App .page-header .page-subtitle {
+      color: #999ade;
+      font-family: "Gotham Bold";
+      font-size: 48px;
+      line-height: 56px; }
+  .App .profile {
+    margin-top: 5em; }
+    .App .profile .backdrop-profile {
+      z-index: -1;
+      position: absolute;
+      margin-left: 22em;
+      margin-top: 8em; }
+      .App .profile .backdrop-profile img {
+        width: 800px;
+        height: 500px; }
+    .App .profile .img-text {
+      position: absolute;
+      bottom: 8px;
+      left: 16px; }
+      .App .profile .img-text h1 {
+        font-size: 52px;
+        line-height: 64px;
+        font-family: "Gotham Bold";
+        letter-spacing: .02em; }
+  .App .about {
+    margin-top: 20em;
+    margin-bottom: 10em; }
+    .App .about a {
+      color: #1a1a1a; }
+    .App .about .about-text {
+      margin-left: 6.5em; }
+      .App .about .about-text .about-me {
+        font-size: 24px;
+        line-height: 36px;
+        font-family: 'Inter UI';
+        letter-spacing: .025em; }
+      .App .about .about-text .btn-primary {
+        background-color: white;
+        border-color: white;
+        color: #1a1a1a;
+        font-family: "Gotham Medium";
+        padding: 20px 38px 20px 30px;
+        margin-top: 3em; }
+  .App .services {
+    padding-top: 10em;
+    padding-bottom: 5em;
+    background-color: white;
+    color: #1a1a1a; }
+    .App .services #tab {
+      color: #1a1a1a; }
+    .App .services .service-details {
+      margin-left: 4em;
+      margin-bottom: 3.5em;
+      font-size: 24px;
+      line-height: 36px;
+      font-family: 'Inter UI';
+      letter-spacing: .025em; }
+    .App .services h1 {
+      font-size: 64px;
+      line-height: 72px;
+      font-family: "Gotham Bold";
+      margin-bottom: 1em;
+      margin-left: -.5em; }
+    .App .services h3 {
+      margin-left: 3.5em;
+      margin-bottom: 1em; }
+    .App .services .service-item {
+      margin-left: 6em;
+      margin-bottom: 4em;
+      color: #7c7c7c;
+      line-height: 32px;
+      font-family: 'Inter UI'; }
+    .App .services .btn-primary {
+      background-color: #0d10b1;
+      border-color: #0d10b1;
+      color: white;
+      font-family: "Gotham Medium";
+      padding: 20px 38px 20px 30px;
+      margin-top: 1em;
+      margin-left: 5.8em; }
+  .App .work {
+    padding-top: 5em;
+    background-color: white; }
+    .App .work .backdrop-work {
+      width: 700px;
+      height: 500px;
+      background: #f6f6f6;
+      z-index: -1;
+      position: absolute;
+      margin-left: 22em;
+      margin-top: 8em; }
+  .App .projects {
+    padding-top: 15em;
+    background-color: white;
+    color: #1a1a1a; }
+    .App .projects h1 {
+      font-size: 64px;
+      line-height: 72px;
+      font-family: "Gotham Bold";
+      letter-spacing: .02em; }
+    .App .projects .project-details {
+      margin-left: 4em;
+      margin-top: 3em;
+      margin-bottom: 3.5em;
+      font-size: 24px;
+      line-height: 36px;
+      font-family: 'Inter UI';
+      letter-spacing: .025em; }
+  .App .work2 {
+    padding-top: 5em;
+    background-color: white;
+    padding-bottom: 10em; }
+    .App .work2 .carousel-control-prev, .App .work2 .carousel-control-next {
+      top: initial;
+      bottom: initial;
+      top: 110%;
+      width: 80%; }
+    .App .work2 .carousel-control-prev-icon {
+      background-image: url("../assets/arrow-left.svg"); }
+    .App .work2 .carousel-control-next-icon {
+      background-image: url("../assets/arrow-left.svg");
+      transform: rotate(180deg); }
+    .App .work2 .carousel-fade .carousel-item {
+      transition-duration: 1s; }
+  .App .footer {
+    padding-top: 15em;
+    margin-bottom: 10em; }
+    .App .footer .contact-details {
+      margin-left: 4em;
+      margin-top: 3em;
+      margin-bottom: 3.5em;
+      font-size: 24px;
+      line-height: 36px;
+      font-family: 'Inter UI';
+      letter-spacing: .025em; } }
+
+@media (min-width: 992px) {
+  .App a {
+    text-decoration: none;
+    outline: none;
+    color: white; }
+  .App .navbar {
+    letter-spacing: .03em; }
+    .App .navbar .navbar-collapse .navbar-nav {
+      height: 100vh; }
+    .App .navbar .navbar-toggler:focus {
+      outline: none; }
+    .App .navbar .navbar-nav {
+      margin-top: 3.5em; }
+    .App .navbar .mobile-social {
+      margin: 0 auto;
+      margin-top: 6em;
+      margin-left: .75em; }
+      .App .navbar .mobile-social img {
+        margin-right: .5em;
+        width: 40px; }
+  .App .navbar-dark .navbar-nav .nav-link {
+    color: rgba(255, 255, 255, 0.9); }
+  .App .nav-link {
+    font-size: 32px;
+    line-height: 42px;
+    margin-left: .5em; }
+  .App #tab {
+    font-size: 16px;
+    line-height: 32px;
+    color: #999ade;
+    font-family: "Gotham Medium";
+    letter-spacing: 0.03em;
+    margin-left: 10em; }
+  .App .page-header {
+    margin-top: 6em; }
+    .App .page-header .page-title {
+      font-size: 48px;
+      line-height: 56px;
+      color: #1a1a1a;
+      font-family: "Gotham Bold";
+      color: white; }
+    .App .page-header .page-subtitle {
+      color: #999ade;
+      font-family: "Gotham Bold";
+      font-size: 48px;
+      line-height: 56px; }
+  .App .profile {
+    margin-top: 5em; }
+    .App .profile .backdrop-profile {
+      z-index: -1;
+      position: absolute;
+      margin-left: 22em;
+      margin-top: 8em; }
+      .App .profile .backdrop-profile img {
+        width: 800px;
+        height: 500px; }
+    .App .profile .img-text {
+      position: absolute;
+      bottom: 8px;
+      left: 16px; }
+      .App .profile .img-text h1 {
+        font-size: 52px;
+        line-height: 64px;
+        font-family: "Gotham Bold";
+        letter-spacing: .02em; }
+  .App .about {
+    margin-top: 20em;
+    margin-bottom: 10em; }
+    .App .about a {
+      color: #1a1a1a; }
+    .App .about .about-text {
+      margin-left: 6.5em; }
+      .App .about .about-text .about-me {
+        font-size: 24px;
+        line-height: 36px;
+        font-family: 'Inter UI';
+        letter-spacing: .025em; }
+      .App .about .about-text .btn-primary {
+        background-color: white;
+        border-color: white;
+        color: #1a1a1a;
+        font-family: "Gotham Medium";
+        padding: 20px 38px 20px 30px;
+        margin-top: 3em; }
+  .App .services {
+    padding-top: 10em;
+    padding-bottom: 5em;
+    background-color: white;
+    color: #1a1a1a; }
+    .App .services #tab {
+      color: #1a1a1a; }
+    .App .services .service-details {
+      margin-left: 4em;
+      margin-bottom: 3.5em;
+      font-size: 24px;
+      line-height: 36px;
+      font-family: 'Inter UI';
+      letter-spacing: .025em; }
+    .App .services h1 {
+      font-size: 64px;
+      line-height: 72px;
+      font-family: "Gotham Bold";
+      margin-bottom: 1em;
+      margin-left: -.5em; }
+    .App .services h3 {
+      margin-left: 3.5em;
+      margin-bottom: 1em; }
+    .App .services .service-item {
+      margin-left: 6em;
+      margin-bottom: 4em;
+      color: #7c7c7c;
+      line-height: 32px;
+      font-family: 'Inter UI'; }
+    .App .services .btn-primary {
+      background-color: #0d10b1;
+      border-color: #0d10b1;
+      color: white;
+      font-family: "Gotham Medium";
+      padding: 20px 38px 20px 30px;
+      margin-top: 1em;
+      margin-left: 5.8em; }
+  .App .work {
+    padding-top: 5em;
+    background-color: white; }
+    .App .work .backdrop-work {
+      width: 700px;
+      height: 500px;
+      background: #f6f6f6;
+      z-index: -1;
+      position: absolute;
+      margin-left: 22em;
+      margin-top: 8em; }
+  .App .projects {
+    padding-top: 15em;
+    background-color: white;
+    color: #1a1a1a; }
+    .App .projects h1 {
+      font-size: 64px;
+      line-height: 72px;
+      font-family: "Gotham Bold";
+      letter-spacing: .02em; }
+    .App .projects .project-details {
+      margin-left: 4em;
+      margin-top: 3em;
+      margin-bottom: 3.5em;
+      font-size: 24px;
+      line-height: 36px;
+      font-family: 'Inter UI';
+      letter-spacing: .025em; }
+  .App .work2 {
+    padding-top: 5em;
+    background-color: white;
+    padding-bottom: 10em; }
+    .App .work2 .carousel-control-prev, .App .work2 .carousel-control-next {
+      top: initial;
+      bottom: initial;
+      top: 110%;
+      width: 80%; }
+    .App .work2 .carousel-control-prev-icon {
+      background-image: url("../assets/arrow-left.svg"); }
+    .App .work2 .carousel-control-next-icon {
+      background-image: url("../assets/arrow-left.svg");
+      transform: rotate(180deg); }
+    .App .work2 .carousel-fade .carousel-item {
+      transition-duration: 1s; }
+  .App .footer {
+    padding-top: 15em;
+    margin-bottom: 10em; }
+    .App .footer .contact-details {
+      margin-left: 4em;
+      margin-top: 3em;
+      margin-bottom: 3.5em;
+      font-size: 24px;
+      line-height: 36px;
+      font-family: 'Inter UI';
+      letter-spacing: .025em; } }
+
+@media (min-width: 1200px) {
+  .App a {
+    text-decoration: none;
+    outline: none;
+    color: white; }
+  .App .navbar {
+    letter-spacing: .03em; }
+    .App .navbar .navbar-collapse .navbar-nav {
+      height: 100vh; }
+    .App .navbar .navbar-toggler:focus {
+      outline: none; }
+    .App .navbar .navbar-nav {
+      margin-top: 3.5em; }
+    .App .navbar .mobile-social {
+      margin: 0 auto;
+      margin-top: 6em;
+      margin-left: .75em; }
+      .App .navbar .mobile-social img {
+        margin-right: .5em;
+        width: 40px; }
+  .App .navbar-dark .navbar-nav .nav-link {
+    color: rgba(255, 255, 255, 0.9); }
+  .App .nav-link {
+    font-size: 32px;
+    line-height: 42px;
+    margin-left: .5em; }
+  .App #tab {
+    font-size: 16px;
+    line-height: 32px;
+    color: #999ade;
+    font-family: "Gotham Medium";
+    letter-spacing: 0.03em;
+    margin-left: 10em; }
+  .App .page-header {
+    margin-top: 6em; }
+    .App .page-header .page-title {
+      font-size: 48px;
+      line-height: 56px;
+      color: #1a1a1a;
+      font-family: "Gotham Bold";
+      color: white; }
+    .App .page-header .page-subtitle {
+      color: #999ade;
+      font-family: "Gotham Bold";
+      font-size: 48px;
+      line-height: 56px; }
+  .App .profile {
+    margin-top: 5em; }
+    .App .profile .backdrop-profile {
+      z-index: -1;
+      position: absolute;
+      margin-left: 22em;
+      margin-top: 8em; }
+      .App .profile .backdrop-profile img {
+        width: 800px;
+        height: 500px; }
+    .App .profile .img-text {
+      position: absolute;
+      bottom: 8px;
+      left: 16px; }
+      .App .profile .img-text h1 {
+        font-size: 52px;
+        line-height: 64px;
+        font-family: "Gotham Bold";
+        letter-spacing: .02em; }
+  .App .about {
+    margin-top: 20em;
+    margin-bottom: 10em; }
+    .App .about a {
+      color: #1a1a1a; }
+    .App .about .about-text {
+      margin-left: 6.5em; }
+      .App .about .about-text .about-me {
+        font-size: 24px;
+        line-height: 36px;
+        font-family: 'Inter UI';
+        letter-spacing: .025em; }
+      .App .about .about-text .btn-primary {
+        background-color: white;
+        border-color: white;
+        color: #1a1a1a;
+        font-family: "Gotham Medium";
+        padding: 20px 38px 20px 30px;
+        margin-top: 3em; }
+  .App .services {
+    padding-top: 10em;
+    padding-bottom: 5em;
+    background-color: white;
+    color: #1a1a1a; }
+    .App .services #tab {
+      color: #1a1a1a; }
+    .App .services .service-details {
+      margin-left: 4em;
+      margin-bottom: 3.5em;
+      font-size: 24px;
+      line-height: 36px;
+      font-family: 'Inter UI';
+      letter-spacing: .025em; }
+    .App .services h1 {
+      font-size: 64px;
+      line-height: 72px;
+      font-family: "Gotham Bold";
+      margin-bottom: 1em;
+      margin-left: -.5em; }
+    .App .services h3 {
+      margin-left: 3.5em;
+      margin-bottom: 1em; }
+    .App .services .service-item {
+      margin-left: 6em;
+      margin-bottom: 4em;
+      color: #7c7c7c;
+      line-height: 32px;
+      font-family: 'Inter UI'; }
+    .App .services .btn-primary {
+      background-color: #0d10b1;
+      border-color: #0d10b1;
+      color: white;
+      font-family: "Gotham Medium";
+      padding: 20px 38px 20px 30px;
+      margin-top: 1em;
+      margin-left: 5.8em; }
+  .App .work {
+    padding-top: 5em;
+    background-color: white; }
+    .App .work .backdrop-work {
+      width: 700px;
+      height: 500px;
+      background: #f6f6f6;
+      z-index: -1;
+      position: absolute;
+      margin-left: 22em;
+      margin-top: 8em; }
+  .App .projects {
+    padding-top: 15em;
+    background-color: white;
+    color: #1a1a1a; }
+    .App .projects h1 {
+      font-size: 64px;
+      line-height: 72px;
+      font-family: "Gotham Bold";
+      letter-spacing: .02em; }
+    .App .projects .project-details {
+      margin-left: 4em;
+      margin-top: 3em;
+      margin-bottom: 3.5em;
+      font-size: 24px;
+      line-height: 36px;
+      font-family: 'Inter UI';
+      letter-spacing: .025em; }
+  .App .work2 {
+    padding-top: 5em;
+    background-color: white;
+    padding-bottom: 10em; }
+    .App .work2 .carousel-control-prev, .App .work2 .carousel-control-next {
+      top: initial;
+      bottom: initial;
+      top: 110%;
+      width: 80%; }
+    .App .work2 .carousel-control-prev-icon {
+      background-image: url("../assets/arrow-left.svg"); }
+    .App .work2 .carousel-control-next-icon {
+      background-image: url("../assets/arrow-left.svg");
+      transform: rotate(180deg); }
+    .App .work2 .carousel-fade .carousel-item {
+      transition-duration: 1s; }
+  .App .footer {
+    padding-top: 15em;
+    margin-bottom: 10em; }
+    .App .footer .contact-details {
+      margin-left: 4em;
+      margin-top: 3em;
+      margin-bottom: 3.5em;
+      font-size: 24px;
+      line-height: 36px;
+      font-family: 'Inter UI';
+      letter-spacing: .025em; } }

@@ -1,0 +1,1227 @@
+@font-face {
+  font-family: "Gotham";
+  src: url("./fonts/Gotham-Book.otf") format("opentype"),
+       url("./fonts/Gotham-Medium.otf") format("opentype"),
+       url("./fonts/Gotham-Bold.ttf") format("truetype"),
+       url("./fonts/Gotham-Ultra.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Inter UI";
+  src: url("./fonts/Inter-UI-Regular.otf") format("opentype");
+}
+
+$title: 'Gotham Bold';
+$title-tab: 'Gotham Medium';
+$body: 'Gotham Medium';
+$text: #1a1a1a;
+$accent: #999ade;
+$box: #0d10b1;
+
+
+body {
+  margin: 0;
+  height: 100%;
+  font-family: $body;
+  background-color: #0004ad;
+  color: white;
+}
+
+.App {
+  a {
+    text-decoration: none;
+    outline: none;
+    color: white;
+  }
+
+  .navbar {
+    letter-spacing: .03em;
+    margin-top: 12px;
+    .navbar-collapse .navbar-nav {
+      height: 100vh;
+    }
+    .navbar-toggler:focus {
+      outline: none;
+    }
+    .navbar-nav {
+      margin-top: 3.5em;
+    }
+
+    .mobile-social {
+      margin: 0 auto;
+      margin-top: 6em;
+      margin-left: .75em;
+      img {
+        margin-right: .5em;
+        width: 40px;
+      }
+    }
+  }
+  .navbar-dark .navbar-nav .nav-link {
+    color: rgba(255, 255, 255, .9);
+  }
+  .nav-link {
+    font-size: 32px;
+    line-height: 42px;
+    margin-left: .5em;
+  }
+
+  #tab {
+    font-size: 16px;
+    line-height: 32px;
+    color: $accent;
+    font-family: $title-tab;
+    letter-spacing: 0.03em;
+    margin-left: 2em;
+  }
+
+  .page-header {
+    margin-top: 3em;
+    .page-headline {
+      margin-top: .5em;
+      margin-left: .75em;
+      font-size: 40px;
+      line-height: 48px;
+      font-family: $title-tab;
+      letter-spacing: .02em;
+      .page-title {
+        color: white;
+      }
+      .page-subtitle {
+        color: $accent;
+      }
+    }
+  }
+
+  .profile {
+    margin-top: 2em;
+    .backdrop-profile {
+      z-index: -2;
+      position: absolute;
+      margin-top: 3em;
+      img {
+        width: 320px;
+        height: 200px;
+      }
+    }
+    .self {
+      max-width: 85%;
+      float: right;
+    }
+  }
+
+  .about {
+    margin-top: 8em;
+    margin-bottom: 8em;
+    a {
+      color: $text;
+    }
+    .about-text {
+      margin-left: 2em;
+      margin-top: 1em;
+      .about-me {
+        font-size: 16px;
+        line-height: 32px;
+        font-family: 'Inter UI';
+        letter-spacing: .025em;
+      }
+      .btn-primary {
+        background-color: white;
+        border-color: white;
+        color: $text;
+        font-family: $title-tab;
+        padding: 14px 24px 14px 20px;
+        margin-top: 1.5em;
+      }
+    }
+  }
+
+  .services {
+    #tab {
+      color: $text;
+    }
+    padding-top: 8em;
+    padding-bottom: 5em;
+    background-color: white;
+    color: $text;
+    .service-details {
+      margin-left: 2em;
+      margin-right: 2em;
+      margin-bottom: 3em;
+      font-size: 16px;
+      line-height: 32px;
+      font-family: 'Inter UI';
+      letter-spacing: .025em;
+      font-weight: 700;
+    }
+    h1 {
+      font-size: 40px;
+      line-height: 48px;
+      font-family: $title;
+      margin-bottom: 1em;
+      margin-left: .75em;
+      margin-top: .5em;
+    }
+    h3 {
+      margin-left: 1.35em;
+      margin-bottom: 1em;
+      margin-top: 4em;
+      font-size: 24px;
+      line-height: 32px;
+    }
+    .service-item {
+      margin-left: 2em;
+      margin-right: 2em;
+      margin-bottom: 4em;
+      color: #7c7c7c;
+      line-height: 32px;
+      font-family: 'Inter UI';
+    }
+    .btn-primary {
+      background-color: $box;
+      border-color: $box;
+      color: white;
+      font-family: $title-tab;
+      padding: 14px 24px 14px 20px;
+      margin-top: 0;
+      margin-left: 2em;
+    }
+  }
+
+  .work {
+    background-color: white;
+    background-clip: border-box;
+
+    .backdrop-work {
+      position: absolute;
+      img {
+        width: 400px;
+        height: 300px;
+      }
+    }
+    .backdrop-cases {
+      .cases {
+        max-width: 90%;
+        margin-top: 2em;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+  }
+
+  .projects {
+    padding-top: 15em;
+    background-color: white;
+    color: $text;
+    h1 {
+      font-size: 64px;
+      line-height: 72px;
+      font-family: $title;
+      letter-spacing: .02em;
+    }
+    .project-details {
+      margin-left: 4em;
+      margin-top: 3em;
+      margin-bottom: 3.5em;
+      font-size: 24px;
+      line-height: 36px;
+      font-family: 'Inter UI';
+      letter-spacing: .025em;
+    }
+  }
+
+  .work2 {
+    padding-top: 5em;
+    background-color: white;
+    padding-bottom: 10em;
+
+    .carousel-control-prev, .carousel-control-next {
+      top: initial;
+      bottom: initial;
+      top: 110%;
+      width: 80%;
+    }
+
+    .carousel-control-prev-icon {
+      background-image: url('../assets/arrow-left.svg');
+    }
+
+    .carousel-control-next-icon {
+      background-image: url('../assets/arrow-left.svg');
+      transform: rotate(180deg);
+    }
+
+    .carousel-fade .carousel-item {
+      transition-duration: 1s;
+     }
+  }
+
+  .footer {
+    padding-top: 15em;
+    margin-bottom: 10em;
+
+    .contact-details {
+      margin-left: 4em;
+      margin-top: 3em;
+      margin-bottom: 3.5em;
+      font-size: 24px;
+      line-height: 36px;
+      font-family: 'Inter UI';
+      letter-spacing: .025em;
+    }
+  }
+}
+
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+  .App {
+    a {
+      text-decoration: none;
+      outline: none;
+      color: white;
+    }
+
+    .navbar {
+      letter-spacing: .03em;
+      .navbar-collapse .navbar-nav {
+        height: 100vh;
+      }
+      .navbar-toggler:focus {
+        outline: none;
+      }
+      .navbar-nav {
+        margin-top: 3.5em;
+      }
+
+      .mobile-social {
+        margin: 0 auto;
+        margin-top: 6em;
+        margin-left: .75em;
+        img {
+          margin-right: .5em;
+          width: 40px;
+        }
+      }
+    }
+    .navbar-dark .navbar-nav .nav-link {
+      color: rgba(255, 255, 255, .9);
+    }
+    .nav-link {
+      font-size: 32px;
+      line-height: 42px;
+      margin-left: .5em;
+    }
+
+    #tab {
+      font-size: 16px;
+      line-height: 32px;
+      color: $accent;
+      font-family: $title-tab;
+      letter-spacing: 0.03em;
+      margin-left: 10em;
+    }
+
+    .page-header {
+      margin-top: 6em;
+      .page-headline {
+        margin-top: 0;
+        font-size: 48px;
+        line-height: 56px;
+        font-family: $title-tab;
+        .page-title {
+          color: white;
+        }
+        .page-subtitle {
+          color: $accent;
+        }
+      }
+    }
+
+    .profile {
+      margin-top: 5em;
+      .backdrop-profile {
+        z-index: -1;
+        position: absolute;
+        margin-left: 22em;
+        margin-top: 8em;
+        img {
+          width: 800px;
+          height: 500px;
+        }
+        .self {
+          max-width: 85%;
+          float: right;
+        }
+      }
+    }
+
+    .about {
+      margin-top: 20em;
+      margin-bottom: 10em;
+      a {
+        color: $text;
+      }
+      .about-text {
+        margin-left: 6.5em;
+        .about-me {
+          font-size: 24px;
+          line-height: 36px;
+          font-family: 'Inter UI';
+          letter-spacing: .025em;
+        }
+        .btn-primary {
+          background-color: white;
+          border-color: white;
+          color: $text;
+          font-family: $title-tab;
+          padding: 20px 38px 20px 30px;
+          margin-top: 3em;
+        }
+      }
+    }
+
+    .services {
+      #tab {
+        color: $text;
+      }
+      padding-top: 10em;
+      padding-bottom: 5em;
+      background-color: white;
+      color: $text;
+      .service-details {
+        margin-left: 4em;
+        margin-bottom: 3.5em;
+        font-size: 24px;
+        line-height: 36px;
+        font-family: 'Inter UI';
+        letter-spacing: .025em;
+      }
+      h1 {
+        font-size: 64px;
+        line-height: 72px;
+        font-family: $title;
+        margin-bottom: 1em;
+        margin-left: -.5em;
+      }
+      h3 {
+        margin-left: 3.5em;
+        margin-bottom: 1em;
+      }
+      .service-item {
+        margin-left: 6em;
+        margin-bottom: 4em;
+        color: #7c7c7c;
+        line-height: 32px;
+        font-family: 'Inter UI';
+      }
+      .btn-primary {
+        background-color: $box;
+        border-color: $box;
+        color: white;
+        font-family: $title-tab;
+        padding: 20px 38px 20px 30px;
+        margin-top: 1em;
+        margin-left: 5.8em;
+      }
+    }
+
+    .work {
+      padding-top: 5em;
+      background-color: white;
+
+      .backdrop-work {
+        width: 700px;
+        height: 500px;
+        background: #f6f6f6;
+        z-index: -1;
+        position: absolute;
+        margin-left: 22em;
+        margin-top: 8em;
+      }
+    }
+
+    .projects {
+      padding-top: 15em;
+      background-color: white;
+      color: $text;
+      h1 {
+        font-size: 64px;
+        line-height: 72px;
+        font-family: $title;
+        letter-spacing: .02em;
+      }
+      .project-details {
+        margin-left: 4em;
+        margin-top: 3em;
+        margin-bottom: 3.5em;
+        font-size: 24px;
+        line-height: 36px;
+        font-family: 'Inter UI';
+        letter-spacing: .025em;
+      }
+    }
+
+    .work2 {
+      padding-top: 5em;
+      background-color: white;
+      padding-bottom: 10em;
+
+      .carousel-control-prev, .carousel-control-next {
+        top: initial;
+        bottom: initial;
+        top: 110%;
+        width: 80%;
+      }
+
+      .carousel-control-prev-icon {
+        background-image: url('../assets/arrow-left.svg');
+      }
+
+      .carousel-control-next-icon {
+        background-image: url('../assets/arrow-left.svg');
+        transform: rotate(180deg);
+      }
+
+      .carousel-fade .carousel-item {
+        transition-duration: 1s;
+       }
+    }
+
+    .footer {
+      padding-top: 15em;
+      margin-bottom: 10em;
+
+      .contact-details {
+        margin-left: 4em;
+        margin-top: 3em;
+        margin-bottom: 3.5em;
+        font-size: 24px;
+        line-height: 36px;
+        font-family: 'Inter UI';
+        letter-spacing: .025em;
+      }
+    }
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  .App {
+    a {
+      text-decoration: none;
+      outline: none;
+      color: white;
+    }
+
+    .navbar {
+      letter-spacing: .03em;
+      .navbar-collapse .navbar-nav {
+        height: 100vh;
+      }
+      .navbar-toggler:focus {
+        outline: none;
+      }
+      .navbar-nav {
+        margin-top: 3.5em;
+      }
+
+      .mobile-social {
+        margin: 0 auto;
+        margin-top: 6em;
+        margin-left: .75em;
+        img {
+          margin-right: .5em;
+          width: 40px;
+        }
+      }
+    }
+    .navbar-dark .navbar-nav .nav-link {
+      color: rgba(255, 255, 255, .9);
+    }
+    .nav-link {
+      font-size: 32px;
+      line-height: 42px;
+      margin-left: .5em;
+    }
+
+    #tab {
+      font-size: 16px;
+      line-height: 32px;
+      color: $accent;
+      font-family: $title-tab;
+      letter-spacing: 0.03em;
+      margin-left: 10em;
+    }
+
+    .page-header {
+      margin-top: 6em;
+      .page-title {
+        font-size: 48px;
+        line-height: 56px;
+        color: $text;
+        font-family: $title;
+        color: white;
+      }
+      .page-subtitle {
+        color: $accent;
+        font-family: $title;
+        font-size: 48px;
+        line-height: 56px;
+      }
+    }
+
+    .profile {
+      margin-top: 5em;
+      .backdrop-profile {
+        z-index: -1;
+        position: absolute;
+        margin-left: 22em;
+        margin-top: 8em;
+        img {
+          width: 800px;
+          height: 500px;
+        }
+      }
+      .img-text {
+        position: absolute;
+        bottom: 8px;
+        left: 16px;
+        h1 {
+          font-size: 52px;
+          line-height: 64px;
+          font-family: $title;
+          letter-spacing: .02em;
+        }
+      }
+    }
+
+    .about {
+      margin-top: 20em;
+      margin-bottom: 10em;
+      a {
+        color: $text;
+      }
+      .about-text {
+        margin-left: 6.5em;
+        .about-me {
+          font-size: 24px;
+          line-height: 36px;
+          font-family: 'Inter UI';
+          letter-spacing: .025em;
+        }
+        .btn-primary {
+          background-color: white;
+          border-color: white;
+          color: $text;
+          font-family: $title-tab;
+          padding: 20px 38px 20px 30px;
+          margin-top: 3em;
+        }
+      }
+    }
+
+    .services {
+      #tab {
+        color: $text;
+      }
+      padding-top: 10em;
+      padding-bottom: 5em;
+      background-color: white;
+      color: $text;
+      .service-details {
+        margin-left: 4em;
+        margin-bottom: 3.5em;
+        font-size: 24px;
+        line-height: 36px;
+        font-family: 'Inter UI';
+        letter-spacing: .025em;
+      }
+      h1 {
+        font-size: 64px;
+        line-height: 72px;
+        font-family: $title;
+        margin-bottom: 1em;
+        margin-left: -.5em;
+      }
+      h3 {
+        margin-left: 3.5em;
+        margin-bottom: 1em;
+      }
+      .service-item {
+        margin-left: 6em;
+        margin-bottom: 4em;
+        color: #7c7c7c;
+        line-height: 32px;
+        font-family: 'Inter UI';
+      }
+      .btn-primary {
+        background-color: $box;
+        border-color: $box;
+        color: white;
+        font-family: $title-tab;
+        padding: 20px 38px 20px 30px;
+        margin-top: 1em;
+        margin-left: 5.8em;
+      }
+    }
+
+    .work {
+      padding-top: 5em;
+      background-color: white;
+
+      .backdrop-work {
+        width: 700px;
+        height: 500px;
+        background: #f6f6f6;
+        z-index: -1;
+        position: absolute;
+        margin-left: 22em;
+        margin-top: 8em;
+      }
+    }
+
+    .projects {
+      padding-top: 15em;
+      background-color: white;
+      color: $text;
+      h1 {
+        font-size: 64px;
+        line-height: 72px;
+        font-family: $title;
+        letter-spacing: .02em;
+      }
+      .project-details {
+        margin-left: 4em;
+        margin-top: 3em;
+        margin-bottom: 3.5em;
+        font-size: 24px;
+        line-height: 36px;
+        font-family: 'Inter UI';
+        letter-spacing: .025em;
+      }
+    }
+
+    .work2 {
+      padding-top: 5em;
+      background-color: white;
+      padding-bottom: 10em;
+
+      .carousel-control-prev, .carousel-control-next {
+        top: initial;
+        bottom: initial;
+        top: 110%;
+        width: 80%;
+      }
+
+      .carousel-control-prev-icon {
+        background-image: url('../assets/arrow-left.svg');
+      }
+
+      .carousel-control-next-icon {
+        background-image: url('../assets/arrow-left.svg');
+        transform: rotate(180deg);
+      }
+
+      .carousel-fade .carousel-item {
+        transition-duration: 1s;
+       }
+    }
+
+    .footer {
+      padding-top: 15em;
+      margin-bottom: 10em;
+
+      .contact-details {
+        margin-left: 4em;
+        margin-top: 3em;
+        margin-bottom: 3.5em;
+        font-size: 24px;
+        line-height: 36px;
+        font-family: 'Inter UI';
+        letter-spacing: .025em;
+      }
+    }
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+  .App {
+    a {
+      text-decoration: none;
+      outline: none;
+      color: white;
+    }
+
+    .navbar {
+      letter-spacing: .03em;
+      .navbar-collapse .navbar-nav {
+        height: 100vh;
+      }
+      .navbar-toggler:focus {
+        outline: none;
+      }
+      .navbar-nav {
+        margin-top: 3.5em;
+      }
+
+      .mobile-social {
+        margin: 0 auto;
+        margin-top: 6em;
+        margin-left: .75em;
+        img {
+          margin-right: .5em;
+          width: 40px;
+        }
+      }
+    }
+    .navbar-dark .navbar-nav .nav-link {
+      color: rgba(255, 255, 255, .9);
+    }
+    .nav-link {
+      font-size: 32px;
+      line-height: 42px;
+      margin-left: .5em;
+    }
+
+    #tab {
+      font-size: 16px;
+      line-height: 32px;
+      color: $accent;
+      font-family: $title-tab;
+      letter-spacing: 0.03em;
+      margin-left: 10em;
+    }
+
+    .page-header {
+      margin-top: 6em;
+      .page-title {
+        font-size: 48px;
+        line-height: 56px;
+        color: $text;
+        font-family: $title;
+        color: white;
+      }
+      .page-subtitle {
+        color: $accent;
+        font-family: $title;
+        font-size: 48px;
+        line-height: 56px;
+      }
+    }
+
+    .profile {
+      margin-top: 5em;
+      .backdrop-profile {
+        z-index: -1;
+        position: absolute;
+        margin-left: 22em;
+        margin-top: 8em;
+        img {
+          width: 800px;
+          height: 500px;
+        }
+      }
+      .img-text {
+        position: absolute;
+        bottom: 8px;
+        left: 16px;
+        h1 {
+          font-size: 52px;
+          line-height: 64px;
+          font-family: $title;
+          letter-spacing: .02em;
+        }
+      }
+    }
+
+    .about {
+      margin-top: 20em;
+      margin-bottom: 10em;
+      a {
+        color: $text;
+      }
+      .about-text {
+        margin-left: 6.5em;
+        .about-me {
+          font-size: 24px;
+          line-height: 36px;
+          font-family: 'Inter UI';
+          letter-spacing: .025em;
+        }
+        .btn-primary {
+          background-color: white;
+          border-color: white;
+          color: $text;
+          font-family: $title-tab;
+          padding: 20px 38px 20px 30px;
+          margin-top: 3em;
+        }
+      }
+    }
+
+    .services {
+      #tab {
+        color: $text;
+      }
+      padding-top: 10em;
+      padding-bottom: 5em;
+      background-color: white;
+      color: $text;
+      .service-details {
+        margin-left: 4em;
+        margin-bottom: 3.5em;
+        font-size: 24px;
+        line-height: 36px;
+        font-family: 'Inter UI';
+        letter-spacing: .025em;
+      }
+      h1 {
+        font-size: 64px;
+        line-height: 72px;
+        font-family: $title;
+        margin-bottom: 1em;
+        margin-left: -.5em;
+      }
+      h3 {
+        margin-left: 3.5em;
+        margin-bottom: 1em;
+      }
+      .service-item {
+        margin-left: 6em;
+        margin-bottom: 4em;
+        color: #7c7c7c;
+        line-height: 32px;
+        font-family: 'Inter UI';
+      }
+      .btn-primary {
+        background-color: $box;
+        border-color: $box;
+        color: white;
+        font-family: $title-tab;
+        padding: 20px 38px 20px 30px;
+        margin-top: 1em;
+        margin-left: 5.8em;
+      }
+    }
+
+    .work {
+      padding-top: 5em;
+      background-color: white;
+
+      .backdrop-work {
+        width: 700px;
+        height: 500px;
+        background: #f6f6f6;
+        z-index: -1;
+        position: absolute;
+        margin-left: 22em;
+        margin-top: 8em;
+      }
+    }
+
+    .projects {
+      padding-top: 15em;
+      background-color: white;
+      color: $text;
+      h1 {
+        font-size: 64px;
+        line-height: 72px;
+        font-family: $title;
+        letter-spacing: .02em;
+      }
+      .project-details {
+        margin-left: 4em;
+        margin-top: 3em;
+        margin-bottom: 3.5em;
+        font-size: 24px;
+        line-height: 36px;
+        font-family: 'Inter UI';
+        letter-spacing: .025em;
+      }
+    }
+
+    .work2 {
+      padding-top: 5em;
+      background-color: white;
+      padding-bottom: 10em;
+
+      .carousel-control-prev, .carousel-control-next {
+        top: initial;
+        bottom: initial;
+        top: 110%;
+        width: 80%;
+      }
+
+      .carousel-control-prev-icon {
+        background-image: url('../assets/arrow-left.svg');
+      }
+
+      .carousel-control-next-icon {
+        background-image: url('../assets/arrow-left.svg');
+        transform: rotate(180deg);
+      }
+
+      .carousel-fade .carousel-item {
+        transition-duration: 1s;
+       }
+    }
+
+    .footer {
+      padding-top: 15em;
+      margin-bottom: 10em;
+
+      .contact-details {
+        margin-left: 4em;
+        margin-top: 3em;
+        margin-bottom: 3.5em;
+        font-size: 24px;
+        line-height: 36px;
+        font-family: 'Inter UI';
+        letter-spacing: .025em;
+      }
+    }
+  }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+  .App {
+    a {
+      text-decoration: none;
+      outline: none;
+      color: white;
+    }
+
+    .navbar {
+      letter-spacing: .03em;
+      .navbar-collapse .navbar-nav {
+        height: 100vh;
+      }
+      .navbar-toggler:focus {
+        outline: none;
+      }
+      .navbar-nav {
+        margin-top: 3.5em;
+      }
+
+      .mobile-social {
+        margin: 0 auto;
+        margin-top: 6em;
+        margin-left: .75em;
+        img {
+          margin-right: .5em;
+          width: 40px;
+        }
+      }
+    }
+    .navbar-dark .navbar-nav .nav-link {
+      color: rgba(255, 255, 255, .9);
+    }
+    .nav-link {
+      font-size: 32px;
+      line-height: 42px;
+      margin-left: .5em;
+    }
+
+    #tab {
+      font-size: 16px;
+      line-height: 32px;
+      color: $accent;
+      font-family: $title-tab;
+      letter-spacing: 0.03em;
+      margin-left: 10em;
+    }
+
+    .page-header {
+      margin-top: 6em;
+      .page-title {
+        font-size: 48px;
+        line-height: 56px;
+        color: $text;
+        font-family: $title;
+        color: white;
+      }
+      .page-subtitle {
+        color: $accent;
+        font-family: $title;
+        font-size: 48px;
+        line-height: 56px;
+      }
+    }
+
+    .profile {
+      margin-top: 5em;
+      .backdrop-profile {
+        z-index: -1;
+        position: absolute;
+        margin-left: 22em;
+        margin-top: 8em;
+        img {
+          width: 800px;
+          height: 500px;
+        }
+      }
+      .img-text {
+        position: absolute;
+        bottom: 8px;
+        left: 16px;
+        h1 {
+          font-size: 52px;
+          line-height: 64px;
+          font-family: $title;
+          letter-spacing: .02em;
+        }
+      }
+    }
+
+    .about {
+      margin-top: 20em;
+      margin-bottom: 10em;
+      a {
+        color: $text;
+      }
+      .about-text {
+        margin-left: 6.5em;
+        .about-me {
+          font-size: 24px;
+          line-height: 36px;
+          font-family: 'Inter UI';
+          letter-spacing: .025em;
+        }
+        .btn-primary {
+          background-color: white;
+          border-color: white;
+          color: $text;
+          font-family: $title-tab;
+          padding: 20px 38px 20px 30px;
+          margin-top: 3em;
+        }
+      }
+    }
+
+    .services {
+      #tab {
+        color: $text;
+      }
+      padding-top: 10em;
+      padding-bottom: 5em;
+      background-color: white;
+      color: $text;
+      .service-details {
+        margin-left: 4em;
+        margin-bottom: 3.5em;
+        font-size: 24px;
+        line-height: 36px;
+        font-family: 'Inter UI';
+        letter-spacing: .025em;
+      }
+      h1 {
+        font-size: 64px;
+        line-height: 72px;
+        font-family: $title;
+        margin-bottom: 1em;
+        margin-left: -.5em;
+      }
+      h3 {
+        margin-left: 3.5em;
+        margin-bottom: 1em;
+      }
+      .service-item {
+        margin-left: 6em;
+        margin-bottom: 4em;
+        color: #7c7c7c;
+        line-height: 32px;
+        font-family: 'Inter UI';
+      }
+      .btn-primary {
+        background-color: $box;
+        border-color: $box;
+        color: white;
+        font-family: $title-tab;
+        padding: 20px 38px 20px 30px;
+        margin-top: 1em;
+        margin-left: 5.8em;
+      }
+    }
+
+    .work {
+      padding-top: 5em;
+      background-color: white;
+
+      .backdrop-work {
+        width: 700px;
+        height: 500px;
+        background: #f6f6f6;
+        z-index: -1;
+        position: absolute;
+        margin-left: 22em;
+        margin-top: 8em;
+      }
+    }
+
+    .projects {
+      padding-top: 15em;
+      background-color: white;
+      color: $text;
+      h1 {
+        font-size: 64px;
+        line-height: 72px;
+        font-family: $title;
+        letter-spacing: .02em;
+      }
+      .project-details {
+        margin-left: 4em;
+        margin-top: 3em;
+        margin-bottom: 3.5em;
+        font-size: 24px;
+        line-height: 36px;
+        font-family: 'Inter UI';
+        letter-spacing: .025em;
+      }
+    }
+
+    .work2 {
+      padding-top: 5em;
+      background-color: white;
+      padding-bottom: 10em;
+
+      .carousel-control-prev, .carousel-control-next {
+        top: initial;
+        bottom: initial;
+        top: 110%;
+        width: 80%;
+      }
+
+      .carousel-control-prev-icon {
+        background-image: url('../assets/arrow-left.svg');
+      }
+
+      .carousel-control-next-icon {
+        background-image: url('../assets/arrow-left.svg');
+        transform: rotate(180deg);
+      }
+
+      .carousel-fade .carousel-item {
+        transition-duration: 1s;
+       }
+    }
+
+    .footer {
+      padding-top: 15em;
+      margin-bottom: 10em;
+
+      .contact-details {
+        margin-left: 4em;
+        margin-top: 3em;
+        margin-bottom: 3.5em;
+        font-size: 24px;
+        line-height: 36px;
+        font-family: 'Inter UI';
+        letter-spacing: .025em;
+      }
+    }
+  }
+}
