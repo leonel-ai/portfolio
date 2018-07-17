@@ -5,23 +5,19 @@ import water from './assets/bgwater.webp';
 import slab from './assets/slab.jpg';
 
 // case studies
-import caseStudy from './assets/case-study-johnsen.gif';
-import caseStudy2 from './assets/case-study-marko.gif';
+import caseStudy from './assets/drdelicacy.png';
+import caseStudy2 from './assets/markowitz-services.gif';
 import case1 from './assets/sdw-sample.png';
 import case2 from './assets/y-delicacies.gif';
-import case3 from './assets/delta2.png';
-import case4 from './assets/drd-products.gif';
+import case3 from './assets/delta-journal.png';
 
 // social icons
-import tw from './assets/twitter.png';
-import li from './assets/linkedin.png';
-import pin from './assets/pinterest.png';
-import tum from './assets/tumblr.png';
-import insta from './assets/instagram.png';
-import git from './assets/github.png';
-import call from './assets/call.png';
-import text from './assets/sms.png';
-
+import tw from './assets/icons/twitter.png';
+import li from './assets/icons/linkedin.png';
+import pin from './assets/icons/pinterest.png';
+import tum from './assets/icons/tumblr.png';
+import insta from './assets/icons/instagram.png';
+import git from './assets/icons/github.png';
 
 import Fade from 'react-reveal/Fade';
 import Footer from './components/footer';
@@ -112,9 +108,9 @@ class App extends Component {
           </div>
         </Fade>
         <Fade bottom delay={500} duration={2000}>
-            <div className="col-xs-6 col-md-7 offset-md-5">
-              <img src={self} alt="" className="img-fluid rounded self"/>
-            </div>
+          <div className="col-xs-6 col-md-7 offset-md-5 backdrop-image">
+            <img src={self} alt="" className="img-fluid rounded self"/>
+          </div>
         </Fade>
         </div>
 
@@ -128,7 +124,9 @@ class App extends Component {
 
         <Fade bottom delay={500} duration={1800}>
           <div className="col-md-5 about-text">
-            <p className="about-me">I believe in meaningful work, beyond the paycheck, turning ideas into user-friendly solutions.</p>
+            <p className="about-me">I'm a web and interaction designer that believes in meaningful work, turning ideas into user-friendly solutions.
+            I work with clients, large or small, to design exceptional brands and web experiences that challenge the norm
+            and contribute positively to the local and global community.</p>
             <p className="about-me">Let's create something together.</p>
             <a href="mailto:leonelaguzman1@gmail.com?subject=Let's talk.">
             <button type="button" className="btn btn-primary">
@@ -147,26 +145,24 @@ class App extends Component {
 
          <div className="col-md-6">
          <Fade bottom delay={500} duration={1300}>
-            <h1>Digital Solutions</h1>
-            <p className="service-details">I specialize in transforming your plans and ideas into powerful digital products and an even stronger brand.
-            Through a seamless combination of design and development, I create engaging websites, campaigns and experiences.</p>
-            <h3>UX/UI Design</h3>
-            <p className="service-item">Designing for an optimal experience, both intuitive and user-friendly. I build for the way your users behave
-            to ensure an experience that will keep them coming back for more.</p>
+            <h1>The Process</h1>
+            <p className="service-details">Forget templates or pre-designed UI kits. I research, design, and develop
+            solutions tailored to each of my client's needs.<br/><br/>Expect transparent, honest and professional communication.
+            Working with me cuts out the middlemen. You'll be talking directly to the strategist, the creator, and the partner invested in the success of your business.
+            </p>
+            <h3>Design</h3>
+            <p className="service-item">UX/UI Design<br/>Responsive Web Design<br/>Mobile App Design<br/>Print Design</p>
             <h3>Web Development</h3>
-            <p className="service-item">Through the use of the latest tools and frameworks, I utilize the best
-            technology to provide clients with fast, scalable products, built for the future.</p>
+            <p className="service-item">HTML, CSS, JS (React/Node), Jquery<br/>Client and Server-Side Scripting<br/>CMS and Cloud Services Platforms<br/>SEO and Bandwidth Optimization</p>
             <h3>Brand Strategy</h3>
-            <p className="service-item"> I use a focused set of capabilities to develop and grow inspirational, authentic brands.
-            First, I realize where we can make the biggest impact. Then I craft the brand positioning, visual identities, and more. Whatever fits your needs.</p>
+            <p className="service-item">Art Direction<br/>Branding and Identity<br/>Digital Marketing and Copywriting<br/>Event Coordination</p>
             <a href="mailto:leonelaguzman1@gmail.com?subject=Let's talk.">
             <button type="button" className="btn btn-primary">
             Let's get started</button></a>
           </Fade>
           </div>
-        </div>
 
-        <div className="row work">
+        {/* <div className="row work">
         <Fade bottom delay={500} duration={1400}>
           <div className="col-xs-2 col-md-7 backdrop-work">
             <img src={slab} alt="" className="img-fluid rounded"/>
@@ -175,32 +171,27 @@ class App extends Component {
             <img src={caseStudy} alt="" className="img-fluid rounded cases"/>
           </div>
         </Fade>
-        </div>
+        </div> */}
 
-        <div className="row projects">
         <Fade bottom delay={200}>
-          <div className="col-xs-2 col-md-2 offset-md-1" id="tab">
+          <div className="col-xs-2 col-md-2 offset-md-1 projects" id="tab">
             Projects
           </div>
         </Fade>
 
           <div className="col-md-6">
           <Fade bottom delay={500}>
-            <h1>Work and play</h1>
-            <p className="project-details">Lorem ipsum dolor sit amet, pri an scripta prompta. At qui noster accommodare definitionem, has ut agam putent nostrum.
-            Eum fugit quando id, ut mel gloriatur reformidans.</p>
+            <h1>The Work</h1>
+            <p className="project-details">With such a diverse set of skills and industry knowledge, I'm </p>
+            <h3>Industry Experience</h3>
+            <p className="project-details">Art / Architecture / B2B+B2C / Fashion / Film / Food / Lifestyle / Music / News / Photography / Radio / Travel / Law / Tech / Apps</p>
           </Fade>
           </div>
-        </div>
 
-        <div className="row work2">
-            <div className="col-md-6 offset-md-5">
+            {/* <div className="col-md-6">
               <div id="carouselExampleControls" className="carousel slide carousel-fade" data-ride="carousel" data-pause="hover" data-interval="7000">
                   <div className="carousel-inner">
                     <div className="carousel-item active">
-                        <img className="d-block w-100" src={case4} alt="Third slide"/>
-                      </div>
-                    <div className="carousel-item">
                       <img className="d-block w-100" src={case1} alt="First slide"/>
                     </div>
                     <div className="carousel-item">
@@ -220,7 +211,37 @@ class App extends Component {
                     <span className="sr-only">Next</span>
                   </a>
                 </div>
+            </div> */}
+
+            <div className="col-md-12 case1">
+              <div className="row">
+                <div className="col-md-6 case-1-img">
+                  <img src={caseStudy} alt="" className="img-fluid rounded"/>
+                </div>
+                <div className="col-md-6 case-1-col">
+                  <h5>Client — DR Delicacy</h5>
+                  <p>Building a new brand and minimalist landing page designed to convert B2B wholesale.</p>
+                  <h5>Responsibilities</h5>
+                  <p>Art Direction<br/>Product Shoot<br/>Branding and Identity<br/>Responsive Web / UI Design</p>
+                </div>
+              </div>
             </div>
+
+            <div className="col-md-12 case2">
+              <div className="row">
+                <div className="col-md-6 case-2-col order-12 order-md-first">
+                  <h5>Client — DR Delicacy</h5>
+                  <p>Building a new brand and minimalist landing page designed to convert B2B wholesale.</p>
+                  <h5>Responsibilities</h5>
+                  <p>Art Direction<br/>Product Shoot<br/>Branding and Identity<br/>Responsive Web / UI Design</p>
+                </div>
+                <div className="col-md-6 case-2-img">
+                  <img src={caseStudy2} alt="" className="img-fluid rounded"/>
+                </div>
+              </div>
+            </div>
+
+
         </div>
 
       <div className="row footer">
@@ -232,9 +253,8 @@ class App extends Component {
 
         <div className="col-md-6">
           <Fade bottom delay={500}>
-            <h1>Changing the game</h1>
-            <p className="contact-details">Lorem ipsum dolor sit amet, pri an scripta prompta. At qui noster accommodare definitionem, has ut agam putent nostrum.
-            Eum fugit quando id, ut mel gloriatur reformidans.</p>
+            <h1>The Next Step</h1>
+            <p className="contact-details">With</p>
           </Fade>
         </div>
       </div>

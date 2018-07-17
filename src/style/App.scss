@@ -18,13 +18,17 @@ $text: #1a1a1a;
 $accent: #999ade;
 $box: #0d10b1;
 
-
+html {
+  background-color: #0004ad;
+}
 body {
   margin: 0;
+  padding: 0;
   height: 100%;
   font-family: $body;
-  background-color: #0004ad;
   color: white;
+  background-color: #0004ad;
+
 }
 
 .App {
@@ -96,17 +100,21 @@ body {
   .profile {
     margin-top: 2em;
     .backdrop-profile {
-      z-index: -2;
       position: absolute;
       margin-top: 3em;
+      -webkit-backface-visibility: hidden;
+      -webkit-transform: scale(1);
       img {
         width: 320px;
         height: 200px;
       }
     }
-    .self {
-      max-width: 85%;
-      float: right;
+    .backdrop-image {
+      .self {
+        max-width: 85%;
+        display: block;
+        float: right;
+      }
     }
   }
 
@@ -118,6 +126,7 @@ body {
     }
     .about-text {
       margin-left: 2em;
+      margin-right: 2em;
       margin-top: 1em;
       .about-me {
         font-size: 16px;
@@ -165,7 +174,7 @@ body {
     h3 {
       margin-left: 1.35em;
       margin-bottom: 1em;
-      margin-top: 4em;
+      margin-top: 3em;
       font-size: 24px;
       line-height: 32px;
     }
@@ -186,55 +195,21 @@ body {
       margin-top: 0;
       margin-left: 2em;
     }
-  }
-
-  .work {
-    background-color: white;
-    background-clip: border-box;
-
-    .backdrop-work {
-      position: absolute;
-      img {
-        width: 400px;
-        height: 300px;
-      }
-    }
-    .backdrop-cases {
-      .cases {
-        max-width: 90%;
-        margin-top: 2em;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-      }
-    }
-  }
-
-  .projects {
-    padding-top: 15em;
-    background-color: white;
-    color: $text;
-    h1 {
-      font-size: 64px;
-      line-height: 72px;
-      font-family: $title;
-      letter-spacing: .02em;
+    .projects {
+      padding-top: 8em;
+      background-color: white;
+      color: $text;
     }
     .project-details {
-      margin-left: 4em;
-      margin-top: 3em;
-      margin-bottom: 3.5em;
-      font-size: 24px;
-      line-height: 36px;
+      margin-left: 2em;
+      margin-right: 2em;
+      margin-bottom: 3em;
+         font-size: 16px;
+        line-height: 32px;
       font-family: 'Inter UI';
       letter-spacing: .025em;
+      font-weight: 700;
     }
-  }
-
-  .work2 {
-    padding-top: 5em;
-    background-color: white;
-    padding-bottom: 10em;
 
     .carousel-control-prev, .carousel-control-next {
       top: initial;
@@ -254,19 +229,81 @@ body {
 
     .carousel-fade .carousel-item {
       transition-duration: 1s;
-     }
+    }
+
+    .case1 {
+      background-color: #f4f4f4;
+      .case-1-img {
+        padding-right: 0;
+        padding-left: 0;
+      }
+      .case-1-col {
+        padding-top: 4em;
+        padding-left: 4em;
+        padding-right: 4em;
+        p {
+          font-family: 'Inter UI';
+        }
+      }
+    }
+    .case2 {
+      background-color: #f4f4f4;
+      .case-2-col {
+        padding-top: 4em;
+        padding-left: 4em;
+        padding-right: 4em;
+        p {
+          font-family: 'Inter UI';
+        }
+      }
+      .case-2-img {
+        padding-right: 0;
+        padding-left: 0;
+        background-color: #f4f4f4;
+        -webkit-backface-visibility: hidden;
+        -webkit-transform: scale(1);
+      }
+    }
   }
 
+  // .work {
+  //   background-color: white;
+  //   .backdrop-work {
+  //     position: absolute;
+  //     img {
+  //       width: 400px;
+  //       height: 300px;
+  //     }
+  //   }
+  //   .backdrop-cases {
+  //     .cases {
+  //       max-width: 90%;
+  //       margin-top: 2em;
+  //       display: block;
+  //       margin-left: auto;
+  //       margin-right: auto;
+  //     }
+  //   }
+  // }
+
   .footer {
-    padding-top: 15em;
+    padding-top: 8em;
     margin-bottom: 10em;
+    h1 {
+      font-size: 40px;
+      line-height: 48px;
+      font-family: $title;
+      margin-bottom: 1em;
+      margin-left: .75em;
+      margin-top: .5em;
+    }
 
     .contact-details {
-      margin-left: 4em;
+      margin-left: 2em;
       margin-top: 3em;
       margin-bottom: 3.5em;
-      font-size: 24px;
-      line-height: 36px;
+      font-size: 16px;
+      line-height: 32px;
       font-family: 'Inter UI';
       letter-spacing: .025em;
     }

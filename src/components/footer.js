@@ -11,23 +11,23 @@ const Footer = () => {
           <h4 class="text-uppercase mb-4 font-weight-bold">Leonela Guzm&#225;n</h4>
         </div>
 
-        <hr class="w-100 clearfix d-md-none"/>
+        {/* <hr class="w-100 clearfix d-md-none"/> */}
 
-        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mt-3">
+        {/* <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mt-3">
           <h6 class="text-uppercase mb-4 font-weight-bold">Services</h6>
           <p>
             UX/UI Design
           </p>
           <p>
-            Web + Software Development
+            Web Development
           </p>
           <p>
-            Brand Audit, Strategy + Consulting
+            Brand Strategy + Consulting
           </p>
           <p>
             Copy + Translation
           </p>
-        </div>
+        </div> */}
 
         <hr class="w-100 clearfix d-md-none"/>
 
@@ -52,12 +52,12 @@ const Footer = () => {
         <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
           <h6 class="text-uppercase mb-4 font-weight-bold">Contact</h6>
           <p>
-            <i class="fa fa-home mr-3"></i><a href="https://goo.gl/maps/Fry8q3gDbC62" target="_blank">HTX 77004</a>
+            <i class="fa fa-home "></i><a href="https://goo.gl/maps/Fry8q3gDbC62" target="_blank">HTX 77004</a>
             </p>
           <p>
-            <i class="fa fa-envelope mr-3"></i><a href="mailto:leonelaguzman1@gmail.com?subject=Let's talk.">Let's Email</a></p>
+            <i class="fa fa-envelope"></i><a href="mailto:leonelaguzman1@gmail.com?subject=Let's talk.">Let's Email</a></p>
           <p>
-            <i class="fa fa-phone mr-3"></i><a href="tel:3372400858">Text Me</a></p>
+            <i class="fa fa-phone"></i><a href="tel:3372400858">Text Me</a></p>
         </div>
 
       </div>
