@@ -2,14 +2,10 @@ import React, { Component } from 'react';
 
 import self from './assets/self.jpg';
 import water from './assets/bgwater.webp';
-import slab from './assets/slab.jpg';
 
 // case studies
 import caseStudy from './assets/drdelicacy.png';
 import caseStudy2 from './assets/markowitz-services.gif';
-import case1 from './assets/sdw-sample.png';
-import case2 from './assets/y-delicacies.gif';
-import case3 from './assets/delta-journal.png';
 
 // social icons
 import tw from './assets/icons/twitter.png';
@@ -89,7 +85,7 @@ class App extends Component {
         <header className="row page-header">
         <Fade bottom delay={400}>
           <div className="col-xs-2 col-md-2 offset-md-1" id="tab">
-            Profile
+            Perfil
           </div>
         </Fade>
 
@@ -108,7 +104,7 @@ class App extends Component {
           </div>
         </Fade>
         <Fade bottom delay={500} duration={2000}>
-          <div className="col-xs-6 col-md-7 offset-md-5 backdrop-image">
+          <div className="col-xs-6 col-md-7 offset-md-4 offset-xl-3 backdrop-image">
             <img src={self} alt="" className="img-fluid rounded self"/>
           </div>
         </Fade>
@@ -118,7 +114,7 @@ class App extends Component {
         <div className="row about">
         <Fade bottom delay={500} duration={1800}>
           <div className="col-xs-2 col-md-2 offset-md-1" id="tab">
-            About
+            Sobre Mí
           </div>
         </Fade>
 
@@ -139,7 +135,7 @@ class App extends Component {
         <div className="row services">
         <Fade bottom delay={200}>
           <div className="col-xs-2 col-md-2 offset-md-1" id="tab">
-            Services
+            Servicios
           </div>
         </Fade>
 
@@ -153,7 +149,7 @@ class App extends Component {
             <h3>Design</h3>
             <p className="service-item">UX/UI Design<br/>Responsive Web Design<br/>Mobile App Design<br/>Print Design</p>
             <h3>Web Development</h3>
-            <p className="service-item">HTML, CSS, JS (React/Node), Jquery<br/>Client and Server-Side Scripting<br/>CMS and Cloud Services Platforms<br/>SEO and Bandwidth Optimization</p>
+            <p className="service-item">HTML/CSS, React/Node, Jquery, C++<br/>Client and Server-Side Scripting<br/>CMS and Cloud Services Platforms<br/>SEO and Bandwidth Optimization</p>
             <h3>Brand Strategy</h3>
             <p className="service-item">Art Direction<br/>Branding and Identity<br/>Digital Marketing and Copywriting<br/>Event Coordination</p>
             <a href="mailto:leonelaguzman1@gmail.com?subject=Let's talk.">
@@ -162,65 +158,32 @@ class App extends Component {
           </Fade>
           </div>
 
-        {/* <div className="row work">
-        <Fade bottom delay={500} duration={1400}>
-          <div className="col-xs-2 col-md-7 backdrop-work">
-            <img src={slab} alt="" className="img-fluid rounded"/>
-          </div>
-          <div className="col-xs-6 col-md-7 offset-md-4 backdrop-cases">
-            <img src={caseStudy} alt="" className="img-fluid rounded cases"/>
-          </div>
-        </Fade>
-        </div> */}
-
         <Fade bottom delay={200}>
-          <div className="col-xs-2 col-md-2 offset-md-1 projects" id="tab">
-            Projects
+          <div className="col-xs-2 col-md-2 offset-md-1 tab-p" id="tab">
+            Proyectos
           </div>
         </Fade>
 
-          <div className="col-md-6">
+          <div className="col-md-6 work">
           <Fade bottom delay={500}>
             <h1>The Work</h1>
-            <p className="project-details">With such a diverse set of skills and industry knowledge, I'm </p>
+            <p className="project-details">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Dolore ipsum nostrum, quia reprehenderit ipsam nam labore sed impedit. Ab quia eum autem consequatur,
+            molestias nemo aspernatur iure. Voluptatum, nemo incidunt. </p>
             <h3>Industry Experience</h3>
-            <p className="project-details">Art / Architecture / B2B+B2C / Fashion / Film / Food / Lifestyle / Music / News / Photography / Radio / Travel / Law / Tech / Apps</p>
+            <p className="project-xp">Art / Architecture / B2B+B2C / Fashion / Film /<br/>
+            Food / Lifestyle / Music / News / Photography /<br/>Radio / Travel / Law / Tech / Apps</p>
           </Fade>
           </div>
 
-            {/* <div className="col-md-6">
-              <div id="carouselExampleControls" className="carousel slide carousel-fade" data-ride="carousel" data-pause="hover" data-interval="7000">
-                  <div className="carousel-inner">
-                    <div className="carousel-item active">
-                      <img className="d-block w-100" src={case1} alt="First slide"/>
-                    </div>
-                    <div className="carousel-item">
-                      <img className="d-block w-100" src={case2} alt="Second slide"/>
-                    </div>
-                    <div className="carousel-item">
-                      <img className="d-block w-100" src={case3} alt="Third slide"/>
-                    </div>
-
-                  </div>
-                  <a className="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-                    <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span className="sr-only">Previous</span>
-                  </a>
-                  <a className="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-                    <span className="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span className="sr-only">Next</span>
-                  </a>
-                </div>
-            </div> */}
-
             <div className="col-md-12 case1">
               <div className="row">
-                <div className="col-md-6 case-1-img">
+                <div className="col-md-6 case1-img">
                   <img src={caseStudy} alt="" className="img-fluid rounded"/>
                 </div>
-                <div className="col-md-6 case-1-col">
-                  <h5>Client — DR Delicacy</h5>
-                  <p>Building a new brand and minimalist landing page designed to convert B2B wholesale.</p>
+                <div className="col-md-6 case1-col">
+                  <h4>Client — DR Delicacy</h4>
+                  <p>Building a new brand and minimalist landing page designed to convert B2B and Wholesale.</p>
                   <h5>Responsibilities</h5>
                   <p>Art Direction<br/>Product Shoot<br/>Branding and Identity<br/>Responsive Web / UI Design</p>
                 </div>
@@ -229,13 +192,13 @@ class App extends Component {
 
             <div className="col-md-12 case2">
               <div className="row">
-                <div className="col-md-6 case-2-col order-12 order-md-first">
-                  <h5>Client — DR Delicacy</h5>
-                  <p>Building a new brand and minimalist landing page designed to convert B2B wholesale.</p>
+                <div className="col-md-6 col-xl-7 case2-col order-12 order-md-first">
+                  <h4>Client — Markowitz Law</h4>
+                  <p>Building a minimalist landing page designed to convert B2B and Wholesale.</p>
                   <h5>Responsibilities</h5>
                   <p>Art Direction<br/>Product Shoot<br/>Branding and Identity<br/>Responsive Web / UI Design</p>
                 </div>
-                <div className="col-md-6 case-2-img">
+                <div className="col-md-6 col-xl-5 case2-img">
                   <img src={caseStudy2} alt="" className="img-fluid rounded"/>
                 </div>
               </div>
@@ -247,14 +210,20 @@ class App extends Component {
       <div className="row footer">
         <Fade bottom delay={200}>
           <div className="col-xs-2 col-md-2 offset-md-1" id="tab">
-            Contact
+            Contacto
           </div>
         </Fade>
 
         <div className="col-md-6">
           <Fade bottom delay={500}>
             <h1>The Next Step</h1>
-            <p className="contact-details">With</p>
+            <p className="contact-details">Lorem ipsum dolor, sit amet consectetur
+            adipisicing elit. Quibusdam repellat vel voluptas totam dignissimos optio ut pariatur,
+            laboriosam, veritatis est ab! Harum quos voluptatum optio, sequi nisi aliquid
+            voluptatem consectetur.</p>
+            <a href="mailto:leonelaguzman1@gmail.com?subject=Let's talk.">
+            <button type="button" className="btn btn-primary">
+            Vámonos</button></a>
           </Fade>
         </div>
       </div>

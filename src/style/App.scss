@@ -13,13 +13,14 @@
 
 $title: 'Gotham Bold';
 $title-tab: 'Gotham Medium';
-$body: 'Gotham Medium';
+$body: 'Inter UI';
 $text: #1a1a1a;
 $accent: #999ade;
 $box: #0d10b1;
+$bg: #0004ad;
 
 html {
-  background-color: #0004ad;
+  background-color: $bg;
 }
 body {
   margin: 0;
@@ -27,8 +28,7 @@ body {
   height: 100%;
   font-family: $body;
   color: white;
-  background-color: #0004ad;
-
+  background-color: $bg;
 }
 
 .App {
@@ -36,6 +36,17 @@ body {
     text-decoration: none;
     outline: none;
     color: white;
+    &:focus {
+      outline: none;
+    }
+  }
+
+  .cta {
+    color: $accent;
+  }
+
+  button:focus, .btn:focus, .btn-primary:focus {
+    outline: none;
   }
 
   .navbar {
@@ -49,6 +60,9 @@ body {
     }
     .navbar-nav {
       margin-top: 3.5em;
+    }
+    .navbar-brand {
+      font-family: $title;
     }
 
     .mobile-social {
@@ -68,6 +82,7 @@ body {
     font-size: 32px;
     line-height: 42px;
     margin-left: .5em;
+    font-family: $title;
   }
 
   #tab {
@@ -100,7 +115,6 @@ body {
   .profile {
     margin-top: 2em;
     .backdrop-profile {
-      position: absolute;
       margin-top: 3em;
       -webkit-backface-visibility: hidden;
       -webkit-transform: scale(1);
@@ -131,7 +145,7 @@ body {
       .about-me {
         font-size: 16px;
         line-height: 32px;
-        font-family: 'Inter UI';
+        font-family: $body;
         letter-spacing: .025em;
       }
       .btn-primary {
@@ -141,6 +155,11 @@ body {
         font-family: $title-tab;
         padding: 14px 24px 14px 20px;
         margin-top: 1.5em;
+        &:hover {
+          background-color: #151515;
+          border-color: #151515;
+          color: white;
+        }
       }
     }
   }
@@ -159,7 +178,7 @@ body {
       margin-bottom: 3em;
       font-size: 16px;
       line-height: 32px;
-      font-family: 'Inter UI';
+      font-family: $body;
       letter-spacing: .025em;
       font-weight: 700;
     }
@@ -184,7 +203,7 @@ body {
       margin-bottom: 4em;
       color: #7c7c7c;
       line-height: 32px;
-      font-family: 'Inter UI';
+      font-family: $body;
     }
     .btn-primary {
       background-color: $box;
@@ -195,96 +214,58 @@ body {
       margin-top: 0;
       margin-left: 2em;
     }
-    .projects {
+    .work {
       padding-top: 8em;
       background-color: white;
       color: $text;
-    }
     .project-details {
       margin-left: 2em;
       margin-right: 2em;
       margin-bottom: 3em;
          font-size: 16px;
         line-height: 32px;
-      font-family: 'Inter UI';
+      font-family: $body;
       letter-spacing: .025em;
       font-weight: 700;
     }
-
-    .carousel-control-prev, .carousel-control-next {
-      top: initial;
-      bottom: initial;
-      top: 110%;
-      width: 80%;
-    }
-
-    .carousel-control-prev-icon {
-      background-image: url('../assets/arrow-left.svg');
-    }
-
-    .carousel-control-next-icon {
-      background-image: url('../assets/arrow-left.svg');
-      transform: rotate(180deg);
-    }
-
-    .carousel-fade .carousel-item {
-      transition-duration: 1s;
-    }
-
+  }
     .case1 {
       background-color: #f4f4f4;
-      .case-1-img {
+      .case1-img {
         padding-right: 0;
         padding-left: 0;
       }
-      .case-1-col {
+      .case1-col {
         padding-top: 4em;
         padding-left: 4em;
         padding-right: 4em;
         p {
-          font-family: 'Inter UI';
+          font-family: $body;
         }
       }
     }
     .case2 {
       background-color: #f4f4f4;
-      .case-2-col {
+      .case2-col {
         padding-top: 4em;
         padding-left: 4em;
         padding-right: 4em;
         p {
-          font-family: 'Inter UI';
+          font-family: $body;
         }
       }
-      .case-2-img {
+      .case2-img {
         padding-right: 0;
         padding-left: 0;
         background-color: #f4f4f4;
         -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
         -webkit-transform: scale(1);
+        -ms-transform: scale(1);
+        transform: scale(1);
       }
     }
   }
-
-  // .work {
-  //   background-color: white;
-  //   .backdrop-work {
-  //     position: absolute;
-  //     img {
-  //       width: 400px;
-  //       height: 300px;
-  //     }
-  //   }
-  //   .backdrop-cases {
-  //     .cases {
-  //       max-width: 90%;
-  //       margin-top: 2em;
-  //       display: block;
-  //       margin-left: auto;
-  //       margin-right: auto;
-  //     }
-  //   }
-  // }
 
   .footer {
     padding-top: 8em;
@@ -304,7 +285,7 @@ body {
       margin-bottom: 3.5em;
       font-size: 16px;
       line-height: 32px;
-      font-family: 'Inter UI';
+      font-family: $body;
       letter-spacing: .025em;
     }
   }
@@ -314,12 +295,6 @@ body {
 // Small devices (landscape phones, 576px and up)
 @media (min-width: 576px) {
   .App {
-    a {
-      text-decoration: none;
-      outline: none;
-      color: white;
-    }
-
     .navbar {
       letter-spacing: .03em;
       .navbar-collapse .navbar-nav {
@@ -379,20 +354,19 @@ body {
     .profile {
       margin-top: 5em;
       .backdrop-profile {
-        z-index: -1;
-        position: absolute;
-        margin-left: 22em;
-        margin-top: 8em;
+        margin-top: 3em;
+        -webkit-backface-visibility: hidden;
+        -webkit-transform: scale(1);
         img {
-          width: 800px;
-          height: 500px;
+          width: 320px;
+          height: 200px;
         }
+      }
         .self {
           max-width: 85%;
           float: right;
         }
       }
-    }
 
     .about {
       margin-top: 20em;
@@ -405,7 +379,7 @@ body {
         .about-me {
           font-size: 24px;
           line-height: 36px;
-          font-family: 'Inter UI';
+          font-family: $body;
           letter-spacing: .025em;
         }
         .btn-primary {
@@ -415,6 +389,11 @@ body {
           font-family: $title-tab;
           padding: 20px 38px 20px 30px;
           margin-top: 3em;
+          &:hover {
+            background-color: #151515;
+            border-color: #151515;
+            color: white;
+          }
         }
       }
     }
@@ -432,7 +411,7 @@ body {
         margin-bottom: 3.5em;
         font-size: 24px;
         line-height: 36px;
-        font-family: 'Inter UI';
+        font-family: $body;
         letter-spacing: .025em;
       }
       h1 {
@@ -451,7 +430,7 @@ body {
         margin-bottom: 4em;
         color: #7c7c7c;
         line-height: 32px;
-        font-family: 'Inter UI';
+        font-family: $body;
       }
       .btn-primary {
         background-color: $box;
@@ -461,70 +440,73 @@ body {
         padding: 20px 38px 20px 30px;
         margin-top: 1em;
         margin-left: 5.8em;
+        &:hover {
+          background-color: #151515;
+          border-color: #151515;
+          color: white;
+        }
+      }
+      .work {
+        padding-top: 5em;
+      }
+      .work {
+        padding-top: 15em;
+        background-color: white;
+        color: $text;
+        h1 {
+          font-size: 64px;
+          line-height: 72px;
+          font-family: $title;
+          letter-spacing: .02em;
+        }
+        .project-details {
+          margin-left: 4em;
+          margin-top: 3em;
+          margin-bottom: 3.5em;
+          font-size: 24px;
+          line-height: 36px;
+          font-family: $body;
+          letter-spacing: .025em;
+        }
+      }
+      .case1 {
+        background-color: #f4f4f4;
+        .case-1-img {
+          padding-right: 0;
+          padding-left: 0;
+        }
+        .case-1-col {
+          padding-top: 4em;
+          padding-left: 4em;
+          padding-right: 4em;
+          p {
+            font-family: $body;
+          }
+        }
+      }
+      .case2 {
+        background-color: #f4f4f4;
+        .case-2-col {
+          padding-top: 4em;
+          padding-left: 4em;
+          padding-right: 4em;
+          p {
+            font-family: $body;
+          }
+        }
+        .case-2-img {
+          padding-right: 0;
+          padding-left: 0;
+          background-color: #f4f4f4;
+          -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+          -webkit-transform: scale(1);
+          -ms-transform: scale(1);
+          transform: scale(1);
+        }
       }
     }
 
-    .work {
-      padding-top: 5em;
-      background-color: white;
-
-      .backdrop-work {
-        width: 700px;
-        height: 500px;
-        background: #f6f6f6;
-        z-index: -1;
-        position: absolute;
-        margin-left: 22em;
-        margin-top: 8em;
-      }
-    }
-
-    .projects {
-      padding-top: 15em;
-      background-color: white;
-      color: $text;
-      h1 {
-        font-size: 64px;
-        line-height: 72px;
-        font-family: $title;
-        letter-spacing: .02em;
-      }
-      .project-details {
-        margin-left: 4em;
-        margin-top: 3em;
-        margin-bottom: 3.5em;
-        font-size: 24px;
-        line-height: 36px;
-        font-family: 'Inter UI';
-        letter-spacing: .025em;
-      }
-    }
-
-    .work2 {
-      padding-top: 5em;
-      background-color: white;
-      padding-bottom: 10em;
-
-      .carousel-control-prev, .carousel-control-next {
-        top: initial;
-        bottom: initial;
-        top: 110%;
-        width: 80%;
-      }
-
-      .carousel-control-prev-icon {
-        background-image: url('../assets/arrow-left.svg');
-      }
-
-      .carousel-control-next-icon {
-        background-image: url('../assets/arrow-left.svg');
-        transform: rotate(180deg);
-      }
-
-      .carousel-fade .carousel-item {
-        transition-duration: 1s;
-       }
-    }
 
     .footer {
       padding-top: 15em;
@@ -536,7 +518,7 @@ body {
         margin-bottom: 3.5em;
         font-size: 24px;
         line-height: 36px;
-        font-family: 'Inter UI';
+        font-family: $body;
         letter-spacing: .025em;
       }
     }
@@ -546,11 +528,6 @@ body {
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) {
   .App {
-    a {
-      text-decoration: none;
-      outline: none;
-      color: white;
-    }
 
     .navbar {
       letter-spacing: .03em;
@@ -612,24 +589,17 @@ body {
     .profile {
       margin-top: 5em;
       .backdrop-profile {
-        z-index: -1;
-        position: absolute;
-        margin-left: 22em;
-        margin-top: 8em;
+        margin-top: 3em;
+        -webkit-backface-visibility: hidden;
+        -webkit-transform: scale(1);
         img {
-          width: 800px;
-          height: 500px;
+          width: 320px;
+          height: 200px;
         }
       }
-      .img-text {
-        position: absolute;
-        bottom: 8px;
-        left: 16px;
-        h1 {
-          font-size: 52px;
-          line-height: 64px;
-          font-family: $title;
-          letter-spacing: .02em;
+      .backdrop-image {
+        .self {
+          max-width: 80%;
         }
       }
     }
@@ -645,7 +615,7 @@ body {
         .about-me {
           font-size: 24px;
           line-height: 36px;
-          font-family: 'Inter UI';
+          font-family: $body;
           letter-spacing: .025em;
         }
         .btn-primary {
@@ -661,18 +631,37 @@ body {
 
     .services {
       #tab {
-        color: $text;
+        color: $bg;
       }
       padding-top: 10em;
       padding-bottom: 5em;
-      background-color: white;
-      color: $text;
+      color: $bg;
+      background-color: $bg;
+      -webkit-transition: 1200ms linear;
+      -ms-transition: 1200ms linear;
+      transition: 1200ms linear;
+      &:hover {
+        background-color: white;
+        color: $text;
+        -webkit-transition: background-color 1000ms linear;
+        -ms-transition: background-color 1000ms linear;
+        transition: background-color 1000ms linear;
+        #tab {
+          color: $text;
+        }
+        .service-item {
+          color: #7c7c7c;
+        }
+        .work {
+          color: $text;
+        }
+    }
       .service-details {
         margin-left: 4em;
         margin-bottom: 3.5em;
         font-size: 24px;
         line-height: 36px;
-        font-family: 'Inter UI';
+        font-family: $body;
         letter-spacing: .025em;
       }
       h1 {
@@ -689,9 +678,8 @@ body {
       .service-item {
         margin-left: 6em;
         margin-bottom: 4em;
-        color: #7c7c7c;
         line-height: 32px;
-        font-family: 'Inter UI';
+        font-family: $body;
       }
       .btn-primary {
         background-color: $box;
@@ -702,68 +690,67 @@ body {
         margin-top: 1em;
         margin-left: 5.8em;
       }
-    }
-
-    .work {
-      padding-top: 5em;
-      background-color: white;
-
-      .backdrop-work {
-        width: 700px;
-        height: 500px;
-        background: #f6f6f6;
-        z-index: -1;
-        position: absolute;
-        margin-left: 22em;
-        margin-top: 8em;
+      .tab-p {
+        padding-top: 15em;
       }
-    }
-
-    .projects {
-      padding-top: 15em;
-      background-color: white;
-      color: $text;
-      h1 {
-        font-size: 64px;
-        line-height: 72px;
-        font-family: $title;
-        letter-spacing: .02em;
+      .work {
+        padding-top: 10em;
+        color: $bg;
+        background-color: inherit;
+        h1 {
+          font-size: 64px;
+          line-height: 72px;
+          font-family: $title;
+          letter-spacing: .02em;
+        }
+        .project-details {
+          margin-left: 4em;
+          margin-top: 3em;
+          margin-bottom: 3.5em;
+          font-size: 24px;
+          line-height: 36px;
+          font-family: $body;
+          letter-spacing: .025em;
+        }
       }
-      .project-details {
-        margin-left: 4em;
-        margin-top: 3em;
-        margin-bottom: 3.5em;
-        font-size: 24px;
-        line-height: 36px;
-        font-family: 'Inter UI';
-        letter-spacing: .025em;
+      .case1 {
+        color: $text;
+        background-color: #f4f4f4;
+        .case-1-img {
+          padding-right: 0;
+          padding-left: 0;
+        }
+        .case-1-col {
+          padding-top: 4em;
+          padding-left: 4em;
+          padding-right: 4em;
+          p {
+            font-family: $body;
+          }
+        }
       }
-    }
-
-    .work2 {
-      padding-top: 5em;
-      background-color: white;
-      padding-bottom: 10em;
-
-      .carousel-control-prev, .carousel-control-next {
-        top: initial;
-        bottom: initial;
-        top: 110%;
-        width: 80%;
+      .case2 {
+        color: $text;
+        background-color: #f4f4f4;
+        .case-2-col {
+          padding-top: 4em;
+          padding-left: 4em;
+          padding-right: 4em;
+          p {
+            font-family: $body;
+          }
+        }
+        .case-2-img {
+          padding-right: 0;
+          padding-left: 0;
+          background-color: #f4f4f4;
+          -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+          -webkit-transform: scale(1);
+          -ms-transform: scale(1);
+          transform: scale(1);
+        }
       }
-
-      .carousel-control-prev-icon {
-        background-image: url('../assets/arrow-left.svg');
-      }
-
-      .carousel-control-next-icon {
-        background-image: url('../assets/arrow-left.svg');
-        transform: rotate(180deg);
-      }
-
-      .carousel-fade .carousel-item {
-        transition-duration: 1s;
-       }
     }
 
     .footer {
@@ -776,7 +763,7 @@ body {
         margin-bottom: 3.5em;
         font-size: 24px;
         line-height: 36px;
-        font-family: 'Inter UI';
+        font-family: $body;
         letter-spacing: .025em;
       }
     }
@@ -786,12 +773,6 @@ body {
 // Large devices (desktops, 992px and up)
 @media (min-width: 992px) {
   .App {
-    a {
-      text-decoration: none;
-      outline: none;
-      color: white;
-    }
-
     .navbar {
       letter-spacing: .03em;
       .navbar-collapse .navbar-nav {
@@ -852,24 +833,17 @@ body {
     .profile {
       margin-top: 5em;
       .backdrop-profile {
-        z-index: -1;
-        position: absolute;
-        margin-left: 22em;
-        margin-top: 8em;
+        margin-top: 3em;
+        -webkit-backface-visibility: hidden;
+        -webkit-transform: scale(1);
         img {
-          width: 800px;
-          height: 500px;
+          width: 320px;
+          height: 200px;
         }
       }
-      .img-text {
-        position: absolute;
-        bottom: 8px;
-        left: 16px;
-        h1 {
-          font-size: 52px;
-          line-height: 64px;
-          font-family: $title;
-          letter-spacing: .02em;
+      .backdrop-image {
+        .self {
+          max-width: 80%;
         }
       }
     }
@@ -885,7 +859,7 @@ body {
         .about-me {
           font-size: 24px;
           line-height: 36px;
-          font-family: 'Inter UI';
+          font-family: $body;
           letter-spacing: .025em;
         }
         .btn-primary {
@@ -900,19 +874,14 @@ body {
     }
 
     .services {
-      #tab {
-        color: $text;
-      }
       padding-top: 10em;
       padding-bottom: 5em;
-      background-color: white;
-      color: $text;
       .service-details {
         margin-left: 4em;
         margin-bottom: 3.5em;
         font-size: 24px;
         line-height: 36px;
-        font-family: 'Inter UI';
+        font-family: $body;
         letter-spacing: .025em;
       }
       h1 {
@@ -929,9 +898,8 @@ body {
       .service-item {
         margin-left: 6em;
         margin-bottom: 4em;
-        color: #7c7c7c;
         line-height: 32px;
-        font-family: 'Inter UI';
+        font-family: $body;
       }
       .btn-primary {
         background-color: $box;
@@ -942,68 +910,27 @@ body {
         margin-top: 1em;
         margin-left: 5.8em;
       }
-    }
-
-    .work {
-      padding-top: 5em;
-      background-color: white;
-
-      .backdrop-work {
-        width: 700px;
-        height: 500px;
-        background: #f6f6f6;
-        z-index: -1;
-        position: absolute;
-        margin-left: 22em;
-        margin-top: 8em;
+      .tab-p {
+        padding-top: 15em;
       }
-    }
-
-    .projects {
-      padding-top: 15em;
-      background-color: white;
-      color: $text;
-      h1 {
-        font-size: 64px;
-        line-height: 72px;
-        font-family: $title;
-        letter-spacing: .02em;
+      .work {
+        padding-top: 15em;
+        h1 {
+          font-size: 64px;
+          line-height: 72px;
+          font-family: $title;
+          letter-spacing: .02em;
+        }
+        .project-details {
+          margin-left: 4em;
+          margin-top: 3em;
+          margin-bottom: 3.5em;
+          font-size: 24px;
+          line-height: 36px;
+          font-family: $body;
+          letter-spacing: .025em;
+        }
       }
-      .project-details {
-        margin-left: 4em;
-        margin-top: 3em;
-        margin-bottom: 3.5em;
-        font-size: 24px;
-        line-height: 36px;
-        font-family: 'Inter UI';
-        letter-spacing: .025em;
-      }
-    }
-
-    .work2 {
-      padding-top: 5em;
-      background-color: white;
-      padding-bottom: 10em;
-
-      .carousel-control-prev, .carousel-control-next {
-        top: initial;
-        bottom: initial;
-        top: 110%;
-        width: 80%;
-      }
-
-      .carousel-control-prev-icon {
-        background-image: url('../assets/arrow-left.svg');
-      }
-
-      .carousel-control-next-icon {
-        background-image: url('../assets/arrow-left.svg');
-        transform: rotate(180deg);
-      }
-
-      .carousel-fade .carousel-item {
-        transition-duration: 1s;
-       }
     }
 
     .footer {
@@ -1016,7 +943,7 @@ body {
         margin-bottom: 3.5em;
         font-size: 24px;
         line-height: 36px;
-        font-family: 'Inter UI';
+        font-family: $body;
         letter-spacing: .025em;
       }
     }
@@ -1026,11 +953,6 @@ body {
 // Extra large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) {
   .App {
-    a {
-      text-decoration: none;
-      outline: none;
-      color: white;
-    }
 
     .navbar {
       letter-spacing: .03em;
@@ -1041,16 +963,19 @@ body {
         outline: none;
       }
       .navbar-nav {
-        margin-top: 3.5em;
+        margin-top: 10em;
+      }
+      .navbar-brand {
+        margin-left: .5em;
       }
 
       .mobile-social {
         margin: 0 auto;
         margin-top: 6em;
-        margin-left: .75em;
+        margin-left: 11.5em;
         img {
-          margin-right: .5em;
-          width: 40px;
+          margin-right: 1.25em;
+          width: 50px;
         }
       }
     }
@@ -1058,192 +983,133 @@ body {
       color: rgba(255, 255, 255, .9);
     }
     .nav-link {
-      font-size: 32px;
-      line-height: 42px;
-      margin-left: .5em;
-    }
-
-    #tab {
-      font-size: 16px;
-      line-height: 32px;
-      color: $accent;
-      font-family: $title-tab;
-      letter-spacing: 0.03em;
-      margin-left: 10em;
+      font-size: 48px;
+      line-height: 56px;
+      margin-left: 4em;
     }
 
     .page-header {
-      margin-top: 6em;
-      .page-title {
-        font-size: 48px;
-        line-height: 56px;
-        color: $text;
-        font-family: $title;
-        color: white;
-      }
-      .page-subtitle {
-        color: $accent;
-        font-family: $title;
-        font-size: 48px;
-        line-height: 56px;
+      margin-top: 10em;
+      .page-title, .page-subtitle {
+        font-size: 64px;
+        line-height: 72px;
       }
     }
 
     .profile {
-      margin-top: 5em;
+      margin-top: 7em;
       .backdrop-profile {
-        z-index: -1;
         position: absolute;
-        margin-left: 22em;
         margin-top: 8em;
+        margin-left: 24em;
         img {
-          width: 800px;
-          height: 500px;
+          width: 860px;
+          height: 640px;
         }
       }
-      .img-text {
-        position: absolute;
-        bottom: 8px;
-        left: 16px;
-        h1 {
-          font-size: 52px;
-          line-height: 64px;
-          font-family: $title;
-          letter-spacing: .02em;
+      .backdrop-image {
+        .self {
+          max-width: 80%;
         }
       }
     }
 
     .about {
-      margin-top: 20em;
+      margin-top: 16em;
       margin-bottom: 10em;
-      a {
-        color: $text;
-      }
       .about-text {
-        margin-left: 6.5em;
+        margin-left: 10em;
         .about-me {
-          font-size: 24px;
-          line-height: 36px;
-          font-family: 'Inter UI';
-          letter-spacing: .025em;
+          line-height: 40px;
         }
         .btn-primary {
-          background-color: white;
-          border-color: white;
-          color: $text;
-          font-family: $title-tab;
           padding: 20px 38px 20px 30px;
-          margin-top: 3em;
+          margin-top: 4em;
         }
       }
     }
 
     .services {
       #tab {
-        color: $text;
+        color: $bg;
       }
       padding-top: 10em;
-      padding-bottom: 5em;
-      background-color: white;
-      color: $text;
-      .service-details {
-        margin-left: 4em;
-        margin-bottom: 3.5em;
-        font-size: 24px;
-        line-height: 36px;
-        font-family: 'Inter UI';
-        letter-spacing: .025em;
+      padding-bottom: 0;
+      color: $bg;
+      background-color: $bg;
+      -webkit-transition: 1200ms linear;
+      -ms-transition: 1200ms linear;
+      transition: 1200ms linear;
+      &:hover {
+          background-color: white;
+          color: $text;
+          -webkit-transition: background-color 1000ms linear;
+          -ms-transition: background-color 1000ms linear;
+          transition: background-color 1000ms linear;
+          #tab {
+            color: $text;
+          }
+          .service-item {
+            color: #7c7c7c;
+          }
       }
-      h1 {
-        font-size: 64px;
-        line-height: 72px;
-        font-family: $title;
-        margin-bottom: 1em;
-        margin-left: -.5em;
+      .service-details {
+        margin-left: 6em;
+        margin-bottom: 3.5em;
+        line-height: 40px;
+        font-weight: 400;
       }
       h3 {
-        margin-left: 3.5em;
-        margin-bottom: 1em;
+        margin-left: 6em;
       }
       .service-item {
-        margin-left: 6em;
-        margin-bottom: 4em;
-        color: #7c7c7c;
-        line-height: 32px;
-        font-family: 'Inter UI';
+        margin-left: 9em;
+        color: $bg;
       }
       .btn-primary {
-        background-color: $box;
-        border-color: $box;
-        color: white;
-        font-family: $title-tab;
-        padding: 20px 38px 20px 30px;
         margin-top: 1em;
-        margin-left: 5.8em;
+        margin-left: 8.77em;
       }
-    }
-
-    .work {
-      padding-top: 5em;
-      background-color: white;
-
-      .backdrop-work {
-        width: 700px;
-        height: 500px;
-        background: #f6f6f6;
-        z-index: -1;
-        position: absolute;
-        margin-left: 22em;
-        margin-top: 8em;
+      .work {
+        padding-top: 15em;
+        h1 {
+          font-size: 64px;
+          line-height: 72px;
+        }
+        .project-details {
+          margin-left: 6em;
+          margin-top: 1em;
+          margin-bottom: 3.5em;
+          line-height: 40px;
+          font-weight: 400;
+        }
+        .project-xp {
+          font-size: 16px;
+          line-height: 32px;
+          margin-left: 9em;
+          margin-bottom: 15em;
+        }
       }
-    }
-
-    .projects {
-      padding-top: 15em;
-      background-color: white;
-      color: $text;
-      h1 {
-        font-size: 64px;
-        line-height: 72px;
-        font-family: $title;
-        letter-spacing: .02em;
+      .case1 {
+        padding-top: 2em;
+        .case1-col {
+          padding-top: 9em;
+          padding-left: 6em;
+          h5 {
+            padding-top: 1em;
+          }
+        }
       }
-      .project-details {
-        margin-left: 4em;
-        margin-top: 3em;
-        margin-bottom: 3.5em;
-        font-size: 24px;
-        line-height: 36px;
-        font-family: 'Inter UI';
-        letter-spacing: .025em;
+      .case2 {
+        padding-bottom: 2em;
+        .case2-col {
+          padding-top: 9em;
+          padding-left: 6em;
+          h5 {
+            padding-top: 1em;
+          }
+        }
       }
-    }
-
-    .work2 {
-      padding-top: 5em;
-      background-color: white;
-      padding-bottom: 10em;
-
-      .carousel-control-prev, .carousel-control-next {
-        top: initial;
-        bottom: initial;
-        top: 110%;
-        width: 80%;
-      }
-
-      .carousel-control-prev-icon {
-        background-image: url('../assets/arrow-left.svg');
-      }
-
-      .carousel-control-next-icon {
-        background-image: url('../assets/arrow-left.svg');
-        transform: rotate(180deg);
-      }
-
-      .carousel-fade .carousel-item {
-        transition-duration: 1s;
-       }
     }
 
     .footer {
@@ -1251,13 +1117,35 @@ body {
       margin-bottom: 10em;
 
       .contact-details {
-        margin-left: 4em;
-        margin-top: 3em;
-        margin-bottom: 3.5em;
+        margin-left: 6em;
         font-size: 24px;
-        line-height: 36px;
-        font-family: 'Inter UI';
-        letter-spacing: .025em;
+        line-height: 40px;
+      }
+      .btn-primary {
+        margin-left: 8.6em;
+        background-color: white;
+        border-color: white;
+        color: $text;
+        font-family: $title-tab;
+        padding: 14px 24px 14px 20px;
+        margin-top: 1.5em;
+        &:hover {
+          background-color: #151515;
+          border-color: #151515;
+          color: white;
+        }
+      }
+    }
+
+    .page-footer {
+      .mobile-social {
+        margin: 0 auto;
+        margin-top: 2em;
+
+        img {
+          margin-right: 1em;
+          width: 50px;
+        }
       }
     }
   }

@@ -1,4 +1,12 @@
 import React, {Component} from 'react';
+// social icons
+import tw from '../assets/icons/twitter.png';
+import li from '../assets/icons/linkedin.png';
+import pin from '../assets/icons/pinterest.png';
+import tum from '../assets/icons/tumblr.png';
+import insta from '../assets/icons/instagram.png';
+import git from '../assets/icons/github.png';
+
 import Fade from 'react-reveal/Fade';
 
 const Footer = () => {
@@ -9,55 +17,49 @@ const Footer = () => {
       <div class="row text-center text-md-left mt-3 pb-3">
         <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
           <h4 class="text-uppercase mb-4 font-weight-bold">Leonela Guzm&#225;n</h4>
+            <p>Full Stack Developer<br/>Polyglot, Futbolista and Part-Time DJ</p>
         </div>
-
-        {/* <hr class="w-100 clearfix d-md-none"/> */}
-
-        {/* <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mt-3">
-          <h6 class="text-uppercase mb-4 font-weight-bold">Services</h6>
-          <p>
-            UX/UI Design
-          </p>
-          <p>
-            Web Development
-          </p>
-          <p>
-            Brand Strategy + Consulting
-          </p>
-          <p>
-            Copy + Translation
-          </p>
-        </div> */}
 
         <hr class="w-100 clearfix d-md-none"/>
 
-        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+        <div class="col-md-4 col-lg-4 col-xl-4 mx-auto mt-3">
           <h6 class="text-uppercase mb-4 font-weight-bold">Social</h6>
-          <p>
-            <a href="https://www.linkedin.com/in/leonelaguzman" target="_blank">Linkedin</a>
-          </p>
-          <p>
-            <a href="https://github.com/leonel-ai" target="_blank">Github</a>
-          </p>
-          <p>
-            <a href="https://medium.com/@leonelaguzman/has-recommended" target="_blank">Medium</a>
-          </p>
-          <p>
-            <a href="https://twitter.com/leonel_ai" target="_blank">Twitter</a>
-          </p>
+          <div className="mobile-social">
+                <Fade top delay={500} duration={2000}>
+              <a href="http://linkedin.com/in/leonelaguzman/" target="_blank"><span>
+                <img src={li} alt=""/></span></a>
+                </Fade>
+                <Fade top delay={560} duration={2000}>
+                <a href="http://github.com/leonel-ai/" target="_blank"><span>
+                <img src={git} alt=""/></span></a>
+                </Fade>
+                <Fade top delay={620} duration={2000}>
+              <a href="http://twitter.com/leonel_ai/" target="_blank"><span>
+                <img src={tw} alt=""/></span></a>
+                </Fade>
+                <Fade top delay={680} duration={2000}>
+              <a href="https://www.pinterest.com/leonel_ai/design/" target="_blank"><span>
+                <img src={pin} alt=""/></span></a>
+                </Fade>
+                <Fade top delay={740} duration={2000}>
+              <a href="http://laesquinalatina.tumblr.com/" target="_blank"><span>
+                <img src={tum} alt=""/></span></a>
+                </Fade>
+                <Fade top delay={800} duration={2000}>
+              <a href="http://instagram.com/leonel.ai/" target="_blank"><span>
+                <img src={insta} alt=""/></span></a>
+                </Fade>
+            </div>
         </div>
 
         <hr class="w-100 clearfix d-md-none"/>
 
-        <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+        <div class="col-md-1 col-lg-1 col-xl-1 mx-auto mt-3">
           <h6 class="text-uppercase mb-4 font-weight-bold">Contact</h6>
           <p>
-            <i class="fa fa-home "></i><a href="https://goo.gl/maps/Fry8q3gDbC62" target="_blank">HTX 77004</a>
-            </p>
-          <p>
-            <i class="fa fa-envelope"></i><a href="mailto:leonelaguzman1@gmail.com?subject=Let's talk.">Let's Email</a></p>
-          <p>
-            <i class="fa fa-phone"></i><a href="tel:3372400858">Text Me</a></p>
+            <i class="fa fa-home "></i><a href="https://goo.gl/maps/Fry8q3gDbC62" target="_blank">HTX 77004</a><br/>
+            <i class="fa fa-envelope"></i><a href="mailto:leonelaguzman1@gmail.com?subject=Let's talk."><span className="cta"> Email</span></a> ||
+            <i class="fa fa-phone"></i><a href="tel:3372400858"> <span className="cta">Text</span></a></p>
         </div>
 
       </div>
