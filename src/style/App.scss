@@ -67,10 +67,10 @@ body {
 
     .mobile-social {
       margin: 0 auto;
-      margin-top: 6em;
+      margin-top: 5em;
       margin-left: .75em;
       img {
-        margin-right: .5em;
+        margin-right: 1em;
         width: 40px;
       }
     }
@@ -115,12 +115,15 @@ body {
   .profile {
     margin-top: 2em;
     .backdrop-profile {
-      margin-top: 3em;
+      margin-top: 4em;
+      position: absolute;
       -webkit-backface-visibility: hidden;
       -webkit-transform: scale(1);
+      transform: scale(1);
+      backface-visibility: hidden;
       img {
         width: 320px;
-        height: 200px;
+        height: 240px;
       }
     }
     .backdrop-image {
@@ -202,8 +205,9 @@ body {
       margin-right: 2em;
       margin-bottom: 4em;
       color: #7c7c7c;
-      line-height: 32px;
+      line-height: 28px;
       font-family: $body;
+      font-size: 14px;
     }
     .btn-primary {
       background-color: $box;
@@ -214,8 +218,10 @@ body {
       margin-top: 0;
       margin-left: 2em;
     }
+    .tab-p {
+      margin-top: 8em;
+    }
     .work {
-      padding-top: 8em;
       background-color: white;
       color: $text;
     .project-details {
@@ -228,9 +234,17 @@ body {
       letter-spacing: .025em;
       font-weight: 700;
     }
+    .project-xp {
+      padding-left: 2.3em;
+      padding-right: 5em;
+      padding-bottom: 5em;
+      font-size: 14px;
+      line-height: 28px;
+    }
   }
     .case1 {
       background-color: #f4f4f4;
+      padding-top: 3.5em;
       .case1-img {
         padding-right: 0;
         padding-left: 0;
@@ -239,17 +253,26 @@ body {
         padding-top: 4em;
         padding-left: 4em;
         padding-right: 4em;
+        h4, h5 {
+          padding-bottom: .5em;
+          font-family: $title;
+        }
         p {
           font-family: $body;
         }
       }
     }
     .case2 {
+      padding-top: 3.5em;
       background-color: #f4f4f4;
       .case2-col {
         padding-top: 4em;
         padding-left: 4em;
         padding-right: 4em;
+        h4, h5 {
+          padding-bottom: .5em;
+          font-family: $title;
+        }
         p {
           font-family: $body;
         }
@@ -263,6 +286,26 @@ body {
         -webkit-transform: scale(1);
         -ms-transform: scale(1);
         transform: scale(1);
+      }
+    }
+    .case3 {
+      background-color: #f4f4f4;
+      padding-top: 3.5em;
+      .case3-img {
+        padding-right: 0;
+        padding-left: 0;
+      }
+      .case3-col {
+        padding-top: 4em;
+        padding-left: 4em;
+        padding-right: 4em;
+        h4, h5 {
+          font-family: $title;
+          padding-bottom: .5em;
+        }
+        p {
+          font-family: $body;
+        }
       }
     }
   }
@@ -974,7 +1017,7 @@ body {
         margin-top: 6em;
         margin-left: 11.5em;
         img {
-          margin-right: 1.25em;
+          margin-right: 2em;
           width: 50px;
         }
       }
@@ -988,8 +1031,15 @@ body {
       margin-left: 4em;
     }
 
+    #tab {
+      margin-left: 11em;
+    }
+
     .page-header {
-      margin-top: 10em;
+      margin-top: 9em;
+      .page-headline {
+        margin-left: 1.75em;
+      }
       .page-title, .page-subtitle {
         font-size: 64px;
         line-height: 72px;
@@ -1055,20 +1105,29 @@ body {
       }
       .service-details {
         margin-left: 6em;
-        margin-bottom: 3.5em;
+        margin-right: 10em;
+        margin-bottom: 1em;
         line-height: 40px;
         font-weight: 400;
       }
       h3 {
-        margin-left: 6em;
+        margin-left: 0;
+        font-family: $title;
+      }
+      .service-items {
+        margin-left: 1.75em;
       }
       .service-item {
-        margin-left: 9em;
+        margin-left: 0;
+        margin-right: 0;
         color: $bg;
       }
       .btn-primary {
-        margin-top: 1em;
+        margin-top: 2em;
         margin-left: 8.77em;
+      }
+      .tab-p {
+        padding-top: 7em;
       }
       .work {
         padding-top: 15em;
@@ -1078,36 +1137,73 @@ body {
         }
         .project-details {
           margin-left: 6em;
+          margin-right: 10em;
           margin-top: 1em;
           margin-bottom: 3.5em;
           line-height: 40px;
           font-weight: 400;
         }
+        h3 {
+          margin-left: 5.85em;
+          font-family: $title;
+        }
         .project-xp {
           font-size: 16px;
           line-height: 32px;
-          margin-left: 9em;
-          margin-bottom: 15em;
+          margin-left: 6.5em;
+          margin-right: 22em;
+          margin-bottom: 5.25em;
         }
       }
       .case1 {
-        padding-top: 2em;
+        padding-top: 5em;
         .case1-col {
-          padding-top: 9em;
+          padding-top: 3em;
           padding-left: 6em;
-          h5 {
-            padding-top: 1em;
+          h4, h5 {
+            font-family: $title;
           }
+          .client {
+            margin: 0;
+            padding: 0;
+          }
+        }
+        .case1-img {
+          padding-left: 4em;
         }
       }
       .case2 {
-        padding-bottom: 2em;
+        padding-top: 5em;
         .case2-col {
-          padding-top: 9em;
+          padding-top: 3em;
           padding-left: 6em;
-          h5 {
-            padding-top: 1em;
+          h4, h5 {
+            font-family: $title;
           }
+          .client {
+            margin: 0;
+            padding: 0;
+          }
+        }
+        .case2-img {
+          padding-right: 4em;
+        }
+      }
+      .case3 {
+        padding-bottom: 5em;
+        .case3-col {
+          padding-top: 3em;
+          padding-left: 6em;
+          h4, h5 {
+            font-family: $title;
+          }
+          .client {
+            margin: 0;
+            padding: 0;
+          }
+        }
+        .case3-img {
+          padding-left: 4em;
         }
       }
     }
@@ -1115,7 +1211,12 @@ body {
     .footer {
       padding-top: 15em;
       margin-bottom: 10em;
-
+      h1 {
+        font-size: 64px;
+        line-height: 72px;
+        letter-spacing: .02em;
+        margin-left: -.5em;
+      }
       .contact-details {
         margin-left: 6em;
         font-size: 24px;
@@ -1143,8 +1244,8 @@ body {
         margin-top: 2em;
 
         img {
-          margin-right: 1em;
-          width: 50px;
+          margin-right: 2em;
+          width: 30px;
         }
       }
     }

@@ -16,13 +16,21 @@ const Footer = () => {
     <div class="container text-center text-md-left">
       <div class="row text-center text-md-left mt-3 pb-3">
         <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
-          <h4 class="text-uppercase mb-4 font-weight-bold">Leonela Guzm&#225;n</h4>
+          <h5 class="text-uppercase mb-4 font-weight-bold">Leonela Guzm&#225;n</h5>
             <p>Full Stack Developer<br/>Polyglot, Futbolista and Part-Time DJ</p>
         </div>
 
         <hr class="w-100 clearfix d-md-none"/>
 
-        <div class="col-md-4 col-lg-4 col-xl-4 mx-auto mt-3">
+        <div class="col-md-1 col-lg-1 col-xl-4 mx-auto mt-3">
+          <h6 class="text-uppercase mb-4 font-weight-bold">Contact</h6>
+          <p>
+            <i class="fa fa-home "></i><a href="https://goo.gl/maps/Fry8q3gDbC62" target="_blank">HTX 77004</a><br/>
+            <i class="fa fa-envelope"></i><a href="mailto:leonelaguzman1@gmail.com?subject=Let's talk."><span className="cta"> Email</span></a> ||
+            <i class="fa fa-phone"></i><a href="tel:3372400858"> <span className="cta">Text</span></a></p>
+        </div>
+
+        <div class="col-md-4 col-lg-4 col-xl-3 mx-auto mt-3">
           <h6 class="text-uppercase mb-4 font-weight-bold">Social</h6>
           <div className="mobile-social">
                 <Fade top delay={500} duration={2000}>
@@ -33,17 +41,13 @@ const Footer = () => {
                 <a href="http://github.com/leonel-ai/" target="_blank"><span>
                 <img src={git} alt=""/></span></a>
                 </Fade>
+                <Fade top delay={680} duration={2000}>
+              <a href="https://www.pinterest.com/leonel_ai/ux-ui/" target="_blank"><span>
+                <img src={pin} alt=""/></span></a>
+                </Fade>
                 <Fade top delay={620} duration={2000}>
               <a href="http://twitter.com/leonel_ai/" target="_blank"><span>
                 <img src={tw} alt=""/></span></a>
-                </Fade>
-                <Fade top delay={680} duration={2000}>
-              <a href="https://www.pinterest.com/leonel_ai/design/" target="_blank"><span>
-                <img src={pin} alt=""/></span></a>
-                </Fade>
-                <Fade top delay={740} duration={2000}>
-              <a href="http://laesquinalatina.tumblr.com/" target="_blank"><span>
-                <img src={tum} alt=""/></span></a>
                 </Fade>
                 <Fade top delay={800} duration={2000}>
               <a href="http://instagram.com/leonel.ai/" target="_blank"><span>
@@ -52,15 +56,6 @@ const Footer = () => {
             </div>
         </div>
 
-        <hr class="w-100 clearfix d-md-none"/>
-
-        <div class="col-md-1 col-lg-1 col-xl-1 mx-auto mt-3">
-          <h6 class="text-uppercase mb-4 font-weight-bold">Contact</h6>
-          <p>
-            <i class="fa fa-home "></i><a href="https://goo.gl/maps/Fry8q3gDbC62" target="_blank">HTX 77004</a><br/>
-            <i class="fa fa-envelope"></i><a href="mailto:leonelaguzman1@gmail.com?subject=Let's talk."><span className="cta"> Email</span></a> ||
-            <i class="fa fa-phone"></i><a href="tel:3372400858"> <span className="cta">Text</span></a></p>
-        </div>
 
       </div>
     </div>
