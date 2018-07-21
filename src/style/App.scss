@@ -1166,6 +1166,7 @@ body {
           .client {
             margin: 0;
             padding: 0;
+            margin-bottom: .25em;
           }
         }
         .case1-img {
@@ -1174,6 +1175,9 @@ body {
       }
       .case2 {
         padding-top: 5em;
+        a {
+          color: $bg;
+        }
         .case2-col {
           padding-top: 3em;
           padding-left: 6em;
@@ -1183,6 +1187,7 @@ body {
           .client {
             margin: 0;
             padding: 0;
+            margin-bottom: .25em;
           }
         }
         .case2-img {
@@ -1200,6 +1205,7 @@ body {
           .client {
             margin: 0;
             padding: 0;
+            margin-bottom: .25em;
           }
         }
         .case3-img {

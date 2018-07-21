@@ -875,11 +875,14 @@ body {
           font-family: "Gotham Bold"; }
         .App .services .case1 .case1-col .client {
           margin: 0;
-          padding: 0; }
+          padding: 0;
+          margin-bottom: .25em; }
       .App .services .case1 .case1-img {
         padding-left: 4em; }
     .App .services .case2 {
       padding-top: 5em; }
+      .App .services .case2 a {
+        color: #0004ad; }
       .App .services .case2 .case2-col {
         padding-top: 3em;
         padding-left: 6em; }
@@ -887,7 +890,8 @@ body {
           font-family: "Gotham Bold"; }
         .App .services .case2 .case2-col .client {
           margin: 0;
-          padding: 0; }
+          padding: 0;
+          margin-bottom: .25em; }
       .App .services .case2 .case2-img {
         padding-right: 4em; }
     .App .services .case3 {
@@ -899,7 +903,8 @@ body {
           font-family: "Gotham Bold"; }
         .App .services .case3 .case3-col .client {
           margin: 0;
-          padding: 0; }
+          padding: 0;
+          margin-bottom: .25em; }
       .App .services .case3 .case3-img {
         padding-left: 4em; }
   .App .footer {

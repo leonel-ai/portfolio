@@ -208,9 +208,15 @@ class App extends Component {
                   <h5 className="client">CLIENT</h5>
                     <p>Markowitz Law</p><br/>
                   <h5 className="client">STRATEGY</h5>
-                    <p>Built a new, responsive website paired with a full rebrand and billboard campaign launch.</p><br/>
+                    <p>Built a new, responsive website paired with a full rebrand and billboard campaign launch. Inspired by the no-nonsense
+                      nature of the Markowitz team and the familiar design elements of a traffic-ridden city, I introduced a site
+                      tailored to help solve the user's legal needs in a professional, efficient and interactive way, and matched the modern push
+                      they've taken with the latest legal software.<br/>
+                      <br/>Going beyond design, I helped integrate their website to the
+                      <a href="https://www.clio.com/" target="_blank"> Clio</a> platform, customized
+                      the software to their administrative needs, and personally trained their team members on the ins and outs.</p><br/>
                   <h5 className="client">TASKS</h5>
-                    <p>Art Direction<br/>Product Shoot<br/>Branding and Identity<br/>Responsive Web / UI Design</p>
+                    <p>Art Direction<br/>UX / UI Design<br/>Cloud-Based Software Integration<br/>Branding and Identity<br/>Responsive Web Design</p>
                 </div>
                 <div className="col-md-6 col-xl-5 case2-img">
                   <img src={caseStudy2} alt="" className="img-fluid rounded"/>
@@ -227,9 +233,10 @@ class App extends Component {
                   <h5 className="client">CLIENT</h5>
                     <p>Trucke</p><br/>
                   <h5 className="client">STRATEGY</h5>
-                    <p>Building a minimalist landing page designed to convert B2B and Wholesale.</p><br/>
+                    <p>Built the backend to the One of a small team of developers that created location-based, on-demand service mobile apps. Agile SDLC.<br/><br/>
+                    Resources: Node, Express, Mocha, mySQL, React, Git, Amazon Web Services, Stripe API, JIRA</p><br/>
                   <h5 className="client">TASKS</h5>
-                    <p>Art Direction<br/>Product Shoot<br/>Branding and Identity<br/>Responsive Web / UI Design</p>
+                    <p>Back-End Development<br/>Amazon Web Services, Git, JIRA<br/>Stripe Payment Processing<br/>Express Routing and API Calls<br/>Business Logic and CRM Database Design</p>
                 </div>
               </div>
             </div>
