@@ -45,8 +45,10 @@ body {
     color: $accent;
   }
 
-  button:focus, .btn:focus, .btn-primary:focus {
+  .btn-primary:not(:disabled):not(.disabled):active, button:focus, button:active, .btn:focus,
+  .btn:active, .btn-primary:focus, .btn-primary:active {
     outline: none;
+    border: none;
   }
 
   .navbar {
@@ -101,8 +103,7 @@ body {
       margin-left: .75em;
       font-size: 40px;
       line-height: 48px;
-      font-family: $title-tab;
-      letter-spacing: .02em;
+      font-family: $title;
       .page-title {
         color: white;
       }
@@ -123,7 +124,7 @@ body {
       backface-visibility: hidden;
       img {
         width: 320px;
-        height: 240px;
+        height: 280px;
       }
     }
     .backdrop-image {
@@ -143,13 +144,13 @@ body {
     }
     .about-text {
       margin-left: 2em;
-      margin-right: 2em;
+      margin-right: 1em;
       margin-top: 1em;
       .about-me {
         font-size: 16px;
         line-height: 32px;
         font-family: $body;
-        letter-spacing: .025em;
+        letter-spacing: .03em;
       }
       .btn-primary {
         background-color: white;
@@ -172,12 +173,11 @@ body {
       color: $text;
     }
     padding-top: 8em;
-    padding-bottom: 5em;
     background-color: white;
     color: $text;
     .service-details {
       margin-left: 2em;
-      margin-right: 2em;
+      margin-right: 1em;
       margin-bottom: 3em;
       font-size: 16px;
       line-height: 32px;
@@ -194,17 +194,16 @@ body {
       margin-top: .5em;
     }
     h3 {
-      margin-left: 1.35em;
+      font-family: $title;
+      margin-left: 3em;
       margin-bottom: 1em;
-      margin-top: 3em;
+      margin-top: 1em;
       font-size: 24px;
       line-height: 32px;
     }
     .service-item {
-      margin-left: 2em;
+      margin-left: 5.25em;
       margin-right: 2em;
-      margin-bottom: 4em;
-      color: #7c7c7c;
       line-height: 28px;
       font-family: $body;
       font-size: 14px;
@@ -215,8 +214,8 @@ body {
       color: white;
       font-family: $title-tab;
       padding: 14px 24px 14px 20px;
-      margin-top: 0;
-      margin-left: 2em;
+      margin-top: 3em;
+      margin-left: 5.25em;
     }
     .tab-p {
       margin-top: 8em;
@@ -226,17 +225,20 @@ body {
       color: $text;
     .project-details {
       margin-left: 2em;
-      margin-right: 2em;
+      margin-right: 1em;
       margin-bottom: 3em;
-         font-size: 16px;
-        line-height: 32px;
+      font-size: 16px;
+      line-height: 32px;
       font-family: $body;
       letter-spacing: .025em;
       font-weight: 700;
     }
+    h3 {
+      margin-left: 3em;
+    }
     .project-xp {
-      padding-left: 2.3em;
-      padding-right: 5em;
+      padding-left: 5.1em;
+      padding-right: 3em;
       padding-bottom: 5em;
       font-size: 14px;
       line-height: 28px;
@@ -251,8 +253,8 @@ body {
       }
       .case1-col {
         padding-top: 4em;
-        padding-left: 4em;
-        padding-right: 4em;
+        padding-left: 3em;
+        padding-right: 3em;
         h4, h5 {
           padding-bottom: .5em;
           font-family: $title;
@@ -263,12 +265,15 @@ body {
       }
     }
     .case2 {
+        a {
+          color: $bg;
+        }
       padding-top: 3.5em;
       background-color: #f4f4f4;
       .case2-col {
         padding-top: 4em;
-        padding-left: 4em;
-        padding-right: 4em;
+        padding-left: 3em;
+        padding-right: 3em;
         h4, h5 {
           padding-bottom: .5em;
           font-family: $title;
@@ -291,14 +296,16 @@ body {
     .case3 {
       background-color: #f4f4f4;
       padding-top: 3.5em;
+      padding-bottom: 3.5em;
+      color: $text;
       .case3-img {
         padding-right: 0;
         padding-left: 0;
       }
       .case3-col {
         padding-top: 4em;
-        padding-left: 4em;
-        padding-right: 4em;
+        padding-left: 3em;
+        padding-right: 3em;
         h4, h5 {
           font-family: $title;
           padding-bottom: .5em;
@@ -312,7 +319,7 @@ body {
 
   .footer {
     padding-top: 8em;
-    margin-bottom: 10em;
+    margin-bottom: 11em;
     h1 {
       font-size: 40px;
       line-height: 48px;
@@ -321,15 +328,40 @@ body {
       margin-left: .75em;
       margin-top: .5em;
     }
-
     .contact-details {
       margin-left: 2em;
+      margin-right: 1em;
       margin-top: 3em;
       margin-bottom: 3.5em;
       font-size: 16px;
       line-height: 32px;
       font-family: $body;
       letter-spacing: .025em;
+    }
+    .btn-primary {
+      margin-left: 2em;
+      background-color: white;
+      border-color: white;
+      color: $text;
+      font-family: $title-tab;
+      padding: 14px 24px 14px 20px;
+      margin-top: 0;
+    }
+  }
+  .page-footer {
+    hr {
+      height: 1px;
+      max-width: 75%;
+      background-color: white;
+    }
+    .mobile-social {
+      margin: 0 auto;
+      margin-top: 2em;
+      img {
+        margin-right: 1em;
+        margin-left: 1em;
+        width: 30px;
+      }
     }
   }
 }
@@ -349,13 +381,16 @@ body {
       .navbar-nav {
         margin-top: 3.5em;
       }
+      .navbar-brand {
+        margin-left: .5em;
+      }
 
       .mobile-social {
         margin: 0 auto;
-        margin-top: 6em;
-        margin-left: .75em;
+        margin-top: 3em;
+        margin-left: 7.5em;
         img {
-          margin-right: .5em;
+          margin-right: 2em;
           width: 40px;
         }
       }
@@ -365,8 +400,8 @@ body {
     }
     .nav-link {
       font-size: 32px;
-      line-height: 42px;
-      margin-left: .5em;
+      line-height: 32px;
+      margin-left: 4em;
     }
 
     #tab {
@@ -375,18 +410,20 @@ body {
       color: $accent;
       font-family: $title-tab;
       letter-spacing: 0.03em;
-      margin-left: 10em;
+      margin-left: 5em;
     }
 
     .page-header {
-      margin-top: 6em;
+      margin-top: 3em;
       .page-headline {
         margin-top: 0;
-        font-size: 48px;
-        line-height: 56px;
-        font-family: $title-tab;
+        font-size: 40px;
+        line-height: 48px;
+        font-family: $title;
+        margin-left: 2em;
         .page-title {
           color: white;
+          margin-top: .5em;
         }
         .page-subtitle {
           color: $accent;
@@ -395,35 +432,36 @@ body {
     }
 
     .profile {
-      margin-top: 5em;
+      margin-top: 3em;
       .backdrop-profile {
-        margin-top: 3em;
+        margin-top: 4em;
         -webkit-backface-visibility: hidden;
         -webkit-transform: scale(1);
         img {
-          width: 320px;
-          height: 200px;
+          width: 600px;
+          height: 440px;
         }
       }
         .self {
-          max-width: 85%;
+          max-width: 100%;
           float: right;
         }
       }
 
     .about {
-      margin-top: 20em;
+      margin-top: 12em;
       margin-bottom: 10em;
+      margin-left: 4em;
       a {
         color: $text;
       }
       .about-text {
-        margin-left: 6.5em;
+        margin-left: 5em;
         .about-me {
-          font-size: 24px;
-          line-height: 36px;
+          font-size: 16px;
+          line-height: 32px;
           font-family: $body;
-          letter-spacing: .025em;
+          letter-spacing: .05em;
         }
         .btn-primary {
           background-color: white;
@@ -431,7 +469,7 @@ body {
           color: $text;
           font-family: $title-tab;
           padding: 20px 38px 20px 30px;
-          margin-top: 3em;
+          margin-top: 2em;
           &:hover {
             background-color: #151515;
             border-color: #151515;
@@ -446,33 +484,38 @@ body {
         color: $text;
       }
       padding-top: 10em;
-      padding-bottom: 5em;
+      padding-bottom: 0;
       background-color: white;
       color: $text;
       .service-details {
-        margin-left: 4em;
-        margin-bottom: 3.5em;
-        font-size: 24px;
-        line-height: 36px;
+        margin-left: 8em;
+        margin-right: 4em;
+        margin-bottom: 1em;
+        font-family: 16px;
+        line-height: 32px;
         font-family: $body;
         letter-spacing: .025em;
       }
       h1 {
-        font-size: 64px;
-        line-height: 72px;
+        font-size: 40px;
+        line-height: 48px;
         font-family: $title;
         margin-bottom: 1em;
-        margin-left: -.5em;
+        margin-left: 2em;
       }
       h3 {
-        margin-left: 3.5em;
+        margin-left: 5.75em;
         margin-bottom: 1em;
+        font-family: $title;
+      }
+      .service-items{
+        margin-left: 5em;
       }
       .service-item {
-        margin-left: 6em;
-        margin-bottom: 4em;
-        color: #7c7c7c;
+        margin-left: 10em;
+        margin-bottom: 0;
         line-height: 32px;
+        font-family: 16px;
         font-family: $body;
       }
       .btn-primary {
@@ -481,65 +524,81 @@ body {
         color: white;
         font-family: $title-tab;
         padding: 20px 38px 20px 30px;
-        margin-top: 1em;
-        margin-left: 5.8em;
+        margin-top: 5em;
+        margin-left: 15em;
         &:hover {
           background-color: #151515;
           border-color: #151515;
           color: white;
         }
       }
-      .work {
-        padding-top: 5em;
+      .tab-p {
+        padding-top: 1.75em;
       }
       .work {
-        padding-top: 15em;
+        padding-top: 0;
         background-color: white;
         color: $text;
         h1 {
-          font-size: 64px;
-          line-height: 72px;
+          font-size: 40px;
+          line-height: 48px;
           font-family: $title;
-          letter-spacing: .02em;
+          letter-spacing: initial;
         }
         .project-details {
-          margin-left: 4em;
+          margin-left: 10em;
+          margin-right: 4em;
           margin-top: 3em;
-          margin-bottom: 3.5em;
-          font-size: 24px;
-          line-height: 36px;
+          margin-bottom: 3em;
+          font-family: 16px;
+          line-height: 32px;
           font-family: $body;
           letter-spacing: .025em;
+        }
+        h3 {
+          margin-left: 10em;
+        }
+        .project-xp {
+          font-size: 16px;
+          line-height: 32px;
+          margin-left: 13em;
+          margin-right: 0;
+          margin-bottom: 1em;
         }
       }
       .case1 {
         background-color: #f4f4f4;
-        .case-1-img {
+        padding-top: 4em;
+        .case1-img {
           padding-right: 0;
           padding-left: 0;
         }
-        .case-1-col {
-          padding-top: 4em;
-          padding-left: 4em;
-          padding-right: 4em;
+        .case1-col {
+          padding-top: 3em;
+          padding-left: 6em;
+          padding-right: 6em;
           p {
             font-family: $body;
+            font-size: 16px;
+            line-height: 32px;
           }
         }
       }
       .case2 {
         background-color: #f4f4f4;
-        .case-2-col {
-          padding-top: 4em;
-          padding-left: 4em;
-          padding-right: 4em;
+        .case2-col {
+          padding-top: 3em;
+          padding-left: 6em;
+          padding-right: 6em;
           p {
             font-family: $body;
+            font-size: 16px;
+            line-height: 32px;
           }
         }
-        .case-2-img {
+        .case2-img {
           padding-right: 0;
-          padding-left: 0;
+          padding-left: 3.5em;
           background-color: #f4f4f4;
           -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
@@ -548,21 +607,66 @@ body {
           transform: scale(1);
         }
       }
+      .case3 {
+        background-color: #f4f4f4;
+        padding-bottom: 5em;
+        .case3-img {
+          padding-right: 0;
+          padding-left: 0;
+        }
+        .case3-col {
+          padding-top: 3em;
+          padding-left: 6em;
+          padding-right: 6em;
+          p {
+            font-family: $body;
+            font-size: 16px;
+            line-height: 32px;
+          }
+        }
+      }
     }
 
 
     .footer {
-      padding-top: 15em;
-      margin-bottom: 10em;
-
+      padding-top: 8em;
+      margin-bottom: 6em;
+      h1 {
+        margin-left: 2em;
+      }
       .contact-details {
-        margin-left: 4em;
+        margin-left: 10em;
+        margin-right: 4em;
         margin-top: 3em;
         margin-bottom: 3.5em;
-        font-size: 24px;
-        line-height: 36px;
+        font-family: 16px;
+        line-height: 32px;
         font-family: $body;
-        letter-spacing: .025em;
+        letter-spacing: .04em;
+      }
+      .btn-primary {
+        margin-left: 10em;
+        background-color: white;
+        border-color: white;
+        color: $text;
+        font-family: $title-tab;
+        padding: 14px 24px 14px 20px;
+        margin-top: 0;
+      }
+    }
+    .page-footer {
+      hr {
+        height: 1px;
+        max-width: 25%;
+        background-color: white;
+      }
+      .mobile-social {
+        margin: 0 auto;
+        margin-top: 2em;
+        img {
+          margin-right: .5em;
+          width: 30px;
+        }
       }
     }
   }
@@ -571,6 +675,7 @@ body {
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) {
   .App {
+    overflow: hidden;
 
     .navbar {
       letter-spacing: .03em;
@@ -581,15 +686,24 @@ body {
         outline: none;
       }
       .navbar-nav {
-        margin-top: 3.5em;
+        margin-top: 10em;
+      }
+
+      .collapsing {
+        position: relative;
+        height: 0;
+        overflow: hidden;
+        -webkit-transition: height .5s ease;
+        -o-transition: height .5s ease;
+           transition: height .5s ease;
       }
 
       .mobile-social {
         margin: 0 auto;
         margin-top: 6em;
-        margin-left: .75em;
+        margin-left: 3.5em;
         img {
-          margin-right: .5em;
+          margin-right: 2em;
           width: 40px;
         }
       }
@@ -599,8 +713,8 @@ body {
     }
     .nav-link {
       font-size: 32px;
-      line-height: 42px;
-      margin-left: .5em;
+      line-height: 46px;
+      margin-left: 2em;
     }
 
     #tab {
@@ -609,57 +723,62 @@ body {
       color: $accent;
       font-family: $title-tab;
       letter-spacing: 0.03em;
-      margin-left: 10em;
+      margin-left: 5em;
     }
 
     .page-header {
-      margin-top: 6em;
+      margin-top: 4em;
       .page-title {
-        font-size: 48px;
-        line-height: 56px;
+        font-size: 40px;
+        line-height: 48px;
         color: $text;
         font-family: $title;
         color: white;
+        margin-top: .5em;
+        margin-left: 1em;
       }
       .page-subtitle {
         color: $accent;
         font-family: $title;
-        font-size: 48px;
-        line-height: 56px;
+        font-size: 40px;
+        line-height: 48px;
+        margin-left: 1em;
       }
     }
 
     .profile {
       margin-top: 5em;
       .backdrop-profile {
-        margin-top: 3em;
+        margin-top: 6em;
+        margin-left: 4em;
         -webkit-backface-visibility: hidden;
         -webkit-transform: scale(1);
         img {
-          width: 320px;
-          height: 200px;
+          width: 800px;
+          height: 400px;
         }
       }
       .backdrop-image {
         .self {
-          max-width: 80%;
+          max-width: 100%;
         }
       }
     }
 
     .about {
-      margin-top: 20em;
+      margin-top: 11em;
       margin-bottom: 10em;
+      margin-left: 4em;
       a {
         color: $text;
       }
       .about-text {
-        margin-left: 6.5em;
+        margin-left: 5em;
         .about-me {
-          font-size: 24px;
-          line-height: 36px;
+          font-size: 16px;
+          line-height: 32px;
           font-family: $body;
-          letter-spacing: .025em;
+          letter-spacing: .05em;
         }
         .btn-primary {
           background-color: white;
@@ -667,7 +786,7 @@ body {
           color: $text;
           font-family: $title-tab;
           padding: 20px 38px 20px 30px;
-          margin-top: 3em;
+          margin-top: 2em;
         }
       }
     }
@@ -677,7 +796,7 @@ body {
         color: $bg;
       }
       padding-top: 10em;
-      padding-bottom: 5em;
+      padding-bottom: 0;
       color: $bg;
       background-color: $bg;
       -webkit-transition: 1200ms linear;
@@ -692,7 +811,7 @@ body {
         #tab {
           color: $text;
         }
-        .service-item {
+        .service-item, .project-xp {
           color: #7c7c7c;
         }
         .work {
@@ -700,28 +819,34 @@ body {
         }
     }
       .service-details {
-        margin-left: 4em;
-        margin-bottom: 3.5em;
-        font-size: 24px;
-        line-height: 36px;
+        margin-left: 10em;
+        margin-right: 0;
+        margin-bottom: 2em;
+        font-family: 16px;
+        line-height: 32px;
         font-family: $body;
         letter-spacing: .025em;
       }
       h1 {
-        font-size: 64px;
-        line-height: 72px;
+        font-size: 40px;
+        line-height: 48px;
         font-family: $title;
         margin-bottom: 1em;
-        margin-left: -.5em;
+        margin-left: 2em;
       }
       h3 {
-        margin-left: 3.5em;
+        margin-left: 5.75em;
         margin-bottom: 1em;
+        font-family: $title;
+      }
+      .service-items{
+        margin-left: 5em;
       }
       .service-item {
-        margin-left: 6em;
-        margin-bottom: 4em;
+        margin-left: 10em;
+        margin-bottom: 0;
         line-height: 32px;
+        font-family: 16px;
         font-family: $body;
       }
       .btn-primary {
@@ -730,62 +855,78 @@ body {
         color: white;
         font-family: $title-tab;
         padding: 20px 38px 20px 30px;
-        margin-top: 1em;
-        margin-left: 5.8em;
+        margin-top: 5em;
+        margin-left: 15em;
       }
       .tab-p {
-        padding-top: 15em;
+        padding-top: 3em;
       }
       .work {
-        padding-top: 10em;
+        padding-top: 0;
         color: $bg;
         background-color: inherit;
         h1 {
-          font-size: 64px;
-          line-height: 72px;
+          font-size: 40px;
+          line-height: 48px;
           font-family: $title;
-          letter-spacing: .02em;
+          letter-spacing: initial;
         }
         .project-details {
-          margin-left: 4em;
+          margin-left: 10em;
           margin-top: 3em;
-          margin-bottom: 3.5em;
-          font-size: 24px;
-          line-height: 36px;
+          margin-right: 0;
+          margin-bottom: 3em;
+          font-family: 16px;
+          line-height: 32px;
           font-family: $body;
           letter-spacing: .025em;
+        }
+        h3 {
+          margin-left: 10em;
+        }
+        .project-xp {
+          font-size: 16px;
+          line-height: 32px;
+          margin-left: 13em;
+          margin-right: 0;
+          margin-bottom: 3em;
         }
       }
       .case1 {
         color: $text;
         background-color: #f4f4f4;
-        .case-1-img {
+        padding-top: 5em;
+        .case1-img {
           padding-right: 0;
           padding-left: 0;
         }
-        .case-1-col {
-          padding-top: 4em;
-          padding-left: 4em;
-          padding-right: 4em;
+        .case1-col {
+          padding-top: 3em;
+          padding-left: 8em;
+          padding-right: 8em;
           p {
             font-family: $body;
+            font-size: 16px;
+            line-height: 32px;
           }
         }
       }
       .case2 {
         color: $text;
         background-color: #f4f4f4;
-        .case-2-col {
-          padding-top: 4em;
-          padding-left: 4em;
-          padding-right: 4em;
+        .case2-col {
+          padding-top: 3em;
+          padding-left: 8em;
+          padding-right: 8em;
           p {
             font-family: $body;
+            font-size: 16px;
+            line-height: 32px;
           }
         }
-        .case-2-img {
+        .case2-img {
           padding-right: 0;
-          padding-left: 0;
+          padding-left: 4.2em;
           background-color: #f4f4f4;
           -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
@@ -794,20 +935,71 @@ body {
           transform: scale(1);
         }
       }
+      .case3 {
+        color: $text;
+        background-color: #f4f4f4;
+        padding-bottom: 5em;
+        .case3-col {
+          padding-top: 3em;
+          padding-left: 8em;
+          padding-right: 8em;
+          p {
+            font-family: $body;
+            font-size: 16px;
+            line-height: 32px;
+          }
+        }
+        .case3-img {
+          padding-right: 0;
+          padding-left: 0;
+        }
+      }
     }
 
     .footer {
-      padding-top: 15em;
-      margin-bottom: 10em;
-
+      padding-top: 10em;
+      margin-bottom: 8em;
+      h1 {
+        margin-left: 2em;
+      }
       .contact-details {
-        margin-left: 4em;
+        margin-left: 10em;
         margin-top: 3em;
+        margin-right: 0;
         margin-bottom: 3.5em;
-        font-size: 24px;
-        line-height: 36px;
+        font-family: 16px;
+        line-height: 32px;
         font-family: $body;
-        letter-spacing: .025em;
+        letter-spacing: .04em;
+      }
+      .btn-primary {
+        margin-left: 10em;
+        background-color: white;
+        border-color: white;
+        color: $text;
+        font-family: $title-tab;
+        padding: 14px 24px 14px 20px;
+        margin-top: 0;
+        &:hover {
+          background-color: #151515;
+          border-color: #151515;
+          color: white;
+        }
+      }
+    }
+    .page-footer {
+      margin-left: .75em;
+      hr {
+        display: none;
+      }
+      .mobile-social {
+        margin: 0 auto;
+        margin-top: 2em;
+
+        img {
+          margin-right: .5em;
+          width: 30px;
+        }
       }
     }
   }
@@ -818,6 +1010,7 @@ body {
   .App {
     .navbar {
       letter-spacing: .03em;
+      background-color: $bg;
       .navbar-collapse .navbar-nav {
         height: 100vh;
       }
@@ -825,26 +1018,28 @@ body {
         outline: none;
       }
       .navbar-nav {
-        margin-top: 3.5em;
+        margin-top: 6em;
+        background-color: $bg;
       }
 
       .mobile-social {
         margin: 0 auto;
         margin-top: 6em;
-        margin-left: .75em;
+        margin-left: 5.5em;
         img {
-          margin-right: .5em;
+          margin-right: 1.5em;
           width: 40px;
         }
       }
     }
     .navbar-dark .navbar-nav .nav-link {
       color: rgba(255, 255, 255, .9);
+      background-color: $bg;
     }
     .nav-link {
-      font-size: 32px;
-      line-height: 42px;
-      margin-left: .5em;
+      font-size: 48px;
+      line-height: 56px;
+      margin-left: 2em;
     }
 
     #tab {
@@ -853,11 +1048,11 @@ body {
       color: $accent;
       font-family: $title-tab;
       letter-spacing: 0.03em;
-      margin-left: 10em;
+      margin-left: 7em;
     }
 
     .page-header {
-      margin-top: 6em;
+      margin-top: 9em;
       .page-title {
         font-size: 48px;
         line-height: 56px;
@@ -877,30 +1072,31 @@ body {
       margin-top: 5em;
       .backdrop-profile {
         margin-top: 3em;
+        margin-left: 14em;
         -webkit-backface-visibility: hidden;
         -webkit-transform: scale(1);
         img {
-          width: 320px;
-          height: 200px;
+          width: 640px;
+          height: 460px;
         }
       }
       .backdrop-image {
         .self {
-          max-width: 80%;
+          max-width: 90%;
         }
       }
     }
 
     .about {
-      margin-top: 20em;
+      margin-top: 14em;
       margin-bottom: 10em;
       a {
         color: $text;
       }
       .about-text {
-        margin-left: 6.5em;
+        margin-left: 6em;
         .about-me {
-          font-size: 24px;
+          font-size: 20px;
           line-height: 36px;
           font-family: $body;
           letter-spacing: .025em;
@@ -911,25 +1107,47 @@ body {
           color: $text;
           font-family: $title-tab;
           padding: 20px 38px 20px 30px;
-          margin-top: 3em;
+          margin-top: 4em;
         }
       }
     }
 
     .services {
+      #tab {
+        color: $bg;
+      }
       padding-top: 10em;
-      padding-bottom: 5em;
+      padding-bottom: 0;
+      color: $bg;
+      background-color: $bg;
+      -webkit-transition: 1200ms linear;
+      -ms-transition: 1200ms linear;
+      transition: 1200ms linear;
+      &:hover {
+          background-color: white;
+          color: $text;
+          -webkit-transition: background-color 1000ms linear;
+          -ms-transition: background-color 1000ms linear;
+          transition: background-color 1000ms linear;
+          #tab {
+            color: $text;
+          }
+          .service-item, .project-xp {
+            color: #7c7c7c;
+          }
+      }
       .service-details {
         margin-left: 4em;
-        margin-bottom: 3.5em;
-        font-size: 24px;
+        margin-right: 4em;
+        margin-bottom: 3em;
+        font-size: 20px;
         line-height: 36px;
         font-family: $body;
         letter-spacing: .025em;
       }
       h1 {
-        font-size: 64px;
-        line-height: 72px;
+        font-size: 48px;
+        line-height: 56px;
         font-family: $title;
         margin-bottom: 1em;
         margin-left: -.5em;
@@ -937,12 +1155,17 @@ body {
       h3 {
         margin-left: 3.5em;
         margin-bottom: 1em;
+        margin-top: 1em;
+        font-family: $title;
+        font-size: 24px;
       }
       .service-item {
         margin-left: 6em;
-        margin-bottom: 4em;
+        margin-bottom: 1em;
+        font-size: 16px;
         line-height: 32px;
         font-family: $body;
+        color: $bg;
       }
       .btn-primary {
         background-color: $box;
@@ -950,44 +1173,100 @@ body {
         color: white;
         font-family: $title-tab;
         padding: 20px 38px 20px 30px;
-        margin-top: 1em;
+        margin-top: 4em;
         margin-left: 5.8em;
       }
       .tab-p {
-        padding-top: 15em;
+        padding-top: 1.75em;
       }
       .work {
-        padding-top: 15em;
+        padding-top: 10em;
         h1 {
-          font-size: 64px;
-          line-height: 72px;
+          font-size: 48px;
+          line-height: 56px;
           font-family: $title;
           letter-spacing: .02em;
         }
         .project-details {
           margin-left: 4em;
-          margin-top: 3em;
+          margin-right: 4em;
           margin-bottom: 3.5em;
-          font-size: 24px;
+          font-size: 20px;
           line-height: 36px;
           font-family: $body;
           letter-spacing: .025em;
+        }
+        .project-xp {
+          font-size: 16px;
+          line-height: 32px;
+          margin-left: 4.5em;
+          margin-right: 5em;
+          margin-bottom: 3em;
+        }
+      }
+      .case1 {
+        .case1-img {
+          padding-top: 6em;
+          padding-left: 2em;
+        }
+      }
+      .case2 {
+        .case2-img {
+          padding-top: 10em;
+          padding-right: 2em;
+        }
+      }
+      .case3 {
+        padding-bottom: 5em;
+        .case3-img {
+          padding-top: 6em;
+          padding-left: 2em;
         }
       }
     }
 
     .footer {
-      padding-top: 15em;
-      margin-bottom: 10em;
-
+      padding-top: 10em;
+      margin-bottom: 6em;
+      h1 {
+        font-size: 48px;
+        line-height: 56px;
+        margin-left: -.5em;
+      }
       .contact-details {
         margin-left: 4em;
+        margin-right: 4em;
         margin-top: 3em;
         margin-bottom: 3.5em;
-        font-size: 24px;
+        font-size: 20px;
         line-height: 36px;
         font-family: $body;
         letter-spacing: .025em;
+      }
+      .btn-primary {
+        margin-left: 4.85em;
+        background-color: white;
+        border-color: white;
+        color: $text;
+        font-family: $title-tab;
+        padding: 14px 24px 14px 20px;
+        margin-top: 0;
+        &:hover {
+          background-color: #151515;
+          border-color: #151515;
+          color: white;
+        }
+      }
+    }
+    .page-footer {
+      .mobile-social {
+        margin: 0 auto;
+        margin-top: 2em;
+
+        img {
+          margin-right: 1.5em;
+          width: 30px;
+        }
       }
     }
   }
@@ -1018,7 +1297,7 @@ body {
         margin-left: 11.5em;
         img {
           margin-right: 2em;
-          width: 50px;
+          width: 40px;
         }
       }
     }
@@ -1032,7 +1311,7 @@ body {
     }
 
     #tab {
-      margin-left: 11em;
+      margin-left: 8em;
     }
 
     .page-header {
@@ -1041,25 +1320,25 @@ body {
         margin-left: 1.75em;
       }
       .page-title, .page-subtitle {
-        font-size: 64px;
-        line-height: 72px;
+        font-size: 48px;
+        line-height: 56px;
       }
     }
 
     .profile {
-      margin-top: 7em;
+      margin-top: 5em;
       .backdrop-profile {
         position: absolute;
-        margin-top: 8em;
-        margin-left: 24em;
+        margin-top: 4em;
+        margin-left: 20em;
         img {
           width: 860px;
-          height: 640px;
+          height: 480px;
         }
       }
       .backdrop-image {
         .self {
-          max-width: 80%;
+          max-width: 75%;
         }
       }
     }
@@ -1068,9 +1347,10 @@ body {
       margin-top: 16em;
       margin-bottom: 10em;
       .about-text {
-        margin-left: 10em;
+        margin-left: 5em;
         .about-me {
-          line-height: 40px;
+          line-height: 36px;
+          font-size: 20px;
         }
         .btn-primary {
           padding: 20px 38px 20px 30px;
@@ -1099,7 +1379,247 @@ body {
           #tab {
             color: $text;
           }
-          .service-item {
+          .service-item, .project-xp {
+            color: #7c7c7c;
+          }
+      }
+      .service-details {
+        margin-left: 3.75em;
+        margin-right: 6em;
+        margin-bottom: 1em;
+        line-height: 36px;
+        font-size: 20px;
+        font-weight: 400;
+      }
+      h1 {
+        font-size: 48px;
+        line-height: 56px;
+      }
+      h3 {
+        margin-left: 0;
+        font-family: $title;
+        font-size: 20px;
+      }
+      .service-items {
+        margin-left: 0;
+        margin-top: 5em;
+        margin-bottom: 4em;
+      }
+      .service-item {
+        margin-left: 0;
+        margin-right: 0;
+        color: $bg;
+      }
+      .btn-primary {
+        margin-top: 2em;
+        margin-left: 4.85em;
+      }
+      .tab-p {
+        padding-top: 2.75em;
+      }
+      .work {
+        padding-top: 11em;
+        h1 {
+          font-size: 48px;
+          line-height: 56px;
+        }
+        .project-details {
+          margin-left: 3.75em;
+          margin-right: 6em;
+          margin-top: 1em;
+          margin-bottom: 3.5em;
+          line-height: 36px;
+          font-size: 20px;
+          font-weight: 400;
+        }
+        h3 {
+          margin-left: 3.2em;
+          font-family: $title;
+        }
+        .project-xp {
+          font-size: 16px;
+          line-height: 32px;
+          margin-left: 4.5em;
+          margin-right: 20em;
+          margin-bottom: 4em;
+        }
+      }
+      .case1 {
+        padding-top: 5em;
+        .case1-col {
+          padding-top: 3em;
+          padding-left: 6em;
+          h4, h5 {
+            font-family: $title;
+          }
+          .client {
+            margin: 0;
+            padding: 0;
+            margin-bottom: .25em;
+          }
+        }
+        .case1-img {
+          padding-left: 4em;
+          padding-top: 5em;
+        }
+      }
+      .case2 {
+        padding-top: 5em;
+        a {
+          color: $bg;
+        }
+        .case2-col {
+          padding-top: 1em;
+          padding-left: 6em;
+          h4, h5 {
+            font-family: $title;
+          }
+          .client {
+            margin: 0;
+            padding: 0;
+            margin-bottom: .25em;
+          }
+        }
+        .case2-img {
+          padding-right: 4em;
+          padding-top: 5em;
+        }
+      }
+      .case3 {
+        padding-bottom: 5em;
+        .case3-col {
+          padding-top: 3em;
+          padding-left: 6em;
+          h4, h5 {
+            font-family: $title;
+          }
+          .client {
+            margin: 0;
+            padding: 0;
+            margin-bottom: .25em;
+          }
+        }
+        .case3-img {
+          padding-left: 4em;
+          padding-top: 5em;
+        }
+      }
+    }
+
+    .footer {
+      padding-top: 11em;
+      margin-bottom: 10em;
+      h1 {
+        font-size: 48px;
+        line-height: 56px;
+        letter-spacing: .02em;
+        margin-left: -.5em;
+      }
+      .contact-details {
+        margin-left: 3.75em;
+        margin-right: 6em;
+        line-height: 36px;
+        font-size: 20px;
+      }
+      .btn-primary {
+        margin-left: 4.5em;
+        background-color: white;
+        border-color: white;
+        color: $text;
+        font-family: $title-tab;
+        padding: 14px 24px 14px 20px;
+        margin-top: 0;
+        &:hover {
+          background-color: #151515;
+          border-color: #151515;
+          color: white;
+        }
+      }
+    }
+
+    .page-footer {
+      .mobile-social {
+        margin: 0 auto;
+        margin-top: 2em;
+
+        img {
+          margin-right: .5em;
+          width: 30px;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1300px) {
+  .App {
+
+    #tab {
+      margin-left: 11em;
+    }
+    .page-header {
+      margin-top: 9em;
+      .page-headline {
+        margin-left: 1.75em;
+      }
+      .page-title, .page-subtitle {
+        font-size: 64px;
+        line-height: 72px;
+      }
+    }
+    .profile {
+      margin-top: 7em;
+      .backdrop-profile {
+        position: absolute;
+        margin-top: 8em;
+        margin-left: 24em;
+        img {
+          width: 860px;
+          height: 620px;
+        }
+      }
+      .backdrop-image {
+        .self {
+          max-width: 80%;
+        }
+      }
+    }
+    .about {
+      margin-top: 20em;
+      margin-bottom: 10em;
+      .about-text {
+        margin-left: 10em;
+        .about-me {
+          line-height: 40px;
+          font-size: 24px;
+        }
+        .btn-primary {
+          padding: 20px 38px 20px 30px;
+          margin-top: 4em;
+        }
+      }
+    }
+    .services {
+      #tab {
+        color: $bg;
+      }
+      padding-top: 10em;
+      padding-bottom: 0;
+      color: $bg;
+      background-color: $bg;
+      -webkit-transition: 1200ms linear;
+      -ms-transition: 1200ms linear;
+      transition: 1200ms linear;
+      &:hover {
+          background-color: white;
+          color: $text;
+          -webkit-transition: background-color 1000ms linear;
+          -ms-transition: background-color 1000ms linear;
+          transition: background-color 1000ms linear;
+          #tab {
+            color: $text;
+          }
+          .service-item, .project-xp {
             color: #7c7c7c;
           }
       }
@@ -1108,11 +1628,17 @@ body {
         margin-right: 10em;
         margin-bottom: 1em;
         line-height: 40px;
+        font-size: 24px;
         font-weight: 400;
+      }
+      h1 {
+        font-size: 64px;
+        line-height: 72px;
       }
       h3 {
         margin-left: 0;
         font-family: $title;
+        font-size: 24px;
       }
       .service-items {
         margin-left: 1.75em;
@@ -1141,6 +1667,7 @@ body {
           margin-top: 1em;
           margin-bottom: 3.5em;
           line-height: 40px;
+          font-size: 24px;
           font-weight: 400;
         }
         h3 {
@@ -1151,7 +1678,7 @@ body {
           font-size: 16px;
           line-height: 32px;
           margin-left: 6.5em;
-          margin-right: 22em;
+          margin-right: 18em;
           margin-bottom: 5.25em;
         }
       }
@@ -1171,6 +1698,7 @@ body {
         }
         .case1-img {
           padding-left: 4em;
+          padding-top: 0;
         }
       }
       .case2 {
@@ -1179,7 +1707,7 @@ body {
           color: $bg;
         }
         .case2-col {
-          padding-top: 3em;
+          padding-top: 1em;
           padding-left: 6em;
           h4, h5 {
             font-family: $title;
@@ -1192,6 +1720,7 @@ body {
         }
         .case2-img {
           padding-right: 4em;
+          padding-top: 0;
         }
       }
       .case3 {
@@ -1210,10 +1739,10 @@ body {
         }
         .case3-img {
           padding-left: 4em;
+          padding-top: 0;
         }
       }
     }
-
     .footer {
       padding-top: 15em;
       margin-bottom: 10em;
@@ -1250,7 +1779,7 @@ body {
         margin-top: 2em;
 
         img {
-          margin-right: 2em;
+          margin-right: 1em;
           width: 30px;
         }
       }
