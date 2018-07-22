@@ -26,7 +26,7 @@ const Footer = () => {
           <h6 class="text-uppercase mb-4 font-weight-bold">Contact</h6>
           <p>
             <i class="fa fa-home "></i><a href="https://goo.gl/maps/Fry8q3gDbC62" target="_blank">HTX 77004</a><br/>
-            <i class="fa fa-envelope"></i><a href="mailto:leonelaguzman1@gmail.com?subject=Let's talk.&body=Psst! Be sure to include the essentials: Name, Contact, Company and of course, Website!"><span className="cta"> Email</span></a> ||
+            <i class="fa fa-envelope"></i><a href="mailto:leonela.dev@gmail.com?subject=Let's talk.&body=Psst! Be sure to include the essentials: Name, Contact, Company and of course, Website!"><span className="cta"> Email</span></a> ||
             <i class="fa fa-phone"></i><a href="sms:3372400858"> <span className="cta">Text</span></a></p>
         </div>
 

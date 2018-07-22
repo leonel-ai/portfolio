@@ -43,7 +43,7 @@ class App extends Component {
           </Fade>
           <Fade top delay={440} duration={1200}>
             <li className="nav-item">
-              <a className="nav-link" href="mailto:leonelaguzman1@gmail.com?subject=Let's talk.&body=Psst! Be sure to include the essentials: Name, Contact, Company and of course, Website!">Let's Email</a>
+              <a className="nav-link" href="mailto:leonela.dev@gmail.com?subject=Let's talk.&body=Psst! Be sure to include the essentials: Name, Contact, Company and of course, Website!">Let's Email</a>
             </li>
           </Fade>
           <Fade top delay={480} duration={1200}>
@@ -120,7 +120,7 @@ class App extends Component {
             <p className="about-me">I'm a web and interaction developer turning ambitious ideas into user-friendly solutions.
             Working with clients — large or small, near and far — I design exceptional brands and compelling web experiences.</p>
             <p className="about-me">Let's work together.</p>
-            <a href="mailto:leonelaguzman1@gmail.com?subject=Let's talk.&body=Psst! Be sure to include the essentials: Name, Contact, Company and of course, Website!">
+            <a href="mailto:leonela.dev@gmail.com?subject=Let's talk.&body=Psst! Be sure to include the essentials: Name, Contact, Company and of course, Website!">
             <button type="button" className="btn btn-primary">
             Get to know me
             </button></a>
@@ -167,7 +167,7 @@ class App extends Component {
               </div>
             </div>
             <Fade bottom delay={500} duration={1300}>
-            <a href="mailto:leonelaguzman1@gmail.com?subject=Let's talk.&body=Psst! Be sure to include the essentials: Name, Contact, Company and of course, Website!">
+            <a href="mailto:leonela.dev@gmail.com?subject=Let's talk.&body=Psst! Be sure to include the essentials: Name, Contact, Company and of course, Website!">
             <button type="button" className="btn btn-primary">
             Let's get started</button></a>
           </Fade>
@@ -287,7 +287,7 @@ class App extends Component {
             <h1>The Next Step</h1>
             <p className="contact-details">I engage only a few projects at once to ensure each one gets my complete attention and creative commitment.<br/><br/>
               Contact me today to inquire about availability.</p>
-            <a href="mailto:leonelaguzman1@gmail.com?subject=Let's talk.&body=Psst! Be sure to include the essentials: Name, Contact, Company and of course, Website!">
+            <a href="mailto:leonela.dev@gmail.com?subject=Let's talk.&body=Psst! Be sure to include the essentials: Name, Contact, Company and of course, Website!">
             <button type="button" className="btn btn-primary">
             Vámonos</button></a>
           </Fade>
