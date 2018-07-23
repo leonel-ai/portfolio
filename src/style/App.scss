@@ -1,9 +1,11 @@
 @font-face {
-  font-family: "Gotham";
-  src: url("./fonts/Gotham-Book.otf") format("opentype"),
-       url("./fonts/Gotham-Medium.otf") format("opentype"),
-       url("./fonts/Gotham-Bold.ttf") format("truetype"),
-       url("./fonts/Gotham-Ultra.ttf") format("truetype");
+  font-family: "Gotham Bold";
+  src: url("./fonts/Gotham-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Gotham Medium";
+  src: url("./fonts/Gotham-Medium.otf") format("opentype");
 }
 
 @font-face {
@@ -11,9 +13,9 @@
   src: url("./fonts/Inter-UI-Regular.otf") format("opentype");
 }
 
-$title: 'Gotham Bold';
-$title-tab: 'Gotham Medium';
-$body: 'Inter UI';
+$title: 'Gotham Bold', Helvetica, sans-serif;
+$title-tab: 'Gotham Medium', Helvetica, sans-serif;
+$body: 'Inter UI', Helvetica, sans-serif;
 $text: #1a1a1a;
 $accent: #999ade;
 $box: #0d10b1;
@@ -88,12 +90,12 @@ body {
   }
 
   #tab {
-    font-size: 16px;
-    line-height: 32px;
+    font-size: 14px;
+    line-height: 28px;
     color: $accent;
     font-family: $title-tab;
     letter-spacing: 0.03em;
-    margin-left: 2em;
+    margin-left: 1em;
   }
 
   .page-header {
@@ -138,17 +140,17 @@ body {
 
   .about {
     margin-top: 8em;
-    margin-bottom: 8em;
+    margin-bottom: 9em;
     a {
       color: $text;
     }
     .about-text {
-      margin-left: 2em;
+      margin-left: 1em;
       margin-right: 1em;
       margin-top: 1em;
       .about-me {
-        font-size: 16px;
-        line-height: 32px;
+        font-size: 14px;
+        line-height: 28px;
         font-family: $body;
         letter-spacing: .03em;
       }
@@ -176,37 +178,36 @@ body {
     background-color: white;
     color: $text;
     .service-details {
-      margin-left: 2em;
+      margin-left: 1em;
       margin-right: 1em;
       margin-bottom: 3em;
-      font-size: 16px;
-      line-height: 32px;
+      font-size: 14px;
+      line-height: 28px;
       font-family: $body;
-      letter-spacing: .025em;
-      font-weight: 700;
+      letter-spacing: .01em;
     }
     h1 {
       font-size: 40px;
       line-height: 48px;
       font-family: $title;
-      margin-bottom: 1em;
-      margin-left: .75em;
+      margin-bottom: .75em;
+      margin-left: .35em;
       margin-top: .5em;
     }
     h3 {
       font-family: $title;
-      margin-left: 3em;
-      margin-bottom: 1em;
+      margin-left: 2em;
+      margin-bottom: .5em;
       margin-top: 1em;
       font-size: 24px;
       line-height: 32px;
     }
     .service-item {
-      margin-left: 5.25em;
+      margin-left: 3.5em;
       margin-right: 2em;
+      font-size: 14px;
       line-height: 28px;
       font-family: $body;
-      font-size: 14px;
     }
     .btn-primary {
       background-color: $box;
@@ -215,29 +216,28 @@ body {
       font-family: $title-tab;
       padding: 14px 24px 14px 20px;
       margin-top: 3em;
-      margin-left: 5.25em;
+      margin-left: 3.75em;
     }
     .tab-p {
-      margin-top: 8em;
+      margin-top: 12em;
     }
     .work {
       background-color: white;
       color: $text;
     .project-details {
-      margin-left: 2em;
+      margin-left: 1em;
       margin-right: 1em;
       margin-bottom: 3em;
-      font-size: 16px;
-      line-height: 32px;
+      font-size: 14px;
+      line-height: 28px;
       font-family: $body;
-      letter-spacing: .025em;
-      font-weight: 700;
+      letter-spacing: .01em;
     }
     h3 {
-      margin-left: 3em;
+      margin-left: 2.25em;
     }
     .project-xp {
-      padding-left: 5.1em;
+      padding-left: 4em;
       padding-right: 3em;
       padding-bottom: 5em;
       font-size: 14px;
@@ -256,11 +256,13 @@ body {
         padding-left: 3em;
         padding-right: 3em;
         h4, h5 {
-          padding-bottom: .5em;
+          padding-bottom: .25em;
           font-family: $title;
         }
         p {
           font-family: $body;
+          font-size: 14px;
+          line-height: 28px;
         }
       }
     }
@@ -275,11 +277,13 @@ body {
         padding-left: 3em;
         padding-right: 3em;
         h4, h5 {
-          padding-bottom: .5em;
+          padding-bottom: .25em;
           font-family: $title;
         }
         p {
           font-family: $body;
+          font-size: 14px;
+          line-height: 28px;
         }
       }
       .case2-img {
@@ -296,7 +300,7 @@ body {
     .case3 {
       background-color: #f4f4f4;
       padding-top: 3.5em;
-      padding-bottom: 3.5em;
+      padding-bottom: 6em;
       color: $text;
       .case3-img {
         padding-right: 0;
@@ -308,10 +312,12 @@ body {
         padding-right: 3em;
         h4, h5 {
           font-family: $title;
-          padding-bottom: .5em;
+          padding-bottom: .25em;
         }
         p {
           font-family: $body;
+          font-size: 14px;
+          line-height: 28px;
         }
       }
     }
@@ -319,7 +325,7 @@ body {
 
   .footer {
     padding-top: 8em;
-    margin-bottom: 11em;
+    margin-bottom: 4em;
     h1 {
       font-size: 40px;
       line-height: 48px;
@@ -333,10 +339,10 @@ body {
       margin-right: 1em;
       margin-top: 3em;
       margin-bottom: 3.5em;
-      font-size: 16px;
-      line-height: 32px;
+      font-size: 14px;
+      line-height: 28px;
       font-family: $body;
-      letter-spacing: .025em;
+      letter-spacing: .03em;
     }
     .btn-primary {
       margin-left: 2em;
@@ -349,11 +355,14 @@ body {
     }
   }
   .page-footer {
+    margin-bottom: 1em;
     hr {
       height: 1px;
-      max-width: 75%;
+      max-width: 85%;
       background-color: white;
     }
+    font-size: 14px;
+    line-height: 28px;
     .mobile-social {
       margin: 0 auto;
       margin-top: 2em;
@@ -379,7 +388,7 @@ body {
         outline: none;
       }
       .navbar-nav {
-        margin-top: 3.5em;
+        margin-top: 3em;
       }
       .navbar-brand {
         margin-left: .5em;
@@ -598,7 +607,7 @@ body {
         }
         .case2-img {
           padding-right: 0;
-          padding-left: 3.5em;
+          padding-left: .75em;
           background-color: #f4f4f4;
           -webkit-backface-visibility: hidden;
           backface-visibility: hidden;

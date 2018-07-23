@@ -1,6 +1,10 @@
 @font-face {
-  font-family: "Gotham";
-  src: url("./fonts/Gotham-Book.otf") format("opentype"), url("./fonts/Gotham-Medium.otf") format("opentype"), url("./fonts/Gotham-Bold.ttf") format("truetype"), url("./fonts/Gotham-Ultra.ttf") format("truetype"); }
+  font-family: "Gotham Bold";
+  src: url("./fonts/Gotham-Bold.ttf") format("truetype"); }
+
+@font-face {
+  font-family: "Gotham Medium";
+  src: url("./fonts/Gotham-Medium.otf") format("opentype"); }
 
 @font-face {
   font-family: "Inter UI";
@@ -13,7 +17,7 @@ body {
   margin: 0;
   padding: 0;
   height: 100%;
-  font-family: "Inter UI";
+  font-family: "Inter UI", Helvetica, sans-serif;
   color: white;
   background-color: #0004ad; }
 
@@ -42,7 +46,7 @@ body {
   .App .navbar .navbar-nav {
     margin-top: 3.5em; }
   .App .navbar .navbar-brand {
-    font-family: "Gotham Bold"; }
+    font-family: "Gotham Bold", Helvetica, sans-serif; }
   .App .navbar .mobile-social {
     margin: 0 auto;
     margin-top: 5em;
@@ -58,15 +62,15 @@ body {
   font-size: 32px;
   line-height: 42px;
   margin-left: .5em;
-  font-family: "Gotham Bold"; }
+  font-family: "Gotham Bold", Helvetica, sans-serif; }
 
 .App #tab {
-  font-size: 16px;
-  line-height: 32px;
+  font-size: 14px;
+  line-height: 28px;
   color: #999ade;
-  font-family: "Gotham Medium";
+  font-family: "Gotham Medium", Helvetica, sans-serif;
   letter-spacing: 0.03em;
-  margin-left: 2em; }
+  margin-left: 1em; }
 
 .App .page-header {
   margin-top: 3em; }
@@ -75,7 +79,7 @@ body {
     margin-left: .75em;
     font-size: 40px;
     line-height: 48px;
-    font-family: "Gotham Bold"; }
+    font-family: "Gotham Bold", Helvetica, sans-serif; }
     .App .page-header .page-headline .page-title {
       color: white; }
     .App .page-header .page-headline .page-subtitle {
@@ -100,23 +104,23 @@ body {
 
 .App .about {
   margin-top: 8em;
-  margin-bottom: 8em; }
+  margin-bottom: 9em; }
   .App .about a {
     color: #1a1a1a; }
   .App .about .about-text {
-    margin-left: 2em;
+    margin-left: 1em;
     margin-right: 1em;
     margin-top: 1em; }
     .App .about .about-text .about-me {
-      font-size: 16px;
-      line-height: 32px;
-      font-family: "Inter UI";
+      font-size: 14px;
+      line-height: 28px;
+      font-family: "Inter UI", Helvetica, sans-serif;
       letter-spacing: .03em; }
     .App .about .about-text .btn-primary {
       background-color: white;
       border-color: white;
       color: #1a1a1a;
-      font-family: "Gotham Medium";
+      font-family: "Gotham Medium", Helvetica, sans-serif;
       padding: 14px 24px 14px 20px;
       margin-top: 1.5em; }
       .App .about .about-text .btn-primary:hover {
@@ -131,60 +135,58 @@ body {
   .App .services #tab {
     color: #1a1a1a; }
   .App .services .service-details {
-    margin-left: 2em;
+    margin-left: 1em;
     margin-right: 1em;
     margin-bottom: 3em;
-    font-size: 16px;
-    line-height: 32px;
-    font-family: "Inter UI";
-    letter-spacing: .025em;
-    font-weight: 700; }
+    font-size: 14px;
+    line-height: 28px;
+    font-family: "Inter UI", Helvetica, sans-serif;
+    letter-spacing: .01em; }
   .App .services h1 {
     font-size: 40px;
     line-height: 48px;
-    font-family: "Gotham Bold";
-    margin-bottom: 1em;
-    margin-left: .75em;
+    font-family: "Gotham Bold", Helvetica, sans-serif;
+    margin-bottom: .75em;
+    margin-left: .35em;
     margin-top: .5em; }
   .App .services h3 {
-    font-family: "Gotham Bold";
-    margin-left: 3em;
-    margin-bottom: 1em;
+    font-family: "Gotham Bold", Helvetica, sans-serif;
+    margin-left: 2em;
+    margin-bottom: .5em;
     margin-top: 1em;
     font-size: 24px;
     line-height: 32px; }
   .App .services .service-item {
-    margin-left: 5.25em;
+    margin-left: 3.5em;
     margin-right: 2em;
+    font-size: 14px;
     line-height: 28px;
-    font-family: "Inter UI";
-    font-size: 14px; }
+    font-family: "Inter UI", Helvetica, sans-serif; }
   .App .services .btn-primary {
     background-color: #0d10b1;
     border-color: #0d10b1;
     color: white;
-    font-family: "Gotham Medium";
+    font-family: "Gotham Medium", Helvetica, sans-serif;
     padding: 14px 24px 14px 20px;
     margin-top: 3em;
-    margin-left: 5.25em; }
+    margin-left: 3.75em; }
   .App .services .tab-p {
-    margin-top: 8em; }
+    margin-top: 12em; }
   .App .services .work {
     background-color: white;
     color: #1a1a1a; }
     .App .services .work .project-details {
-      margin-left: 2em;
+      margin-left: 1em;
       margin-right: 1em;
       margin-bottom: 3em;
-      font-size: 16px;
-      line-height: 32px;
-      font-family: "Inter UI";
-      letter-spacing: .025em;
-      font-weight: 700; }
+      font-size: 14px;
+      line-height: 28px;
+      font-family: "Inter UI", Helvetica, sans-serif;
+      letter-spacing: .01em; }
     .App .services .work h3 {
-      margin-left: 3em; }
+      margin-left: 2.25em; }
     .App .services .work .project-xp {
-      padding-left: 5.1em;
+      padding-left: 4em;
       padding-right: 3em;
       padding-bottom: 5em;
       font-size: 14px;
@@ -200,10 +202,12 @@ body {
       padding-left: 3em;
       padding-right: 3em; }
       .App .services .case1 .case1-col h4, .App .services .case1 .case1-col h5 {
-        padding-bottom: .5em;
-        font-family: "Gotham Bold"; }
+        padding-bottom: .25em;
+        font-family: "Gotham Bold", Helvetica, sans-serif; }
       .App .services .case1 .case1-col p {
-        font-family: "Inter UI"; }
+        font-family: "Inter UI", Helvetica, sans-serif;
+        font-size: 14px;
+        line-height: 28px; }
   .App .services .case2 {
     padding-top: 3.5em;
     background-color: #f4f4f4; }
@@ -214,10 +218,12 @@ body {
       padding-left: 3em;
       padding-right: 3em; }
       .App .services .case2 .case2-col h4, .App .services .case2 .case2-col h5 {
-        padding-bottom: .5em;
-        font-family: "Gotham Bold"; }
+        padding-bottom: .25em;
+        font-family: "Gotham Bold", Helvetica, sans-serif; }
       .App .services .case2 .case2-col p {
-        font-family: "Inter UI"; }
+        font-family: "Inter UI", Helvetica, sans-serif;
+        font-size: 14px;
+        line-height: 28px; }
     .App .services .case2 .case2-img {
       padding-right: 0;
       padding-left: 0;
@@ -230,7 +236,7 @@ body {
   .App .services .case3 {
     background-color: #f4f4f4;
     padding-top: 3.5em;
-    padding-bottom: 3.5em;
+    padding-bottom: 6em;
     color: #1a1a1a; }
     .App .services .case3 .case3-img {
       padding-right: 0;
@@ -240,18 +246,20 @@ body {
       padding-left: 3em;
       padding-right: 3em; }
       .App .services .case3 .case3-col h4, .App .services .case3 .case3-col h5 {
-        font-family: "Gotham Bold";
-        padding-bottom: .5em; }
+        font-family: "Gotham Bold", Helvetica, sans-serif;
+        padding-bottom: .25em; }
       .App .services .case3 .case3-col p {
-        font-family: "Inter UI"; }
+        font-family: "Inter UI", Helvetica, sans-serif;
+        font-size: 14px;
+        line-height: 28px; }
 
 .App .footer {
   padding-top: 8em;
-  margin-bottom: 11em; }
+  margin-bottom: 4em; }
   .App .footer h1 {
     font-size: 40px;
     line-height: 48px;
-    font-family: "Gotham Bold";
+    font-family: "Gotham Bold", Helvetica, sans-serif;
     margin-bottom: 1em;
     margin-left: .75em;
     margin-top: .5em; }
@@ -260,31 +268,34 @@ body {
     margin-right: 1em;
     margin-top: 3em;
     margin-bottom: 3.5em;
-    font-size: 16px;
-    line-height: 32px;
-    font-family: "Inter UI";
-    letter-spacing: .025em; }
+    font-size: 14px;
+    line-height: 28px;
+    font-family: "Inter UI", Helvetica, sans-serif;
+    letter-spacing: .03em; }
   .App .footer .btn-primary {
     margin-left: 2em;
     background-color: white;
     border-color: white;
     color: #1a1a1a;
-    font-family: "Gotham Medium";
+    font-family: "Gotham Medium", Helvetica, sans-serif;
     padding: 14px 24px 14px 20px;
     margin-top: 0; }
 
-.App .page-footer hr {
-  height: 1px;
-  max-width: 75%;
-  background-color: white; }
-
-.App .page-footer .mobile-social {
-  margin: 0 auto;
-  margin-top: 2em; }
-  .App .page-footer .mobile-social img {
-    margin-right: 1em;
-    margin-left: 1em;
-    width: 30px; }
+.App .page-footer {
+  margin-bottom: 1em;
+  font-size: 14px;
+  line-height: 28px; }
+  .App .page-footer hr {
+    height: 1px;
+    max-width: 85%;
+    background-color: white; }
+  .App .page-footer .mobile-social {
+    margin: 0 auto;
+    margin-top: 2em; }
+    .App .page-footer .mobile-social img {
+      margin-right: 1em;
+      margin-left: 1em;
+      width: 30px; }
 
 @media (min-width: 576px) {
   .App .navbar {
@@ -294,7 +305,7 @@ body {
     .App .navbar .navbar-toggler:focus {
       outline: none; }
     .App .navbar .navbar-nav {
-      margin-top: 3.5em; }
+      margin-top: 3em; }
     .App .navbar .navbar-brand {
       margin-left: .5em; }
     .App .navbar .mobile-social {
@@ -314,7 +325,7 @@ body {
     font-size: 16px;
     line-height: 32px;
     color: #999ade;
-    font-family: "Gotham Medium";
+    font-family: "Gotham Medium", Helvetica, sans-serif;
     letter-spacing: 0.03em;
     margin-left: 5em; }
   .App .page-header {
@@ -323,7 +334,7 @@ body {
       margin-top: 0;
       font-size: 40px;
       line-height: 48px;
-      font-family: "Gotham Bold";
+      font-family: "Gotham Bold", Helvetica, sans-serif;
       margin-left: 2em; }
       .App .page-header .page-headline .page-title {
         color: white;
@@ -353,13 +364,13 @@ body {
       .App .about .about-text .about-me {
         font-size: 16px;
         line-height: 32px;
-        font-family: "Inter UI";
+        font-family: "Inter UI", Helvetica, sans-serif;
         letter-spacing: .05em; }
       .App .about .about-text .btn-primary {
         background-color: white;
         border-color: white;
         color: #1a1a1a;
-        font-family: "Gotham Medium";
+        font-family: "Gotham Medium", Helvetica, sans-serif;
         padding: 20px 38px 20px 30px;
         margin-top: 2em; }
         .App .about .about-text .btn-primary:hover {
@@ -379,18 +390,18 @@ body {
       margin-bottom: 1em;
       font-family: 16px;
       line-height: 32px;
-      font-family: "Inter UI";
+      font-family: "Inter UI", Helvetica, sans-serif;
       letter-spacing: .025em; }
     .App .services h1 {
       font-size: 40px;
       line-height: 48px;
-      font-family: "Gotham Bold";
+      font-family: "Gotham Bold", Helvetica, sans-serif;
       margin-bottom: 1em;
       margin-left: 2em; }
     .App .services h3 {
       margin-left: 5.75em;
       margin-bottom: 1em;
-      font-family: "Gotham Bold"; }
+      font-family: "Gotham Bold", Helvetica, sans-serif; }
     .App .services .service-items {
       margin-left: 5em; }
     .App .services .service-item {
@@ -398,12 +409,12 @@ body {
       margin-bottom: 0;
       line-height: 32px;
       font-family: 16px;
-      font-family: "Inter UI"; }
+      font-family: "Inter UI", Helvetica, sans-serif; }
     .App .services .btn-primary {
       background-color: #0d10b1;
       border-color: #0d10b1;
       color: white;
-      font-family: "Gotham Medium";
+      font-family: "Gotham Medium", Helvetica, sans-serif;
       padding: 20px 38px 20px 30px;
       margin-top: 5em;
       margin-left: 15em; }
@@ -420,7 +431,7 @@ body {
       .App .services .work h1 {
         font-size: 40px;
         line-height: 48px;
-        font-family: "Gotham Bold";
+        font-family: "Gotham Bold", Helvetica, sans-serif;
         letter-spacing: initial; }
       .App .services .work .project-details {
         margin-left: 10em;
@@ -429,7 +440,7 @@ body {
         margin-bottom: 3em;
         font-family: 16px;
         line-height: 32px;
-        font-family: "Inter UI";
+        font-family: "Inter UI", Helvetica, sans-serif;
         letter-spacing: .025em; }
       .App .services .work h3 {
         margin-left: 10em; }
@@ -450,7 +461,7 @@ body {
         padding-left: 6em;
         padding-right: 6em; }
         .App .services .case1 .case1-col p {
-          font-family: "Inter UI";
+          font-family: "Inter UI", Helvetica, sans-serif;
           font-size: 16px;
           line-height: 32px; }
     .App .services .case2 {
@@ -460,12 +471,12 @@ body {
         padding-left: 6em;
         padding-right: 6em; }
         .App .services .case2 .case2-col p {
-          font-family: "Inter UI";
+          font-family: "Inter UI", Helvetica, sans-serif;
           font-size: 16px;
           line-height: 32px; }
       .App .services .case2 .case2-img {
         padding-right: 0;
-        padding-left: 3.5em;
+        padding-left: .75em;
         background-color: #f4f4f4;
         -webkit-backface-visibility: hidden;
         backface-visibility: hidden;
@@ -483,7 +494,7 @@ body {
         padding-left: 6em;
         padding-right: 6em; }
         .App .services .case3 .case3-col p {
-          font-family: "Inter UI";
+          font-family: "Inter UI", Helvetica, sans-serif;
           font-size: 16px;
           line-height: 32px; }
   .App .footer {
@@ -498,14 +509,14 @@ body {
       margin-bottom: 3.5em;
       font-family: 16px;
       line-height: 32px;
-      font-family: "Inter UI";
+      font-family: "Inter UI", Helvetica, sans-serif;
       letter-spacing: .04em; }
     .App .footer .btn-primary {
       margin-left: 10em;
       background-color: white;
       border-color: white;
       color: #1a1a1a;
-      font-family: "Gotham Medium";
+      font-family: "Gotham Medium", Helvetica, sans-serif;
       padding: 14px 24px 14px 20px;
       margin-top: 0; }
   .App .page-footer hr {
@@ -554,7 +565,7 @@ body {
       font-size: 16px;
       line-height: 32px;
       color: #999ade;
-      font-family: "Gotham Medium";
+      font-family: "Gotham Medium", Helvetica, sans-serif;
       letter-spacing: 0.03em;
       margin-left: 5em; }
     .App .page-header {
@@ -563,13 +574,13 @@ body {
         font-size: 40px;
         line-height: 48px;
         color: #1a1a1a;
-        font-family: "Gotham Bold";
+        font-family: "Gotham Bold", Helvetica, sans-serif;
         color: white;
         margin-top: .5em;
         margin-left: 1em; }
       .App .page-header .page-subtitle {
         color: #999ade;
-        font-family: "Gotham Bold";
+        font-family: "Gotham Bold", Helvetica, sans-serif;
         font-size: 40px;
         line-height: 48px;
         margin-left: 1em; }
@@ -596,13 +607,13 @@ body {
         .App .about .about-text .about-me {
           font-size: 16px;
           line-height: 32px;
-          font-family: "Inter UI";
+          font-family: "Inter UI", Helvetica, sans-serif;
           letter-spacing: .05em; }
         .App .about .about-text .btn-primary {
           background-color: white;
           border-color: white;
           color: #1a1a1a;
-          font-family: "Gotham Medium";
+          font-family: "Gotham Medium", Helvetica, sans-serif;
           padding: 20px 38px 20px 30px;
           margin-top: 2em; }
     .App .services {
@@ -633,18 +644,18 @@ body {
         margin-bottom: 2em;
         font-family: 16px;
         line-height: 32px;
-        font-family: "Inter UI";
+        font-family: "Inter UI", Helvetica, sans-serif;
         letter-spacing: .025em; }
       .App .services h1 {
         font-size: 40px;
         line-height: 48px;
-        font-family: "Gotham Bold";
+        font-family: "Gotham Bold", Helvetica, sans-serif;
         margin-bottom: 1em;
         margin-left: 2em; }
       .App .services h3 {
         margin-left: 5.75em;
         margin-bottom: 1em;
-        font-family: "Gotham Bold"; }
+        font-family: "Gotham Bold", Helvetica, sans-serif; }
       .App .services .service-items {
         margin-left: 5em; }
       .App .services .service-item {
@@ -652,12 +663,12 @@ body {
         margin-bottom: 0;
         line-height: 32px;
         font-family: 16px;
-        font-family: "Inter UI"; }
+        font-family: "Inter UI", Helvetica, sans-serif; }
       .App .services .btn-primary {
         background-color: #0d10b1;
         border-color: #0d10b1;
         color: white;
-        font-family: "Gotham Medium";
+        font-family: "Gotham Medium", Helvetica, sans-serif;
         padding: 20px 38px 20px 30px;
         margin-top: 5em;
         margin-left: 15em; }
@@ -670,7 +681,7 @@ body {
         .App .services .work h1 {
           font-size: 40px;
           line-height: 48px;
-          font-family: "Gotham Bold";
+          font-family: "Gotham Bold", Helvetica, sans-serif;
           letter-spacing: initial; }
         .App .services .work .project-details {
           margin-left: 10em;
@@ -679,7 +690,7 @@ body {
           margin-bottom: 3em;
           font-family: 16px;
           line-height: 32px;
-          font-family: "Inter UI";
+          font-family: "Inter UI", Helvetica, sans-serif;
           letter-spacing: .025em; }
         .App .services .work h3 {
           margin-left: 10em; }
@@ -701,7 +712,7 @@ body {
           padding-left: 8em;
           padding-right: 8em; }
           .App .services .case1 .case1-col p {
-            font-family: "Inter UI";
+            font-family: "Inter UI", Helvetica, sans-serif;
             font-size: 16px;
             line-height: 32px; }
       .App .services .case2 {
@@ -712,7 +723,7 @@ body {
           padding-left: 8em;
           padding-right: 8em; }
           .App .services .case2 .case2-col p {
-            font-family: "Inter UI";
+            font-family: "Inter UI", Helvetica, sans-serif;
             font-size: 16px;
             line-height: 32px; }
         .App .services .case2 .case2-img {
@@ -733,7 +744,7 @@ body {
           padding-left: 8em;
           padding-right: 8em; }
           .App .services .case3 .case3-col p {
-            font-family: "Inter UI";
+            font-family: "Inter UI", Helvetica, sans-serif;
             font-size: 16px;
             line-height: 32px; }
         .App .services .case3 .case3-img {
@@ -751,14 +762,14 @@ body {
         margin-bottom: 3.5em;
         font-family: 16px;
         line-height: 32px;
-        font-family: "Inter UI";
+        font-family: "Inter UI", Helvetica, sans-serif;
         letter-spacing: .04em; }
       .App .footer .btn-primary {
         margin-left: 10em;
         background-color: white;
         border-color: white;
         color: #1a1a1a;
-        font-family: "Gotham Medium";
+        font-family: "Gotham Medium", Helvetica, sans-serif;
         padding: 14px 24px 14px 20px;
         margin-top: 0; }
         .App .footer .btn-primary:hover {
@@ -805,7 +816,7 @@ body {
     font-size: 16px;
     line-height: 32px;
     color: #999ade;
-    font-family: "Gotham Medium";
+    font-family: "Gotham Medium", Helvetica, sans-serif;
     letter-spacing: 0.03em;
     margin-left: 7em; }
   .App .page-header {
@@ -814,11 +825,11 @@ body {
       font-size: 48px;
       line-height: 56px;
       color: #1a1a1a;
-      font-family: "Gotham Bold";
+      font-family: "Gotham Bold", Helvetica, sans-serif;
       color: white; }
     .App .page-header .page-subtitle {
       color: #999ade;
-      font-family: "Gotham Bold";
+      font-family: "Gotham Bold", Helvetica, sans-serif;
       font-size: 48px;
       line-height: 56px; }
   .App .profile {
@@ -843,13 +854,13 @@ body {
       .App .about .about-text .about-me {
         font-size: 20px;
         line-height: 36px;
-        font-family: "Inter UI";
+        font-family: "Inter UI", Helvetica, sans-serif;
         letter-spacing: .025em; }
       .App .about .about-text .btn-primary {
         background-color: white;
         border-color: white;
         color: #1a1a1a;
-        font-family: "Gotham Medium";
+        font-family: "Gotham Medium", Helvetica, sans-serif;
         padding: 20px 38px 20px 30px;
         margin-top: 4em; }
   .App .services {
@@ -878,32 +889,32 @@ body {
       margin-bottom: 3em;
       font-size: 20px;
       line-height: 36px;
-      font-family: "Inter UI";
+      font-family: "Inter UI", Helvetica, sans-serif;
       letter-spacing: .025em; }
     .App .services h1 {
       font-size: 48px;
       line-height: 56px;
-      font-family: "Gotham Bold";
+      font-family: "Gotham Bold", Helvetica, sans-serif;
       margin-bottom: 1em;
       margin-left: -.5em; }
     .App .services h3 {
       margin-left: 3.5em;
       margin-bottom: 1em;
       margin-top: 1em;
-      font-family: "Gotham Bold";
+      font-family: "Gotham Bold", Helvetica, sans-serif;
       font-size: 24px; }
     .App .services .service-item {
       margin-left: 6em;
       margin-bottom: 1em;
       font-size: 16px;
       line-height: 32px;
-      font-family: "Inter UI";
+      font-family: "Inter UI", Helvetica, sans-serif;
       color: #0004ad; }
     .App .services .btn-primary {
       background-color: #0d10b1;
       border-color: #0d10b1;
       color: white;
-      font-family: "Gotham Medium";
+      font-family: "Gotham Medium", Helvetica, sans-serif;
       padding: 20px 38px 20px 30px;
       margin-top: 4em;
       margin-left: 5.8em; }
@@ -914,7 +925,7 @@ body {
       .App .services .work h1 {
         font-size: 48px;
         line-height: 56px;
-        font-family: "Gotham Bold";
+        font-family: "Gotham Bold", Helvetica, sans-serif;
         letter-spacing: .02em; }
       .App .services .work .project-details {
         margin-left: 4em;
@@ -922,7 +933,7 @@ body {
         margin-bottom: 3.5em;
         font-size: 20px;
         line-height: 36px;
-        font-family: "Inter UI";
+        font-family: "Inter UI", Helvetica, sans-serif;
         letter-spacing: .025em; }
       .App .services .work .project-xp {
         font-size: 16px;
@@ -955,14 +966,14 @@ body {
       margin-bottom: 3.5em;
       font-size: 20px;
       line-height: 36px;
-      font-family: "Inter UI";
+      font-family: "Inter UI", Helvetica, sans-serif;
       letter-spacing: .025em; }
     .App .footer .btn-primary {
       margin-left: 4.85em;
       background-color: white;
       border-color: white;
       color: #1a1a1a;
-      font-family: "Gotham Medium";
+      font-family: "Gotham Medium", Helvetica, sans-serif;
       padding: 14px 24px 14px 20px;
       margin-top: 0; }
       .App .footer .btn-primary:hover {
@@ -1063,7 +1074,7 @@ body {
       line-height: 56px; }
     .App .services h3 {
       margin-left: 0;
-      font-family: "Gotham Bold";
+      font-family: "Gotham Bold", Helvetica, sans-serif;
       font-size: 20px; }
     .App .services .service-items {
       margin-left: 0;
@@ -1093,7 +1104,7 @@ body {
         font-weight: 400; }
       .App .services .work h3 {
         margin-left: 3.2em;
-        font-family: "Gotham Bold"; }
+        font-family: "Gotham Bold", Helvetica, sans-serif; }
       .App .services .work .project-xp {
         font-size: 16px;
         line-height: 32px;
@@ -1106,7 +1117,7 @@ body {
         padding-top: 3em;
         padding-left: 6em; }
         .App .services .case1 .case1-col h4, .App .services .case1 .case1-col h5 {
-          font-family: "Gotham Bold"; }
+          font-family: "Gotham Bold", Helvetica, sans-serif; }
         .App .services .case1 .case1-col .client {
           margin: 0;
           padding: 0;
@@ -1122,7 +1133,7 @@ body {
         padding-top: 1em;
         padding-left: 6em; }
         .App .services .case2 .case2-col h4, .App .services .case2 .case2-col h5 {
-          font-family: "Gotham Bold"; }
+          font-family: "Gotham Bold", Helvetica, sans-serif; }
         .App .services .case2 .case2-col .client {
           margin: 0;
           padding: 0;
@@ -1136,7 +1147,7 @@ body {
         padding-top: 3em;
         padding-left: 6em; }
         .App .services .case3 .case3-col h4, .App .services .case3 .case3-col h5 {
-          font-family: "Gotham Bold"; }
+          font-family: "Gotham Bold", Helvetica, sans-serif; }
         .App .services .case3 .case3-col .client {
           margin: 0;
           padding: 0;
@@ -1162,7 +1173,7 @@ body {
       background-color: white;
       border-color: white;
       color: #1a1a1a;
-      font-family: "Gotham Medium";
+      font-family: "Gotham Medium", Helvetica, sans-serif;
       padding: 14px 24px 14px 20px;
       margin-top: 0; }
       .App .footer .btn-primary:hover {
@@ -1240,7 +1251,7 @@ body {
       line-height: 72px; }
     .App .services h3 {
       margin-left: 0;
-      font-family: "Gotham Bold";
+      font-family: "Gotham Bold", Helvetica, sans-serif;
       font-size: 24px; }
     .App .services .service-items {
       margin-left: 1.75em; }
@@ -1268,7 +1279,7 @@ body {
         font-weight: 400; }
       .App .services .work h3 {
         margin-left: 5.85em;
-        font-family: "Gotham Bold"; }
+        font-family: "Gotham Bold", Helvetica, sans-serif; }
       .App .services .work .project-xp {
         font-size: 16px;
         line-height: 32px;
@@ -1281,7 +1292,7 @@ body {
         padding-top: 3em;
         padding-left: 6em; }
         .App .services .case1 .case1-col h4, .App .services .case1 .case1-col h5 {
-          font-family: "Gotham Bold"; }
+          font-family: "Gotham Bold", Helvetica, sans-serif; }
         .App .services .case1 .case1-col .client {
           margin: 0;
           padding: 0;
@@ -1297,7 +1308,7 @@ body {
         padding-top: 1em;
         padding-left: 6em; }
         .App .services .case2 .case2-col h4, .App .services .case2 .case2-col h5 {
-          font-family: "Gotham Bold"; }
+          font-family: "Gotham Bold", Helvetica, sans-serif; }
         .App .services .case2 .case2-col .client {
           margin: 0;
           padding: 0;
@@ -1311,7 +1322,7 @@ body {
         padding-top: 3em;
         padding-left: 6em; }
         .App .services .case3 .case3-col h4, .App .services .case3 .case3-col h5 {
-          font-family: "Gotham Bold"; }
+          font-family: "Gotham Bold", Helvetica, sans-serif; }
         .App .services .case3 .case3-col .client {
           margin: 0;
           padding: 0;
@@ -1336,7 +1347,7 @@ body {
       background-color: white;
       border-color: white;
       color: #1a1a1a;
-      font-family: "Gotham Medium";
+      font-family: "Gotham Medium", Helvetica, sans-serif;
       padding: 14px 24px 14px 20px;
       margin-top: 1.5em; }
       .App .footer .btn-primary:hover {

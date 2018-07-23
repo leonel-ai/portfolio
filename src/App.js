@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 import self from './assets/self.jpg';
-import water from './assets/bgwater.webp';
+import water from './assets/bgwater.gif';
 
 // case studies
 import caseStudy from './assets/drdelicacy.png';
@@ -12,7 +12,6 @@ import caseStudy3 from './assets/trucke.png';
 import tw from './assets/icons/twitter.png';
 import li from './assets/icons/linkedin.png';
 import pin from './assets/icons/pinterest.png';
-import tum from './assets/icons/tumblr.png';
 import insta from './assets/icons/instagram.png';
 import git from './assets/icons/github.png';
 
@@ -38,7 +37,7 @@ class App extends Component {
           <ul className="navbar-nav ml-auto">
           <Fade top delay={400} duration={1200}>
             <li className="nav-item active">
-              <a className="nav-link" href="http://linkedin.com/in/leonelaguzman/" target="_blank">CV</a>
+              <a className="nav-link" href="http://linkedin.com/in/leonelaguzman/" target="_blank" rel="noopener noreferrer">CV</a>
             </li>
           </Fade>
           <Fade top delay={440} duration={1200}>
@@ -53,24 +52,24 @@ class App extends Component {
           </Fade>
 
             <div className="mobile-social">
-                <Fade top delay={500} duration={2000}>
-              <a href="http://linkedin.com/in/leonelaguzman/" target="_blank"><span>
+                <Fade top delay={500} duration={1000}>
+              <a href="http://linkedin.com/in/leonelaguzman/" target="_blank" rel="noopener noreferrer"><span>
                 <img src={li} alt=""/></span></a>
                 </Fade>
-                <Fade top delay={560} duration={2000}>
-                <a href="http://github.com/leonel-ai/" target="_blank"><span>
+                <Fade top delay={560} duration={1000}>
+                <a href="http://github.com/leonel-ai/" target="_blank" rel="noopener noreferrer"><span>
                 <img src={git} alt=""/></span></a>
                 </Fade>
-                <Fade top delay={680} duration={2000}>
-              <a href="https://www.pinterest.com/leonel_ai/ux-ui/" target="_blank"><span>
+                <Fade top delay={680} duration={1000}>
+              <a href="https://www.pinterest.com/leonel_ai/ux-ui/" target="_blank" rel="noopener noreferrer"><span>
                 <img src={pin} alt=""/></span></a>
                 </Fade>
-                <Fade top delay={620} duration={2000}>
-              <a href="http://twitter.com/leonel_ai/" target="_blank"><span>
+                <Fade top delay={620} duration={1000}>
+              <a href="http://twitter.com/leonel_ai/" target="_blank" rel="noopener noreferrer"><span>
                 <img src={tw} alt=""/></span></a>
                 </Fade>
-                <Fade top delay={800} duration={2000}>
-              <a href="http://instagram.com/leonel.ai/" target="_blank"><span>
+                <Fade top delay={800} duration={1000}>
+              <a href="http://instagram.com/leonel.ai/" target="_blank" rel="noopener noreferrer"><span>
                 <img src={insta} alt=""/></span></a>
                 </Fade>
             </div>
@@ -119,7 +118,7 @@ class App extends Component {
           <div className="col-md-9 col-lg-6 about-text">
             <p className="about-me">I'm a web and interaction developer turning ambitious ideas into user-friendly solutions.
             Working with clients — large or small, near and far — I design exceptional brands and compelling web experiences.</p>
-            <p className="about-me">Let's work together.</p>
+            {/* <p className="about-me">Let's work together.</p> */}
             <a href="mailto:leonela.dev@gmail.com?subject=Let's talk.&body=Psst! Be sure to include the essentials: Name, Contact, Company and of course, Website!">
             <button type="button" className="btn btn-primary">
             Get to know me
@@ -136,7 +135,7 @@ class App extends Component {
         </Fade>
 
          <div className="col-md-11 col-lg-8">
-         <Fade bottom delay={500} duration={1300}>
+         <Fade bottom delay={500} duration={1000}>
             <h1>The Process</h1>
             <p className="service-details">Forget templates or pre-designed UI kits. I research, design, and develop
             solutions tailored to each of my client's needs.<br/><br/>Expect transparent, honest and professional communication.
@@ -146,19 +145,19 @@ class App extends Component {
 
             <div className="col-md-12">
               <div className="row justify-content-around service-items">
-              <Fade bottom delay={500} duration={1300}>
+              <Fade bottom delay={500} duration={1000}>
                 <div className="col-lg-12 col-xl-3">
                   <h3>Design</h3>
                   <p className="service-item">UX / UI Design<br/>Responsive Web Design<br/>Mobile App Design<br/>Print Design</p>
                 </div>
                 </Fade>
-                <Fade bottom delay={500} duration={1300}>
+                <Fade bottom delay={500} duration={1000}>
                 <div className="col-lg-12 col-xl-4">
                   <h3>Development</h3>
                   <p className="service-item">HTML / CSS, JS, Jquery, C++<br/>Client &amp; Server-Side Scripting<br/>CMS &amp; Cloud Services<br/>SEO &amp; Bandwidth Optimization</p>
                 </div>
                 </Fade>
-                <Fade bottom delay={500} duration={1300}>
+                <Fade bottom delay={500} duration={1000}>
                 <div className="col-lg-12 col-xl-4">
                   <h3>Strategy</h3>
                   <p className="service-item">Art Direction<br/>User Research<br/>Branding &amp; Identity<br/>Digital Marketing &amp; Copy</p>
@@ -166,7 +165,7 @@ class App extends Component {
                 </Fade>
               </div>
             </div>
-            <Fade bottom delay={500} duration={1300}>
+            <Fade bottom delay={500} duration={1000}>
             <a href="mailto:leonela.dev@gmail.com?subject=Let's talk.&body=Psst! Be sure to include the essentials: Name, Contact, Company and of course, Website!">
             <button type="button" className="btn btn-primary">
             Let's get started</button></a>
@@ -200,17 +199,17 @@ class App extends Component {
                 </div>
               </Fade>
                 <div className="col-md-12 col-lg-6 case1-col">
-                <Fade bottom delay={500} duration={1300}>
+                <Fade bottom delay={500} duration={1000}>
                   <h5 className="client">CLIENT</h5>
                     <p>DR Delicacy</p><br/>
                   </Fade>
-                  <Fade bottom delay={500} duration={1300}>
+                  <Fade bottom delay={500} duration={1000}>
                   <h5 className="client">STRATEGY</h5>
                     <p>Building a new brand and minimalist landing page designed to convert B2B and Wholesale. Inspired by
                       the truffle hunting expeditions in France and the owner's expertise and personal history with the product,
                       I crafted a simple story that emphasized the natural products, in a playful, modern take of traditional field guides.</p><br/>
                   </Fade>
-                  <Fade bottom delay={500} duration={1300}>
+                  <Fade bottom delay={500} duration={1000}>
                   <h5 className="client">TASKS</h5>
                     <p>Art Direction<br/>Product Shoot<br/>Branding and Identity<br/>Responsive Web / UI Design</p>
                   </Fade>
@@ -221,25 +220,25 @@ class App extends Component {
             <div className="col-md-12 case2">
               <div className="row">
                 <div className="col-md-12 col-lg-7 case2-col order-12 order-lg-first">
-                <Fade bottom delay={500} duration={1300}>
+                <Fade bottom delay={500} duration={1000}>
                   <h5 className="client">CLIENT</h5>
                     <p>Markowitz Law</p><br/>
                   </Fade>
-                  <Fade bottom delay={500} duration={1300}>
+                  <Fade bottom delay={500} duration={1000}>
                   <h5 className="client">STRATEGY</h5>
                     <p>Constructing a new, responsive website paired with a full rebrand and billboard campaign launch. Inspired by the no-nonsense
                       nature of the Markowitz team and the familiar design elements of a traffic-ridden city, I introduced a site
                       tailored to help solve the user's legal needs in a professional, efficient and interactive way.<br/>
                       <br/>Going beyond design, I helped integrate their website to the
-                      <a href="https://www.clio.com/" target="_blank"> Clio</a> platform, customized
+                      <a href="https://www.clio.com/" target="_blank" rel="noopener noreferrer"> Clio</a> platform, customized
                       the software to their administrative needs, and personally trained their team members on the ins and outs.</p><br/>
                     </Fade>
-                    <Fade bottom delay={500} duration={1300}>
+                    <Fade bottom delay={500} duration={1000}>
                   <h5 className="client">TASKS</h5>
                     <p>Art Direction<br/>Cloud-Based Software Integration<br/>Branding and Identity<br/>Responsive Web / UI Design</p>
                   </Fade>
                 </div>
-                <Fade bottom delay={500} duration={1300}>
+                <Fade bottom delay={500} duration={1000}>
                 <div className="col-md-12 col-lg-5 case2-img">
                   <img src={caseStudy2} alt="" className="img-fluid rounded"/>
                 </div>
@@ -249,30 +248,28 @@ class App extends Component {
 
             <div className="col-md-12 case3">
               <div className="row">
-              <Fade bottom delay={500} duration={1300}>
+              <Fade bottom delay={500} duration={1000}>
                 <div className="col-md-12 col-lg-6 case3-img">
                   <img src={caseStudy3} alt="" className="img-fluid rounded"/>
                 </div>
               </Fade>
                 <div className="col-md-12 col-lg-6 case3-col">
-                <Fade bottom delay={500} duration={1300}>
+                <Fade bottom delay={500} duration={1000}>
                   <h5 className="client">CLIENT</h5>
                     <p>Trucke</p><br/>
                   </Fade>
-                  <Fade bottom delay={500} duration={1300}>
+                  <Fade bottom delay={500} duration={1000}>
                   <h5 className="client">STRATEGY</h5>
                     <p>Reimagining the moving labor experience for a forward-thinking Austin startup. One of a small distributed team of developers
                       that created a location-based, on-demand service mobile app utilizing an Agile software development life cycle (SDLC) and a combination of React, Express, and MySQL.</p><br/>
                       </Fade>
-                  <Fade bottom delay={500} duration={1300}>
+                  <Fade bottom delay={500} duration={1000}>
                   <h5 className="client">TASKS</h5>
                     <p>Back-End Development<br/>Amazon Web Services, Git, JIRA<br/>Stripe Payment Processing<br/>Node RESTful APIs<br/>CRM Database Design<br/>Testing and Debugging</p>
                   </Fade>
                 </div>
               </div>
             </div>
-
-
         </div>
 
       <div className="row footer">
