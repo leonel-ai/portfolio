@@ -298,6 +298,9 @@ body {
       }
     }
     .case3 {
+      a {
+        color: $bg;
+      }
       background-color: #f4f4f4;
       padding-top: 3.5em;
       padding-bottom: 6em;
@@ -1099,6 +1102,9 @@ body {
     .about {
       margin-top: 14em;
       margin-bottom: 10em;
+      #tab {
+        margin-left: 2em;
+      }
       a {
         color: $text;
       }
@@ -1355,8 +1361,11 @@ body {
     .about {
       margin-top: 16em;
       margin-bottom: 10em;
+      #tab {
+        margin-left: 3em;
+      }
       .about-text {
-        margin-left: 5em;
+        margin-left: 6em;
         .about-me {
           line-height: 36px;
           font-size: 20px;
@@ -1596,6 +1605,9 @@ body {
     .about {
       margin-top: 20em;
       margin-bottom: 10em;
+      #tab {
+        margin-left: 6em;
+      }
       .about-text {
         margin-left: 10em;
         .about-me {

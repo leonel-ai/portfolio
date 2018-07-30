@@ -11,7 +11,7 @@ import Fade from 'react-reveal/Fade';
 const Footer = () => {
   return (
 <footer class="page-footer pt-4">
-<Fade bottom delay={800}>
+<Fade bottom>
     <div class="container text-center text-md-left">
       <div class="row text-center text-md-left mt-3 pb-3">
 

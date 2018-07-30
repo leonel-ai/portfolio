@@ -238,6 +238,8 @@ body {
     padding-top: 3.5em;
     padding-bottom: 6em;
     color: #1a1a1a; }
+    .App .services .case3 a {
+      color: #0004ad; }
     .App .services .case3 .case3-img {
       padding-right: 0;
       padding-left: 0; }
@@ -847,6 +849,8 @@ body {
   .App .about {
     margin-top: 14em;
     margin-bottom: 10em; }
+    .App .about #tab {
+      margin-left: 2em; }
     .App .about a {
       color: #1a1a1a; }
     .App .about .about-text {
@@ -1034,8 +1038,10 @@ body {
   .App .about {
     margin-top: 16em;
     margin-bottom: 10em; }
+    .App .about #tab {
+      margin-left: 3em; }
     .App .about .about-text {
-      margin-left: 5em; }
+      margin-left: 6em; }
       .App .about .about-text .about-me {
         line-height: 36px;
         font-size: 20px; }
@@ -1211,6 +1217,8 @@ body {
   .App .about {
     margin-top: 20em;
     margin-bottom: 10em; }
+    .App .about #tab {
+      margin-left: 6em; }
     .App .about .about-text {
       margin-left: 10em; }
       .App .about .about-text .about-me {
