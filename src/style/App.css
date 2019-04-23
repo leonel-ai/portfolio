@@ -3,23 +3,24 @@
   src: url("./fonts/Gotham-Bold.ttf") format("truetype"); }
 
 @font-face {
-  font-family: "Gotham Medium";
-  src: url("./fonts/Gotham-Medium.otf") format("opentype"); }
+  font-family: "Open Sans";
+  src: url("./fonts/Open-Sans.ttf") format("truetype"); }
 
 @font-face {
   font-family: "Inter UI";
   src: url("./fonts/Inter-UI-Regular.otf") format("opentype"); }
 
 html {
-  background-color: #0004ad; }
+  background-color: black; }
 
 body {
   margin: 0;
   padding: 0;
   height: 100%;
-  font-family: "Inter UI", Helvetica, sans-serif;
+  font-family: "Open Sans", Helvetica, sans-serif;
   color: white;
-  background-color: #0004ad; }
+  background-color: black;
+  transition: background-color 1s ease; }
 
 .App a {
   text-decoration: none;
@@ -64,16 +65,55 @@ body {
   margin-left: .5em;
   font-family: "Gotham Bold", Helvetica, sans-serif; }
 
-.App #tab {
-  font-size: 14px;
-  line-height: 28px;
-  color: #999ade;
-  font-family: "Gotham Medium", Helvetica, sans-serif;
-  letter-spacing: 0.03em;
-  margin-left: 1em; }
+.App #tab p {
+  font-size: 11px;
+  letter-spacing: 3px;
+  margin-bottom: 0;
+  font-weight: 600; }
 
 .App .page-header {
   margin-top: 3em; }
+  .App .page-header #tab {
+    position: fixed;
+    left: .15em;
+    right: 0;
+    bottom: 48px;
+    z-index: 9999;
+    flex-direction: column;
+    justify-content: center; }
+  .App .page-header .loader {
+    height: 1px;
+    width: 10%;
+    position: fixed;
+    bottom: 1em;
+    left: .5em;
+    overflow: hidden;
+    background-color: #f7f7f7;
+    transform: rotate(90deg); }
+  .App .page-header .loader:before {
+    display: block;
+    position: absolute;
+    content: "";
+    left: -200px;
+    width: 200px;
+    height: 4px;
+    background-color: #999ade;
+    animation: loading 2s linear infinite; }
+
+@keyframes loading {
+  from {
+    left: -200px;
+    width: 30%; }
+  50% {
+    width: 30%; }
+  70% {
+    width: 70%; }
+  80% {
+    left: 50%; }
+  95% {
+    left: 120%; }
+  to {
+    left: 100%; } }
   .App .page-header .page-headline {
     margin-top: .5em;
     margin-left: .75em;
@@ -104,50 +144,46 @@ body {
 
 .App .about {
   margin-top: 8em;
-  margin-bottom: 9em; }
+  margin-bottom: 9em;
+  margin-left: 0; }
   .App .about a {
     color: #1a1a1a; }
   .App .about .about-text {
-    margin-left: 1em;
-    margin-right: 1em;
     margin-top: 1em; }
     .App .about .about-text .about-me {
       font-size: 14px;
       line-height: 28px;
-      font-family: "Inter UI", Helvetica, sans-serif;
+      font-family: "Open Sans", Helvetica, sans-serif;
       letter-spacing: .03em; }
     .App .about .about-text .btn-primary {
       background-color: white;
       border-color: white;
       color: #1a1a1a;
-      font-family: "Gotham Medium", Helvetica, sans-serif;
+      font-family: "Open Sans", Helvetica, sans-serif;
       padding: 14px 24px 14px 20px;
       margin-top: 1.5em; }
-      .App .about .about-text .btn-primary:hover {
-        background-color: #151515;
-        border-color: #151515;
-        color: white; }
 
 .App .services {
-  padding-top: 8em;
+  padding-top: 6em;
   background-color: white;
   color: #1a1a1a; }
-  .App .services #tab {
-    color: #1a1a1a; }
   .App .services .service-details {
-    margin-left: 1em;
-    margin-right: 1em;
+    margin-left: initial;
+    margin-right: initial;
     margin-bottom: 3em;
     font-size: 14px;
     line-height: 28px;
-    font-family: "Inter UI", Helvetica, sans-serif;
+    font-family: "Open Sans", Helvetica, sans-serif;
     letter-spacing: .01em; }
+  .App .services .inner {
+    margin-left: 1em;
+    margin-bottom: 5em; }
   .App .services h1 {
     font-size: 40px;
     line-height: 48px;
     font-family: "Gotham Bold", Helvetica, sans-serif;
     margin-bottom: .75em;
-    margin-left: .35em;
+    margin-left: 0;
     margin-top: .5em; }
   .App .services h3 {
     font-family: "Gotham Bold", Helvetica, sans-serif;
@@ -161,36 +197,15 @@ body {
     margin-right: 2em;
     font-size: 14px;
     line-height: 28px;
-    font-family: "Inter UI", Helvetica, sans-serif; }
+    font-family: "Open Sans", Helvetica, sans-serif; }
   .App .services .btn-primary {
-    background-color: #0d10b1;
-    border-color: #0d10b1;
+    background-color: black;
+    border-color: black;
     color: white;
-    font-family: "Gotham Medium", Helvetica, sans-serif;
+    font-family: "Open Sans", Helvetica, sans-serif;
     padding: 14px 24px 14px 20px;
     margin-top: 3em;
     margin-left: 3.75em; }
-  .App .services .tab-p {
-    margin-top: 12em; }
-  .App .services .work {
-    background-color: white;
-    color: #1a1a1a; }
-    .App .services .work .project-details {
-      margin-left: 1em;
-      margin-right: 1em;
-      margin-bottom: 3em;
-      font-size: 14px;
-      line-height: 28px;
-      font-family: "Inter UI", Helvetica, sans-serif;
-      letter-spacing: .01em; }
-    .App .services .work h3 {
-      margin-left: 2.25em; }
-    .App .services .work .project-xp {
-      padding-left: 4em;
-      padding-right: 3em;
-      padding-bottom: 5em;
-      font-size: 14px;
-      line-height: 28px; }
   .App .services .case1 {
     background-color: #f4f4f4;
     padding-top: 3.5em; }
@@ -205,14 +220,14 @@ body {
         padding-bottom: .25em;
         font-family: "Gotham Bold", Helvetica, sans-serif; }
       .App .services .case1 .case1-col p {
-        font-family: "Inter UI", Helvetica, sans-serif;
+        font-family: "Open Sans", Helvetica, sans-serif;
         font-size: 14px;
         line-height: 28px; }
   .App .services .case2 {
     padding-top: 3.5em;
     background-color: #f4f4f4; }
     .App .services .case2 a {
-      color: #0004ad; }
+      color: black; }
     .App .services .case2 .case2-col {
       padding-top: 4em;
       padding-left: 3em;
@@ -221,7 +236,7 @@ body {
         padding-bottom: .25em;
         font-family: "Gotham Bold", Helvetica, sans-serif; }
       .App .services .case2 .case2-col p {
-        font-family: "Inter UI", Helvetica, sans-serif;
+        font-family: "Open Sans", Helvetica, sans-serif;
         font-size: 14px;
         line-height: 28px; }
     .App .services .case2 .case2-img {
@@ -239,7 +254,7 @@ body {
     padding-bottom: 6em;
     color: #1a1a1a; }
     .App .services .case3 a {
-      color: #0004ad; }
+      color: black; }
     .App .services .case3 .case3-img {
       padding-right: 0;
       padding-left: 0; }
@@ -251,35 +266,38 @@ body {
         font-family: "Gotham Bold", Helvetica, sans-serif;
         padding-bottom: .25em; }
       .App .services .case3 .case3-col p {
-        font-family: "Inter UI", Helvetica, sans-serif;
+        font-family: "Open Sans", Helvetica, sans-serif;
         font-size: 14px;
         line-height: 28px; }
 
 .App .footer {
-  padding-top: 8em;
+  padding-top: 6em;
   margin-bottom: 4em; }
+  .App .footer .inner {
+    margin-left: 1em; }
   .App .footer h1 {
     font-size: 40px;
     line-height: 48px;
     font-family: "Gotham Bold", Helvetica, sans-serif;
     margin-bottom: 1em;
-    margin-left: .75em;
+    margin-left: 0;
+    margin-right: 0;
     margin-top: .5em; }
   .App .footer .contact-details {
-    margin-left: 2em;
-    margin-right: 1em;
+    margin-left: 0;
+    margin-right: 0;
     margin-top: 3em;
     margin-bottom: 3.5em;
     font-size: 14px;
     line-height: 28px;
-    font-family: "Inter UI", Helvetica, sans-serif;
+    font-family: "Open Sans", Helvetica, sans-serif;
     letter-spacing: .03em; }
   .App .footer .btn-primary {
-    margin-left: 2em;
+    margin-left: 0;
     background-color: white;
     border-color: white;
     color: #1a1a1a;
-    font-family: "Gotham Medium", Helvetica, sans-serif;
+    font-family: "Open Sans", Helvetica, sans-serif;
     padding: 14px 24px 14px 20px;
     margin-top: 0; }
 
@@ -287,10 +305,6 @@ body {
   margin-bottom: 1em;
   font-size: 14px;
   line-height: 28px; }
-  .App .page-footer hr {
-    height: 1px;
-    max-width: 85%;
-    background-color: white; }
   .App .page-footer .mobile-social {
     margin: 0 auto;
     margin-top: 2em; }
@@ -323,26 +337,64 @@ body {
     font-size: 32px;
     line-height: 32px;
     margin-left: 4em; }
-  .App #tab {
-    font-size: 16px;
-    line-height: 32px;
-    color: #999ade;
-    font-family: "Gotham Medium", Helvetica, sans-serif;
-    letter-spacing: 0.03em;
-    margin-left: 5em; }
+  .App #tab p {
+    font-size: 11px;
+    letter-spacing: 3px;
+    margin-bottom: 0;
+    font-weight: 600; }
   .App .page-header {
     margin-top: 3em; }
+    .App .page-header #tab {
+      position: fixed;
+      left: -.75em;
+      right: 0;
+      bottom: 61px;
+      z-index: 9999;
+      flex-direction: column;
+      justify-content: center; }
+    .App .page-header .loader {
+      height: 1px;
+      width: 5%;
+      position: fixed;
+      bottom: 2em;
+      left: 1.15em;
+      overflow: hidden;
+      background-color: #f7f7f7;
+      transform: rotate(90deg); }
+    .App .page-header .loader:before {
+      display: block;
+      position: absolute;
+      content: "";
+      left: -200px;
+      width: 200px;
+      height: 4px;
+      background-color: #999ade;
+      animation: loading 2s linear infinite; }
+  @keyframes loading {
+    from {
+      left: -200px;
+      width: 30%; }
+    50% {
+      width: 30%; }
+    70% {
+      width: 70%; }
+    80% {
+      left: 50%; }
+    95% {
+      left: 120%; }
+    to {
+      left: 100%; } }
     .App .page-header .page-headline {
       margin-top: 0;
-      font-size: 40px;
-      line-height: 48px;
-      font-family: "Gotham Bold", Helvetica, sans-serif;
       margin-left: 2em; }
-      .App .page-header .page-headline .page-title {
-        color: white;
-        margin-top: .5em; }
-      .App .page-header .page-headline .page-subtitle {
-        color: #999ade; }
+    .App .page-header .page-title {
+      color: #1a1a1a; }
+    .App .page-header .page-subtitle {
+      color: #999ade; }
+    .App .page-header .page-title, .App .page-header .page-subtitle {
+      font-family: "Gotham Bold", Helvetica, sans-serif;
+      font-size: 60px;
+      line-height: 80px; }
   .App .profile {
     margin-top: 3em; }
     .App .profile .backdrop-profile {
@@ -357,8 +409,8 @@ body {
       float: right; }
   .App .about {
     margin-top: 12em;
-    margin-bottom: 10em;
-    margin-left: 4em; }
+    margin-bottom: 7em;
+    margin-left: 0; }
     .App .about a {
       color: #1a1a1a; }
     .App .about .about-text {
@@ -366,92 +418,58 @@ body {
       .App .about .about-text .about-me {
         font-size: 16px;
         line-height: 32px;
-        font-family: "Inter UI", Helvetica, sans-serif;
+        font-family: "Open Sans", Helvetica, sans-serif;
         letter-spacing: .05em; }
       .App .about .about-text .btn-primary {
         background-color: white;
         border-color: white;
         color: #1a1a1a;
-        font-family: "Gotham Medium", Helvetica, sans-serif;
+        font-family: "Open Sans", Helvetica, sans-serif;
         padding: 20px 38px 20px 30px;
         margin-top: 2em; }
-        .App .about .about-text .btn-primary:hover {
-          background-color: #151515;
-          border-color: #151515;
-          color: white; }
   .App .services {
-    padding-top: 10em;
+    padding-top: 5em;
     padding-bottom: 0;
     background-color: white;
     color: #1a1a1a; }
-    .App .services #tab {
-      color: #1a1a1a; }
     .App .services .service-details {
-      margin-left: 8em;
-      margin-right: 4em;
+      margin-left: initial;
+      margin-right: initial;
       margin-bottom: 1em;
-      font-family: 16px;
+      font-size: 16px;
       line-height: 32px;
-      font-family: "Inter UI", Helvetica, sans-serif;
+      font-family: "Open Sans", Helvetica, sans-serif;
       letter-spacing: .025em; }
+    .App .services .inner {
+      margin-left: 2em;
+      margin-bottom: 5em; }
     .App .services h1 {
       font-size: 40px;
       line-height: 48px;
       font-family: "Gotham Bold", Helvetica, sans-serif;
       margin-bottom: 1em;
-      margin-left: 2em; }
+      margin-left: 0; }
     .App .services h3 {
-      margin-left: 5.75em;
+      margin-left: 0;
       margin-bottom: 1em;
       font-family: "Gotham Bold", Helvetica, sans-serif; }
     .App .services .service-items {
-      margin-left: 5em; }
+      margin-left: 0; }
     .App .services .service-item {
-      margin-left: 10em;
+      margin-left: 0;
+      margin-right: 0;
       margin-bottom: 0;
       line-height: 32px;
       font-family: 16px;
-      font-family: "Inter UI", Helvetica, sans-serif; }
+      font-family: "Open Sans", Helvetica, sans-serif;
+      color: black; }
     .App .services .btn-primary {
-      background-color: #0d10b1;
-      border-color: #0d10b1;
+      background-color: black;
       color: white;
-      font-family: "Gotham Medium", Helvetica, sans-serif;
+      font-family: "Open Sans", Helvetica, sans-serif;
       padding: 20px 38px 20px 30px;
       margin-top: 5em;
-      margin-left: 15em; }
-      .App .services .btn-primary:hover {
-        background-color: #151515;
-        border-color: #151515;
-        color: white; }
-    .App .services .tab-p {
-      padding-top: 1.75em; }
-    .App .services .work {
-      padding-top: 0;
-      background-color: white;
-      color: #1a1a1a; }
-      .App .services .work h1 {
-        font-size: 40px;
-        line-height: 48px;
-        font-family: "Gotham Bold", Helvetica, sans-serif;
-        letter-spacing: initial; }
-      .App .services .work .project-details {
-        margin-left: 10em;
-        margin-right: 4em;
-        margin-top: 3em;
-        margin-bottom: 3em;
-        font-family: 16px;
-        line-height: 32px;
-        font-family: "Inter UI", Helvetica, sans-serif;
-        letter-spacing: .025em; }
-      .App .services .work h3 {
-        margin-left: 10em; }
-      .App .services .work .project-xp {
-        font-size: 16px;
-        line-height: 32px;
-        margin-left: 13em;
-        margin-right: 0;
-        margin-bottom: 1em; }
+      margin-left: 0; }
     .App .services .case1 {
       background-color: #f4f4f4;
       padding-top: 4em; }
@@ -463,7 +481,7 @@ body {
         padding-left: 6em;
         padding-right: 6em; }
         .App .services .case1 .case1-col p {
-          font-family: "Inter UI", Helvetica, sans-serif;
+          font-family: "Open Sans", Helvetica, sans-serif;
           font-size: 16px;
           line-height: 32px; }
     .App .services .case2 {
@@ -473,7 +491,7 @@ body {
         padding-left: 6em;
         padding-right: 6em; }
         .App .services .case2 .case2-col p {
-          font-family: "Inter UI", Helvetica, sans-serif;
+          font-family: "Open Sans", Helvetica, sans-serif;
           font-size: 16px;
           line-height: 32px; }
       .App .services .case2 .case2-img {
@@ -496,35 +514,33 @@ body {
         padding-left: 6em;
         padding-right: 6em; }
         .App .services .case3 .case3-col p {
-          font-family: "Inter UI", Helvetica, sans-serif;
+          font-family: "Open Sans", Helvetica, sans-serif;
           font-size: 16px;
           line-height: 32px; }
   .App .footer {
     padding-top: 8em;
     margin-bottom: 6em; }
-    .App .footer h1 {
+    .App .footer .inner {
       margin-left: 2em; }
+    .App .footer h1 {
+      margin-left: 0; }
     .App .footer .contact-details {
-      margin-left: 10em;
-      margin-right: 4em;
+      margin-left: 0;
+      margin-right: 0;
       margin-top: 3em;
       margin-bottom: 3.5em;
       font-family: 16px;
       line-height: 32px;
-      font-family: "Inter UI", Helvetica, sans-serif;
+      font-family: "Open Sans", Helvetica, sans-serif;
       letter-spacing: .04em; }
     .App .footer .btn-primary {
-      margin-left: 10em;
+      margin-left: 0;
       background-color: white;
       border-color: white;
       color: #1a1a1a;
-      font-family: "Gotham Medium", Helvetica, sans-serif;
+      font-family: "Open Sans", Helvetica, sans-serif;
       padding: 14px 24px 14px 20px;
       margin-top: 0; }
-  .App .page-footer hr {
-    height: 1px;
-    max-width: 25%;
-    background-color: white; }
   .App .page-footer .mobile-social {
     margin: 0 auto;
     margin-top: 2em; }
@@ -563,29 +579,17 @@ body {
       font-size: 32px;
       line-height: 46px;
       margin-left: 2em; }
-    .App #tab {
-      font-size: 16px;
-      line-height: 32px;
-      color: #999ade;
-      font-family: "Gotham Medium", Helvetica, sans-serif;
-      letter-spacing: 0.03em;
-      margin-left: 5em; }
+    .App #tab p {
+      font-size: 11px;
+      letter-spacing: 3px;
+      margin-bottom: 0;
+      font-weight: 600; }
     .App .page-header {
       margin-top: 4em; }
-      .App .page-header .page-title {
-        font-size: 40px;
-        line-height: 48px;
-        color: #1a1a1a;
-        font-family: "Gotham Bold", Helvetica, sans-serif;
-        color: white;
-        margin-top: .5em;
-        margin-left: 1em; }
-      .App .page-header .page-subtitle {
-        color: #999ade;
-        font-family: "Gotham Bold", Helvetica, sans-serif;
-        font-size: 40px;
-        line-height: 48px;
-        margin-left: 1em; }
+      .App .page-header #tab {
+        left: .5em; }
+      .App .page-header .page-headline {
+        margin-left: 2.5em; }
     .App .profile {
       margin-top: 5em; }
       .App .profile .backdrop-profile {
@@ -600,108 +604,17 @@ body {
         max-width: 100%; }
     .App .about {
       margin-top: 11em;
-      margin-bottom: 10em;
-      margin-left: 4em; }
-      .App .about a {
-        color: #1a1a1a; }
-      .App .about .about-text {
-        margin-left: 5em; }
-        .App .about .about-text .about-me {
-          font-size: 16px;
-          line-height: 32px;
-          font-family: "Inter UI", Helvetica, sans-serif;
-          letter-spacing: .05em; }
-        .App .about .about-text .btn-primary {
-          background-color: white;
-          border-color: white;
-          color: #1a1a1a;
-          font-family: "Gotham Medium", Helvetica, sans-serif;
-          padding: 20px 38px 20px 30px;
-          margin-top: 2em; }
+      margin-bottom: 10em; }
     .App .services {
-      padding-top: 10em;
-      padding-bottom: 0;
-      color: #0004ad;
-      background-color: #0004ad;
-      -webkit-transition: 1200ms linear;
-      -ms-transition: 1200ms linear;
-      transition: 1200ms linear; }
-      .App .services #tab {
-        color: #0004ad; }
-      .App .services:hover {
-        background-color: white;
-        color: #1a1a1a;
-        -webkit-transition: background-color 1000ms linear;
-        -ms-transition: background-color 1000ms linear;
-        transition: background-color 1000ms linear; }
-        .App .services:hover #tab {
-          color: #1a1a1a; }
-        .App .services:hover .service-item, .App .services:hover .project-xp {
-          color: #7c7c7c; }
-        .App .services:hover .work {
-          color: #1a1a1a; }
+      padding-top: 10em; }
       .App .services .service-details {
-        margin-left: 10em;
-        margin-right: 0;
-        margin-bottom: 2em;
-        font-family: 16px;
-        line-height: 32px;
-        font-family: "Inter UI", Helvetica, sans-serif;
-        letter-spacing: .025em; }
-      .App .services h1 {
-        font-size: 40px;
-        line-height: 48px;
-        font-family: "Gotham Bold", Helvetica, sans-serif;
-        margin-bottom: 1em;
-        margin-left: 2em; }
-      .App .services h3 {
-        margin-left: 5.75em;
-        margin-bottom: 1em;
-        font-family: "Gotham Bold", Helvetica, sans-serif; }
-      .App .services .service-items {
-        margin-left: 5em; }
-      .App .services .service-item {
-        margin-left: 10em;
-        margin-bottom: 0;
-        line-height: 32px;
-        font-family: 16px;
-        font-family: "Inter UI", Helvetica, sans-serif; }
-      .App .services .btn-primary {
-        background-color: #0d10b1;
-        border-color: #0d10b1;
-        color: white;
-        font-family: "Gotham Medium", Helvetica, sans-serif;
-        padding: 20px 38px 20px 30px;
-        margin-top: 5em;
-        margin-left: 15em; }
-      .App .services .tab-p {
-        padding-top: 3em; }
-      .App .services .work {
-        padding-top: 0;
-        color: #0004ad;
-        background-color: inherit; }
-        .App .services .work h1 {
-          font-size: 40px;
-          line-height: 48px;
-          font-family: "Gotham Bold", Helvetica, sans-serif;
-          letter-spacing: initial; }
-        .App .services .work .project-details {
-          margin-left: 10em;
-          margin-top: 3em;
-          margin-right: 0;
-          margin-bottom: 3em;
-          font-family: 16px;
-          line-height: 32px;
-          font-family: "Inter UI", Helvetica, sans-serif;
-          letter-spacing: .025em; }
-        .App .services .work h3 {
-          margin-left: 10em; }
-        .App .services .work .project-xp {
-          font-size: 16px;
-          line-height: 32px;
-          margin-left: 13em;
-          margin-right: 0;
-          margin-bottom: 3em; }
+        margin-bottom: 2em; }
+      .App .services .inner {
+        margin-left: 6em;
+        margin-bottom: 10em; }
+      .App .services .btn-primary:hover {
+        background-color: transparent;
+        color: black; }
       .App .services .case1 {
         color: #1a1a1a;
         background-color: #f4f4f4;
@@ -711,10 +624,10 @@ body {
           padding-left: 0; }
         .App .services .case1 .case1-col {
           padding-top: 3em;
-          padding-left: 8em;
+          padding-left: 8.5em;
           padding-right: 8em; }
           .App .services .case1 .case1-col p {
-            font-family: "Inter UI", Helvetica, sans-serif;
+            font-family: "Open Sans", Helvetica, sans-serif;
             font-size: 16px;
             line-height: 32px; }
       .App .services .case2 {
@@ -725,12 +638,11 @@ body {
           padding-left: 8em;
           padding-right: 8em; }
           .App .services .case2 .case2-col p {
-            font-family: "Inter UI", Helvetica, sans-serif;
+            font-family: "Open Sans", Helvetica, sans-serif;
             font-size: 16px;
             line-height: 32px; }
         .App .services .case2 .case2-img {
           padding-right: 0;
-          padding-left: 4.2em;
           background-color: #f4f4f4;
           -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
@@ -746,7 +658,7 @@ body {
           padding-left: 8em;
           padding-right: 8em; }
           .App .services .case3 .case3-col p {
-            font-family: "Inter UI", Helvetica, sans-serif;
+            font-family: "Open Sans", Helvetica, sans-serif;
             font-size: 16px;
             line-height: 32px; }
         .App .services .case3 .case3-img {
@@ -755,51 +667,30 @@ body {
     .App .footer {
       padding-top: 10em;
       margin-bottom: 8em; }
-      .App .footer h1 {
-        margin-left: 2em; }
-      .App .footer .contact-details {
-        margin-left: 10em;
-        margin-top: 3em;
-        margin-right: 0;
-        margin-bottom: 3.5em;
-        font-family: 16px;
-        line-height: 32px;
-        font-family: "Inter UI", Helvetica, sans-serif;
-        letter-spacing: .04em; }
-      .App .footer .btn-primary {
-        margin-left: 10em;
-        background-color: white;
-        border-color: white;
-        color: #1a1a1a;
-        font-family: "Gotham Medium", Helvetica, sans-serif;
-        padding: 14px 24px 14px 20px;
-        margin-top: 0; }
-        .App .footer .btn-primary:hover {
-          background-color: #151515;
-          border-color: #151515;
-          color: white; }
-    .App .page-footer {
-      margin-left: .75em; }
-      .App .page-footer hr {
-        display: none; }
-      .App .page-footer .mobile-social {
-        margin: 0 auto;
-        margin-top: 2em; }
-        .App .page-footer .mobile-social img {
-          margin-right: .5em;
-          width: 30px; } }
+      .App .footer .inner {
+        margin-left: 6em; }
+      .App .footer .btn-primary:hover {
+        background-color: #151515;
+        border-color: #151515;
+        color: white; }
+    .App .page-footer .mobile-social {
+      margin: 0 auto;
+      margin-top: 2em; }
+      .App .page-footer .mobile-social img {
+        margin-right: .5em;
+        width: 30px; } }
 
 @media (min-width: 992px) {
   .App .navbar {
     letter-spacing: .03em;
-    background-color: #0004ad; }
+    background-color: black; }
     .App .navbar .navbar-collapse .navbar-nav {
       height: 100vh; }
     .App .navbar .navbar-toggler:focus {
       outline: none; }
     .App .navbar .navbar-nav {
       margin-top: 6em;
-      background-color: #0004ad; }
+      background-color: black; }
     .App .navbar .mobile-social {
       margin: 0 auto;
       margin-top: 6em;
@@ -809,187 +700,91 @@ body {
         width: 40px; }
   .App .navbar-dark .navbar-nav .nav-link {
     color: rgba(255, 255, 255, 0.9);
-    background-color: #0004ad; }
+    background-color: black; }
   .App .nav-link {
     font-size: 48px;
     line-height: 56px;
     margin-left: 2em; }
-  .App #tab {
-    font-size: 16px;
-    line-height: 32px;
-    color: #999ade;
-    font-family: "Gotham Medium", Helvetica, sans-serif;
-    letter-spacing: 0.03em;
-    margin-left: 7em; }
+  .App #tab p {
+    font-size: 11px;
+    letter-spacing: 3px;
+    margin-bottom: 0;
+    font-weight: 600; }
   .App .page-header {
     margin-top: 9em; }
-    .App .page-header .page-title {
-      font-size: 48px;
-      line-height: 56px;
-      color: #1a1a1a;
-      font-family: "Gotham Bold", Helvetica, sans-serif;
-      color: white; }
-    .App .page-header .page-subtitle {
-      color: #999ade;
-      font-family: "Gotham Bold", Helvetica, sans-serif;
-      font-size: 48px;
-      line-height: 56px; }
-  .App .profile {
-    margin-top: 5em; }
-    .App .profile .backdrop-profile {
-      margin-top: 3em;
-      margin-left: 14em;
-      -webkit-backface-visibility: hidden;
-      -webkit-transform: scale(1); }
-      .App .profile .backdrop-profile img {
-        width: 640px;
-        height: 460px; }
-    .App .profile .backdrop-image .self {
-      max-width: 90%; }
+    .App .page-header #tab {
+      left: 1em;
+      bottom: 72px; }
+    .App .page-header .page-title, .App .page-header .page-subtitle {
+      font-size: 80px;
+      line-height: 100px; }
+  .App .profile .backdrop-profile {
+    margin-top: 3em;
+    margin-left: 14em; }
+    .App .profile .backdrop-profile img {
+      width: 640px;
+      height: 460px; }
+  .App .profile .backdrop-image .self {
+    max-width: 90%; }
   .App .about {
-    margin-top: 14em;
-    margin-bottom: 10em; }
-    .App .about #tab {
-      margin-left: 2em; }
-    .App .about a {
-      color: #1a1a1a; }
+    margin-top: 14em; }
     .App .about .about-text {
       margin-left: 6em; }
       .App .about .about-text .about-me {
         font-size: 20px;
         line-height: 36px;
-        font-family: "Inter UI", Helvetica, sans-serif;
         letter-spacing: .025em; }
       .App .about .about-text .btn-primary {
-        background-color: white;
-        border-color: white;
-        color: #1a1a1a;
-        font-family: "Gotham Medium", Helvetica, sans-serif;
-        padding: 20px 38px 20px 30px;
         margin-top: 4em; }
-  .App .services {
+        .App .about .about-text .btn-primary:hover {
+          background-color: #151515;
+          border-color: #151515;
+          color: white; }
+  .App .services .service-details {
+    margin-bottom: 3em;
+    font-size: 20px;
+    line-height: 36px; }
+  .App .services .inner {
+    margin-left: 14.75em;
+    margin-bottom: 10em; }
+  .App .services h1 {
+    font-size: 48px;
+    line-height: 56px; }
+  .App .services h3 {
+    margin-top: 1em;
+    font-size: 24px; }
+  .App .services .service-items {
+    margin-top: 5em;
+    margin-bottom: 4em; }
+  .App .services .service-item {
+    margin-bottom: 1em; }
+  .App .services .btn-primary {
+    margin-top: 4em; }
+  .App .services .case1 .case1-img {
+    padding-top: 6em;
+    padding-left: 2em; }
+  .App .services .case2 .case2-img {
     padding-top: 10em;
-    padding-bottom: 0;
-    color: #0004ad;
-    background-color: #0004ad;
-    -webkit-transition: 1200ms linear;
-    -ms-transition: 1200ms linear;
-    transition: 1200ms linear; }
-    .App .services #tab {
-      color: #0004ad; }
-    .App .services:hover {
-      background-color: white;
-      color: #1a1a1a;
-      -webkit-transition: background-color 1000ms linear;
-      -ms-transition: background-color 1000ms linear;
-      transition: background-color 1000ms linear; }
-      .App .services:hover #tab {
-        color: #1a1a1a; }
-      .App .services:hover .service-item, .App .services:hover .project-xp {
-        color: #7c7c7c; }
-    .App .services .service-details {
-      margin-left: 4em;
-      margin-right: 4em;
-      margin-bottom: 3em;
-      font-size: 20px;
-      line-height: 36px;
-      font-family: "Inter UI", Helvetica, sans-serif;
-      letter-spacing: .025em; }
-    .App .services h1 {
-      font-size: 48px;
-      line-height: 56px;
-      font-family: "Gotham Bold", Helvetica, sans-serif;
-      margin-bottom: 1em;
-      margin-left: -.5em; }
-    .App .services h3 {
-      margin-left: 3.5em;
-      margin-bottom: 1em;
-      margin-top: 1em;
-      font-family: "Gotham Bold", Helvetica, sans-serif;
-      font-size: 24px; }
-    .App .services .service-item {
-      margin-left: 6em;
-      margin-bottom: 1em;
-      font-size: 16px;
-      line-height: 32px;
-      font-family: "Inter UI", Helvetica, sans-serif;
-      color: #0004ad; }
-    .App .services .btn-primary {
-      background-color: #0d10b1;
-      border-color: #0d10b1;
-      color: white;
-      font-family: "Gotham Medium", Helvetica, sans-serif;
-      padding: 20px 38px 20px 30px;
-      margin-top: 4em;
-      margin-left: 5.8em; }
-    .App .services .tab-p {
-      padding-top: 1.75em; }
-    .App .services .work {
-      padding-top: 10em; }
-      .App .services .work h1 {
-        font-size: 48px;
-        line-height: 56px;
-        font-family: "Gotham Bold", Helvetica, sans-serif;
-        letter-spacing: .02em; }
-      .App .services .work .project-details {
-        margin-left: 4em;
-        margin-right: 4em;
-        margin-bottom: 3.5em;
-        font-size: 20px;
-        line-height: 36px;
-        font-family: "Inter UI", Helvetica, sans-serif;
-        letter-spacing: .025em; }
-      .App .services .work .project-xp {
-        font-size: 16px;
-        line-height: 32px;
-        margin-left: 4.5em;
-        margin-right: 5em;
-        margin-bottom: 3em; }
-    .App .services .case1 .case1-img {
+    padding-right: 2em; }
+  .App .services .case3 {
+    padding-bottom: 5em; }
+    .App .services .case3 .case3-img {
       padding-top: 6em;
       padding-left: 2em; }
-    .App .services .case2 .case2-img {
-      padding-top: 10em;
-      padding-right: 2em; }
-    .App .services .case3 {
-      padding-bottom: 5em; }
-      .App .services .case3 .case3-img {
-        padding-top: 6em;
-        padding-left: 2em; }
   .App .footer {
-    padding-top: 10em;
     margin-bottom: 6em; }
+    .App .footer .inner {
+      margin-left: 14.75em; }
     .App .footer h1 {
       font-size: 48px;
-      line-height: 56px;
-      margin-left: -.5em; }
+      line-height: 56px; }
     .App .footer .contact-details {
-      margin-left: 4em;
-      margin-right: 4em;
-      margin-top: 3em;
-      margin-bottom: 3.5em;
+      margin-right: 6em;
       font-size: 20px;
       line-height: 36px;
-      font-family: "Inter UI", Helvetica, sans-serif;
       letter-spacing: .025em; }
-    .App .footer .btn-primary {
-      margin-left: 4.85em;
-      background-color: white;
-      border-color: white;
-      color: #1a1a1a;
-      font-family: "Gotham Medium", Helvetica, sans-serif;
-      padding: 14px 24px 14px 20px;
-      margin-top: 0; }
-      .App .footer .btn-primary:hover {
-        background-color: #151515;
-        border-color: #151515;
-        color: white; }
-  .App .page-footer .mobile-social {
-    margin: 0 auto;
-    margin-top: 2em; }
-    .App .page-footer .mobile-social img {
-      margin-right: 1.5em;
-      width: 30px; } }
+  .App .page-footer .mobile-social img {
+    margin-right: 1.5em; } }
 
 @media (min-width: 1200px) {
   .App .navbar {
@@ -1009,183 +804,96 @@ body {
       .App .navbar .mobile-social img {
         margin-right: 2em;
         width: 40px; }
-  .App .navbar-dark .navbar-nav .nav-link {
-    color: rgba(255, 255, 255, 0.9); }
   .App .nav-link {
-    font-size: 48px;
-    line-height: 56px;
     margin-left: 4em; }
-  .App #tab {
-    margin-left: 8em; }
+  .App #tab p {
+    font-size: 11px;
+    letter-spacing: 3px;
+    margin-bottom: 0;
+    font-weight: 600; }
   .App .page-header {
-    margin-top: 9em; }
-    .App .page-header .page-headline {
-      margin-left: 1.75em; }
+    margin-top: 10em; }
+    .App .page-header #tab {
+      left: 1.15em;
+      bottom: 61px; }
+    .App .page-header .loader {
+      bottom: 1em; }
     .App .page-header .page-title, .App .page-header .page-subtitle {
-      font-size: 48px;
-      line-height: 56px; }
-  .App .profile {
-    margin-top: 5em; }
-    .App .profile .backdrop-profile {
-      position: absolute;
-      margin-top: 4em;
-      margin-left: 20em; }
-      .App .profile .backdrop-profile img {
-        width: 860px;
-        height: 480px; }
-    .App .profile .backdrop-image .self {
-      max-width: 75%; }
+      font-size: 90px;
+      line-height: 110px; }
+  .App .profile .backdrop-profile {
+    position: absolute;
+    margin-top: 4em;
+    margin-left: 20em; }
+    .App .profile .backdrop-profile img {
+      width: 860px;
+      height: 480px; }
+  .App .profile .backdrop-image .self {
+    max-width: 75%; }
   .App .about {
-    margin-top: 16em;
-    margin-bottom: 10em; }
-    .App .about #tab {
-      margin-left: 3em; }
-    .App .about .about-text {
-      margin-left: 6em; }
-      .App .about .about-text .about-me {
-        line-height: 36px;
-        font-size: 20px; }
-      .App .about .about-text .btn-primary {
-        padding: 20px 38px 20px 30px;
-        margin-top: 4em; }
-  .App .services {
-    padding-top: 10em;
-    padding-bottom: 0;
-    color: #0004ad;
-    background-color: #0004ad;
-    -webkit-transition: 1200ms linear;
-    -ms-transition: 1200ms linear;
-    transition: 1200ms linear; }
-    .App .services #tab {
-      color: #0004ad; }
-    .App .services:hover {
-      background-color: white;
-      color: #1a1a1a;
-      -webkit-transition: background-color 1000ms linear;
-      -ms-transition: background-color 1000ms linear;
-      transition: background-color 1000ms linear; }
-      .App .services:hover #tab {
-        color: #1a1a1a; }
-      .App .services:hover .service-item, .App .services:hover .project-xp {
-        color: #7c7c7c; }
-    .App .services .service-details {
-      margin-left: 3.75em;
-      margin-right: 6em;
-      margin-bottom: 1em;
-      line-height: 36px;
-      font-size: 20px;
-      font-weight: 400; }
-    .App .services h1 {
-      font-size: 48px;
-      line-height: 56px; }
-    .App .services h3 {
-      margin-left: 0;
-      font-family: "Gotham Bold", Helvetica, sans-serif;
-      font-size: 20px; }
-    .App .services .service-items {
-      margin-left: 0;
-      margin-top: 5em;
-      margin-bottom: 4em; }
-    .App .services .service-item {
-      margin-left: 0;
-      margin-right: 0;
-      color: #0004ad; }
-    .App .services .btn-primary {
-      margin-top: 2em;
-      margin-left: 4.85em; }
-    .App .services .tab-p {
-      padding-top: 2.75em; }
-    .App .services .work {
-      padding-top: 11em; }
-      .App .services .work h1 {
-        font-size: 48px;
-        line-height: 56px; }
-      .App .services .work .project-details {
-        margin-left: 3.75em;
-        margin-right: 6em;
-        margin-top: 1em;
-        margin-bottom: 3.5em;
-        line-height: 36px;
-        font-size: 20px;
-        font-weight: 400; }
-      .App .services .work h3 {
-        margin-left: 3.2em;
+    margin-top: 16em; }
+  .App .services .service-details {
+    margin-bottom: 1em;
+    font-weight: 400; }
+  .App .services h3 {
+    font-size: 20px; }
+  .App .services .service-items {
+    margin-left: 0;
+    margin-top: 5em;
+    margin-bottom: 4em; }
+  .App .services .btn-primary {
+    margin-top: 2em; }
+  .App .services .case1 {
+    padding-top: 5em; }
+    .App .services .case1 .case1-col {
+      padding-top: 3em;
+      padding-left: 6em; }
+      .App .services .case1 .case1-col h4, .App .services .case1 .case1-col h5 {
         font-family: "Gotham Bold", Helvetica, sans-serif; }
-      .App .services .work .project-xp {
-        font-size: 16px;
-        line-height: 32px;
-        margin-left: 4.5em;
-        margin-right: 20em;
-        margin-bottom: 4em; }
-    .App .services .case1 {
+      .App .services .case1 .case1-col .client {
+        margin: 0;
+        padding: 0;
+        margin-bottom: .25em; }
+    .App .services .case1 .case1-img {
+      padding-left: 4em;
       padding-top: 5em; }
-      .App .services .case1 .case1-col {
-        padding-top: 3em;
-        padding-left: 6em; }
-        .App .services .case1 .case1-col h4, .App .services .case1 .case1-col h5 {
-          font-family: "Gotham Bold", Helvetica, sans-serif; }
-        .App .services .case1 .case1-col .client {
-          margin: 0;
-          padding: 0;
-          margin-bottom: .25em; }
-      .App .services .case1 .case1-img {
-        padding-left: 4em;
-        padding-top: 5em; }
-    .App .services .case2 {
+  .App .services .case2 {
+    padding-top: 5em; }
+    .App .services .case2 a {
+      color: black; }
+    .App .services .case2 .case2-col {
+      padding-top: 1em;
+      padding-left: 6em; }
+      .App .services .case2 .case2-col h4, .App .services .case2 .case2-col h5 {
+        font-family: "Gotham Bold", Helvetica, sans-serif; }
+      .App .services .case2 .case2-col .client {
+        margin: 0;
+        padding: 0;
+        margin-bottom: .25em; }
+    .App .services .case2 .case2-img {
+      padding-right: 4em;
       padding-top: 5em; }
-      .App .services .case2 a {
-        color: #0004ad; }
-      .App .services .case2 .case2-col {
-        padding-top: 1em;
-        padding-left: 6em; }
-        .App .services .case2 .case2-col h4, .App .services .case2 .case2-col h5 {
-          font-family: "Gotham Bold", Helvetica, sans-serif; }
-        .App .services .case2 .case2-col .client {
-          margin: 0;
-          padding: 0;
-          margin-bottom: .25em; }
-      .App .services .case2 .case2-img {
-        padding-right: 4em;
-        padding-top: 5em; }
-    .App .services .case3 {
-      padding-bottom: 5em; }
-      .App .services .case3 .case3-col {
-        padding-top: 3em;
-        padding-left: 6em; }
-        .App .services .case3 .case3-col h4, .App .services .case3 .case3-col h5 {
-          font-family: "Gotham Bold", Helvetica, sans-serif; }
-        .App .services .case3 .case3-col .client {
-          margin: 0;
-          padding: 0;
-          margin-bottom: .25em; }
-      .App .services .case3 .case3-img {
-        padding-left: 4em;
-        padding-top: 5em; }
+  .App .services .case3 {
+    padding-bottom: 5em; }
+    .App .services .case3 .case3-col {
+      padding-top: 3em;
+      padding-left: 6em; }
+      .App .services .case3 .case3-col h4, .App .services .case3 .case3-col h5 {
+        font-family: "Gotham Bold", Helvetica, sans-serif; }
+      .App .services .case3 .case3-col .client {
+        margin: 0;
+        padding: 0;
+        margin-bottom: .25em; }
+    .App .services .case3 .case3-img {
+      padding-left: 4em;
+      padding-top: 5em; }
   .App .footer {
     padding-top: 11em;
     margin-bottom: 10em; }
     .App .footer h1 {
-      font-size: 48px;
-      line-height: 56px;
-      letter-spacing: .02em;
-      margin-left: -.5em; }
+      letter-spacing: .02em; }
     .App .footer .contact-details {
-      margin-left: 3.75em;
-      margin-right: 6em;
-      line-height: 36px;
-      font-size: 20px; }
-    .App .footer .btn-primary {
-      margin-left: 4.5em;
-      background-color: white;
-      border-color: white;
-      color: #1a1a1a;
-      font-family: "Gotham Medium", Helvetica, sans-serif;
-      padding: 14px 24px 14px 20px;
-      margin-top: 0; }
-      .App .footer .btn-primary:hover {
-        background-color: #151515;
-        border-color: #151515;
-        color: white; }
+      margin-right: 7em; }
   .App .page-footer .mobile-social {
     margin: 0 auto;
     margin-top: 2em; }
@@ -1194,19 +902,11 @@ body {
       width: 30px; } }
 
 @media (min-width: 1300px) {
-  .App #tab {
-    margin-left: 11em; }
   .App .page-header {
-    margin-top: 9em; }
-    .App .page-header .page-headline {
-      margin-left: 1.75em; }
-    .App .page-header .page-title, .App .page-header .page-subtitle {
-      font-size: 64px;
-      line-height: 72px; }
+    margin-top: 12em; }
   .App .profile {
     margin-top: 7em; }
     .App .profile .backdrop-profile {
-      position: absolute;
       margin-top: 8em;
       margin-left: 24em; }
       .App .profile .backdrop-profile img {
@@ -1215,153 +915,78 @@ body {
     .App .profile .backdrop-image .self {
       max-width: 80%; }
   .App .about {
-    margin-top: 20em;
-    margin-bottom: 10em; }
-    .App .about #tab {
-      margin-left: 6em; }
+    margin-top: 20em; }
     .App .about .about-text {
       margin-left: 10em; }
       .App .about .about-text .about-me {
         line-height: 40px;
         font-size: 24px; }
-      .App .about .about-text .btn-primary {
-        padding: 20px 38px 20px 30px;
-        margin-top: 4em; }
-  .App .services {
-    padding-top: 10em;
-    padding-bottom: 0;
-    color: #0004ad;
-    background-color: #0004ad;
-    -webkit-transition: 1200ms linear;
-    -ms-transition: 1200ms linear;
-    transition: 1200ms linear; }
-    .App .services #tab {
-      color: #0004ad; }
-    .App .services:hover {
-      background-color: white;
-      color: #1a1a1a;
-      -webkit-transition: background-color 1000ms linear;
-      -ms-transition: background-color 1000ms linear;
-      transition: background-color 1000ms linear; }
-      .App .services:hover #tab {
-        color: #1a1a1a; }
-      .App .services:hover .service-item, .App .services:hover .project-xp {
-        color: #7c7c7c; }
-    .App .services .service-details {
-      margin-left: 6em;
-      margin-right: 10em;
-      margin-bottom: 1em;
-      line-height: 40px;
-      font-size: 24px;
-      font-weight: 400; }
-    .App .services h1 {
-      font-size: 64px;
-      line-height: 72px; }
-    .App .services h3 {
-      margin-left: 0;
-      font-family: "Gotham Bold", Helvetica, sans-serif;
-      font-size: 24px; }
-    .App .services .service-items {
-      margin-left: 1.75em; }
-    .App .services .service-item {
-      margin-left: 0;
-      margin-right: 0;
-      color: #0004ad; }
-    .App .services .btn-primary {
-      margin-top: 2em;
-      margin-left: 8.77em; }
-    .App .services .tab-p {
-      padding-top: 7em; }
-    .App .services .work {
-      padding-top: 15em; }
-      .App .services .work h1 {
-        font-size: 64px;
-        line-height: 72px; }
-      .App .services .work .project-details {
-        margin-left: 6em;
-        margin-right: 10em;
-        margin-top: 1em;
-        margin-bottom: 3.5em;
-        line-height: 40px;
-        font-size: 24px;
-        font-weight: 400; }
-      .App .services .work h3 {
-        margin-left: 5.85em;
+  .App .services .service-details {
+    line-height: 40px;
+    font-size: 24px; }
+  .App .services h1 {
+    font-size: 64px;
+    line-height: 72px; }
+  .App .services h3 {
+    font-size: 24px; }
+  .App .services .btn-primary {
+    margin-top: 2em; }
+  .App .services .case1 {
+    padding-top: 5em; }
+    .App .services .case1 .case1-col {
+      padding-top: 3em;
+      padding-left: 6em; }
+      .App .services .case1 .case1-col h4, .App .services .case1 .case1-col h5 {
         font-family: "Gotham Bold", Helvetica, sans-serif; }
-      .App .services .work .project-xp {
-        font-size: 16px;
-        line-height: 32px;
-        margin-left: 6.5em;
-        margin-right: 18em;
-        margin-bottom: 5.25em; }
-    .App .services .case1 {
-      padding-top: 5em; }
-      .App .services .case1 .case1-col {
-        padding-top: 3em;
-        padding-left: 6em; }
-        .App .services .case1 .case1-col h4, .App .services .case1 .case1-col h5 {
-          font-family: "Gotham Bold", Helvetica, sans-serif; }
-        .App .services .case1 .case1-col .client {
-          margin: 0;
-          padding: 0;
-          margin-bottom: .25em; }
-      .App .services .case1 .case1-img {
-        padding-left: 4em;
-        padding-top: 0; }
-    .App .services .case2 {
-      padding-top: 5em; }
-      .App .services .case2 a {
-        color: #0004ad; }
-      .App .services .case2 .case2-col {
-        padding-top: 1em;
-        padding-left: 6em; }
-        .App .services .case2 .case2-col h4, .App .services .case2 .case2-col h5 {
-          font-family: "Gotham Bold", Helvetica, sans-serif; }
-        .App .services .case2 .case2-col .client {
-          margin: 0;
-          padding: 0;
-          margin-bottom: .25em; }
-      .App .services .case2 .case2-img {
-        padding-right: 4em;
-        padding-top: 0; }
-    .App .services .case3 {
-      padding-bottom: 5em; }
-      .App .services .case3 .case3-col {
-        padding-top: 3em;
-        padding-left: 6em; }
-        .App .services .case3 .case3-col h4, .App .services .case3 .case3-col h5 {
-          font-family: "Gotham Bold", Helvetica, sans-serif; }
-        .App .services .case3 .case3-col .client {
-          margin: 0;
-          padding: 0;
-          margin-bottom: .25em; }
-      .App .services .case3 .case3-img {
-        padding-left: 4em;
-        padding-top: 0; }
+      .App .services .case1 .case1-col .client {
+        margin: 0;
+        padding: 0;
+        margin-bottom: .25em; }
+    .App .services .case1 .case1-img {
+      padding-left: 4em;
+      padding-top: 0; }
+  .App .services .case2 {
+    padding-top: 5em; }
+    .App .services .case2 a {
+      color: black; }
+    .App .services .case2 .case2-col {
+      padding-top: 1em;
+      padding-left: 6em; }
+      .App .services .case2 .case2-col h4, .App .services .case2 .case2-col h5 {
+        font-family: "Gotham Bold", Helvetica, sans-serif; }
+      .App .services .case2 .case2-col .client {
+        margin: 0;
+        padding: 0;
+        margin-bottom: .25em; }
+    .App .services .case2 .case2-img {
+      padding-right: 4em;
+      padding-top: 0; }
+  .App .services .case3 {
+    padding-bottom: 5em; }
+    .App .services .case3 .case3-col {
+      padding-top: 3em;
+      padding-left: 6em; }
+      .App .services .case3 .case3-col h4, .App .services .case3 .case3-col h5 {
+        font-family: "Gotham Bold", Helvetica, sans-serif; }
+      .App .services .case3 .case3-col .client {
+        margin: 0;
+        padding: 0;
+        margin-bottom: .25em; }
+    .App .services .case3 .case3-img {
+      padding-left: 4em;
+      padding-top: 0; }
   .App .footer {
     padding-top: 15em;
     margin-bottom: 10em; }
     .App .footer h1 {
       font-size: 64px;
       line-height: 72px;
-      letter-spacing: .02em;
-      margin-left: -.5em; }
+      letter-spacing: .02em; }
     .App .footer .contact-details {
-      margin-left: 6em;
       font-size: 24px;
       line-height: 40px; }
     .App .footer .btn-primary {
-      margin-left: 8.6em;
-      background-color: white;
-      border-color: white;
-      color: #1a1a1a;
-      font-family: "Gotham Medium", Helvetica, sans-serif;
-      padding: 14px 24px 14px 20px;
       margin-top: 1.5em; }
-      .App .footer .btn-primary:hover {
-        background-color: #151515;
-        border-color: #151515;
-        color: white; }
   .App .page-footer .mobile-social {
     margin: 0 auto;
     margin-top: 2em; }
