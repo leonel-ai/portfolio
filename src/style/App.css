@@ -44,6 +44,30 @@ body {
     height: 100vh; }
   .App .navbar .navbar-toggler:focus {
     outline: none; }
+  .App .navbar .icon-bar {
+    width: 22px;
+    height: 2px;
+    background-color: #B6B6B6;
+    display: block;
+    transition: all 0.2s;
+    margin-top: 4px; }
+  .App .navbar .navbar-toggler {
+    border: none;
+    background: transparent !important; }
+  .App .navbar .navbar-toggler .top-bar {
+    transform: rotate(45deg);
+    transform-origin: 10% 10%; }
+  .App .navbar .navbar-toggler .middle-bar {
+    opacity: 0; }
+  .App .navbar .navbar-toggler .bottom-bar {
+    transform: rotate(-45deg);
+    transform-origin: 10% 90%; }
+  .App .navbar .navbar-toggler.collapsed .top-bar {
+    transform: rotate(0); }
+  .App .navbar .navbar-toggler.collapsed .middle-bar {
+    opacity: 1; }
+  .App .navbar .navbar-toggler.collapsed .bottom-bar {
+    transform: rotate(0); }
   .App .navbar .navbar-nav {
     margin-top: 3.5em; }
   .App .navbar .navbar-brand {
@@ -165,7 +189,6 @@ body {
 
 .App .services {
   padding-top: 6em;
-  background-color: white;
   color: #1a1a1a; }
   .App .services .service-details {
     margin-left: initial;

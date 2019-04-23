@@ -1,4 +1,8 @@
 import React, { Component } from 'react';
+import {
+  isBrowser,
+  isMobile
+} from "react-device-detect";
 
 import self from './assets/self.jpg';
 import water from './assets/bgwater.gif';
@@ -23,14 +27,39 @@ import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import './style/App.css';
 
 class App extends Component {
+  state = {
+    color: 'black',
+    transition: 'inherit'
+  }
+
+  listenScrollEvent = e => {
+    if (window.scrollY > 1200 && isBrowser) {
+      this.setState({
+        color: 'white',
+        transition: 'all 4s ease'
+      })
+    } else if (window.scrollY > 680 && isMobile) {
+      this.setState({
+        color: 'white',
+        transition: 'all 4s ease'
+      })
+    }
+  }
+
+  componentDidMount() {
+    window.addEventListener('scroll', this.listenScrollEvent)
+  }
+
   render() {
     return (
       <div className="container-fluid App">
 
       <nav className="navbar navbar-dark">
-        <a className="navbar-brand" href="#"></a>
-        <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span className="navbar-toggler-icon"></span>
+        <a className="navbar-brand" href="/"></a>
+        <button className="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span className="icon-bar top-bar"></span>
+          <span className="icon-bar middle-bar"></span>
+          <span className="icon-bar bottom-bar"></span>
         </button>
 
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
@@ -104,7 +133,7 @@ class App extends Component {
         </Fade>
         </div>
 
-        <div className="row about" data-background="#000">
+        <div className="row about">
 
         <Fade bottom>
           <div className="col-md-9 col-lg-8 about-text">
@@ -120,7 +149,7 @@ class App extends Component {
         </Fade>
         </div>
 
-        <div className="row services" data-background="#fff">
+        <div className="row services" style={{backgroundColor: this.state.color, transition: this.state.transition}}>
 
          <div className="col-md-8 col-lg-8 inner">
          <Fade bottom>
@@ -128,7 +157,7 @@ class App extends Component {
             <p className="service-details">Forget templates or dressed-up Wix sites. I research, design, and develop
             solutions tailored to your needs.</p>
 
-            <p className="service-details">Forget the middlemen and bloated agency pricing. You'll be talking directly to the strategist, the creator, and the partner
+            <p className="service-details">Forget middlemen and bloated agency prices. You'll be talking directly to the strategist, the creator, and the partner
             invested in the success of your business. Expect transparent, honest and professional communication every step of the way.
             </p>
         </Fade>
@@ -203,8 +232,6 @@ class App extends Component {
                   <h5 className="client">CLIENT</h5>
                   <a href="http://tellusyours.com" target="_blank" rel="noopener noreferrer">
                     <p>Markowitz Law</p><br/></a>
-                  </Fade>
-                  <Fade bottom>
                   <h5 className="client">STRATEGY</h5>
                     <p>Constructing a new, responsive website paired with a full rebrand and billboard campaign launch. Inspired by the no-nonsense
                       nature of the Markowitz team and the familiar design elements of a traffic-ridden city, I introduced a site
@@ -245,8 +272,6 @@ class App extends Component {
                   <h5 className="client">STRATEGY</h5>
                     <p>Reimagining the moving labor experience for a forward-thinking Austin startup. One of a small distributed team of developers
                       that created a location-based, on-demand service mobile app utilizing an Agile software development life cycle (SDLC) and a combination of React, Express, and MySQL.</p><br/>
-                      </Fade>
-                  <Fade bottom>
                   <h5 className="client">TASKS</h5>
                     <p>Back-End Development<br/>Amazon Web Services, Git, JIRA<br/>Stripe Payment Processing<br/>Node RESTful APIs<br/>CRM Database Design<br/>Testing and Debugging</p>
                   </Fade>
