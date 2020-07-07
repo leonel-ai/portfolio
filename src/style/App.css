@@ -112,7 +112,7 @@ body {
     width: 10%;
     position: fixed;
     bottom: 1em;
-    left: .5em;
+    left: 1rem;
     overflow: hidden;
     background-color: #f7f7f7;
     transform: rotate(90deg); }
@@ -373,7 +373,7 @@ body {
       position: fixed;
       left: -.75em;
       right: 0;
-      bottom: 61px;
+      bottom: 3rem;
       z-index: 9999;
       flex-direction: column;
       justify-content: center; }
@@ -381,7 +381,7 @@ body {
       height: 1px;
       width: 5%;
       position: fixed;
-      bottom: 2em;
+      bottom: 1em;
       left: 1.15em;
       overflow: hidden;
       background-color: #f7f7f7;
@@ -614,7 +614,7 @@ body {
     .App .page-header {
       margin-top: 4em; }
       .App .page-header #tab {
-        left: .5em; }
+        left: 0; }
       .App .page-header .page-headline {
         margin-left: 2.5em; }
     .App .profile {
@@ -744,6 +744,9 @@ body {
     .App .page-header #tab {
       left: 1em;
       bottom: 72px; }
+    .App .page-header .loader {
+      bottom: 1.5rem;
+      left: 1.5rem; }
     .App .page-header .page-title, .App .page-header .page-subtitle {
       font-size: 80px;
       line-height: 100px; }
@@ -935,6 +938,9 @@ body {
 @media (min-width: 1300px) {
   .App .page-header {
     margin-top: 12em; }
+    .App .page-header .loader {
+      bottom: 0.75rem;
+      left: 1.25rem; }
   .App .profile {
     margin-top: 7em; }
     .App .profile .backdrop-profile {
@@ -1027,4 +1033,5 @@ body {
 
 @media (min-width: 1500px) {
   .App .page-header .loader {
-    left: 0.5rem; } }
+    left: 0.5rem;
+    bottom: 0; } }

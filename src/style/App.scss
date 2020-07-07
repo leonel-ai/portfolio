@@ -154,7 +154,7 @@ body {
       width: 10%;
       position: fixed;
       bottom: 1em;
-      left: .5em;
+      left: 1rem;
       overflow: hidden;
       background-color: $tab;
       transform: rotate(90deg);
@@ -474,7 +474,7 @@ body {
         position: fixed;
         left: -.75em;
         right: 0;
-        bottom: 61px;
+        bottom: 3rem;
         z-index: 9999;
         flex-direction: column;
         justify-content: center;
@@ -483,7 +483,7 @@ body {
         height: 1px;
         width: 5%;
         position: fixed;
-        bottom: 2em;
+        bottom: 1em;
         left: 1.15em;
         overflow: hidden;
         background-color: $tab;
@@ -784,7 +784,7 @@ body {
     .page-header {
       margin-top: 4em;
       #tab {
-        left: .5em;
+        left: 0;
       }
       .page-headline {
         margin-left: 2.5em;
@@ -1001,6 +1001,10 @@ body {
       #tab {
         left: 1em;
         bottom: 72px;
+      }
+      .loader {
+        bottom: 1.5rem;
+        left: 1.5rem;
       }
       .page-title, .page-subtitle {
         font-size: 80px;
@@ -1351,6 +1355,11 @@ body {
   .App {
     .page-header {
       margin-top: 12em;
+
+      .loader {
+        bottom: 0.75rem;
+        left: 1.25rem;
+      }
     }
     .profile {
       margin-top: 7em;
@@ -1553,5 +1562,6 @@ body {
 @media (min-width: 1500px) {
   .App .page-header .loader {
     left: 0.5rem;
+    bottom: 0;
   }
 }
