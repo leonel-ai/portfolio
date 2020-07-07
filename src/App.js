@@ -95,7 +95,7 @@ class App extends Component {
                   <FontAwesomeIcon icon={['fab', 'github']} size="6x" /></a>
                 </Fade>
                 <Fade top delay={800} duration={1000}>
-                  <a className="icon-whatsapp" href="http://github.com/leonel-ai/" target="_blank" rel="noopener noreferrer">
+                  <a className="icon-whatsapp" href="https://imgur.com/a/93HNi8l" target="_blank" rel="noopener noreferrer">
                   <FontAwesomeIcon icon={['fab', 'whatsapp']} size="6x" /></a>
                 </Fade>
             </div>
