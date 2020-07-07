@@ -12,19 +12,30 @@ import caseStudy from './assets/drdelicacy.png';
 import caseStudy2 from './assets/markowitz-services.gif';
 import caseStudy3 from './assets/trucke.png';
 
-// social icons
-import tw from './assets/icons/twitter.png';
-import li from './assets/icons/linkedin.png';
-import behance from './assets/icons/behance.png';
-import insta from './assets/icons/instagram.png';
-import git from './assets/icons/github.png';
-
 import Fade from 'react-reveal/Fade';
 import Footer from './components/footer';
 
 // styles
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import './style/App.css';
+
+
+// social icons
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import { faLinkedin, faGithub, faWhatsapp, faTwitter, faBehance} from '@fortawesome/free-brands-svg-icons';
+
+library.add(
+  faEnvelope,
+  faLinkedin,
+  faGithub,
+  faWhatsapp,
+  faTwitter,
+  faBehance
+);
+
+
 
 class App extends Component {
   state = {
@@ -65,41 +76,27 @@ class App extends Component {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav ml-auto">
           <Fade top delay={400} duration={1000}>
-            <li className="nav-item active">
-              <a className="nav-link" href="http://linkedin.com/in/leonelaguzman/" target="_blank" rel="noopener noreferrer">CV</a>
-            </li>
-          </Fade>
-          <Fade top delay={440} duration={1000}>
             <li className="nav-item">
-              <a className="nav-link" href="mailto:leonela.dev@gmail.com?subject=Let's talk.">Let's Email</a>
-            </li>
-          </Fade>
-          <Fade top delay={480} duration={1000}>
-            <li className="nav-item">
-              <a className="nav-link" href="sms:3372400858">Text Me</a>
+              <p className="nav-link">Get in touch</p>
             </li>
           </Fade>
 
             <div className="mobile-social">
                 <Fade top duration={1000}>
-              <a href="http://linkedin.com/in/leonelaguzman/" target="_blank" rel="noopener noreferrer"><span>
-                <img src={li} alt=""/></span></a>
+                  <a href="http://linkedin.com/in/leonelaguzman/" target="_blank" rel="noopener noreferrer">
+                  <FontAwesomeIcon icon={['fab', 'linkedin']} size="6x" /></a>
                 </Fade>
-                <Fade top delay={560} duration={1000}>
-                <a href="http://github.com/leonel-ai/" target="_blank" rel="noopener noreferrer"><span>
-                <img src={git} alt=""/></span></a>
+                <Fade top delay={600} duration={1000}>
+                  <a className="icon-email"href="mailto:leonela.dev@gmail.com?subject=Let's talk." target="_blank" rel="noopener noreferrer">
+                  <FontAwesomeIcon icon={['fas', 'envelope']} size="6x" /></a>
                 </Fade>
-                <Fade top delay={680} duration={1000}>
-              <a href="https://www.behance.net/leonelaguzman" target="_blank" rel="noopener noreferrer"><span>
-                <img src={behance} alt=""/></span></a>
-                </Fade>
-                <Fade top delay={620} duration={1000}>
-              <a href="http://twitter.com/leonel_ai/" target="_blank" rel="noopener noreferrer"><span>
-                <img src={tw} alt=""/></span></a>
+                <Fade top delay={700} duration={1000}>
+                  <a className="icon-git" href="http://github.com/leonel-ai/" target="_blank" rel="noopener noreferrer">
+                  <FontAwesomeIcon icon={['fab', 'github']} size="6x" /></a>
                 </Fade>
                 <Fade top delay={800} duration={1000}>
-              <a href="http://instagram.com/leonel.ai/" target="_blank" rel="noopener noreferrer"><span>
-                <img src={insta} alt=""/></span></a>
+                  <a className="icon-whatsapp" href="http://github.com/leonel-ai/" target="_blank" rel="noopener noreferrer">
+                  <FontAwesomeIcon icon={['fab', 'whatsapp']} size="6x" /></a>
                 </Fade>
             </div>
           </ul>
@@ -114,7 +111,7 @@ class App extends Component {
 
           <div className="col-md-10 col-lg-10 page-headline">
           <Fade bottom>
-            <h1 className="page-title">Leonela Guzmán</h1>
+            <h1 className="page-title">Leonela Guzmán del Cid</h1>
             <h1 className="page-subtitle">Design + Development</h1>
           </Fade>
           </div>
@@ -137,13 +134,12 @@ class App extends Component {
 
         <Fade bottom>
           <div className="col-md-9 col-lg-8 about-text">
-            <p className="about-me">I'm a software developer turning ambitious ideas into user-friendly
-            solutions with a keen aesthetic eye. In other words, I can bring your plans to life from start to finish,
-            design to final production. With years of experience in public relations and creative
-            advertising, rest assured that, together, we'll design an exceptional brand and compelling web experiences.</p>
+            <p className="about-me">A full-stack software developer and occasional writer with design, PR, and creative advertising roots.
+            I turn ambitious ideas into user-friendly solutions with a keen aesthetic eye. As a writer, my primary beats are film, television,
+            politics, culture and wherever any of them intersect.</p>
             <a href="mailto:leonela.dev@gmail.com?subject=Let's talk.">
             <button type="button" className="btn btn-primary">
-            Get to know me
+            Say hello
             </button></a>
           </div>
         </Fade>
@@ -154,10 +150,10 @@ class App extends Component {
          <div className="col-md-8 col-lg-8 inner">
          <Fade bottom>
             <h1>The Process</h1>
-            <p className="service-details">Forget templates or dressed-up Wix sites. I research, design, and develop
+            <p className="service-details">1) Forget templates or dressed-up Wix sites. I research, design, and develop
             solutions tailored to your needs.</p>
 
-            <p className="service-details">Forget middlemen and bloated agency prices. You'll be talking directly to the strategist, the creator, and the partner
+            <p className="service-details">2) Forget middlemen and bloated agency prices. You'll be talking directly to the strategist, the creator, and the partner
             invested in the success of your business. Expect transparent, honest and professional communication every step of the way.
             </p>
         </Fade>
@@ -167,15 +163,15 @@ class App extends Component {
                 <Fade bottom>
                   <div className="col-lg-3 col-xl-3">
                     <h3>Design</h3>
-                    <p className="service-item">UX / UI Design<br/>Responsive Web Design<br/>Mobile App Design<br/>Print Design</p>
+                    <p className="service-item">UX + UI<br/>Responsive Web Design<br/>Mobile Apps<br/>Print + Social Media</p>
                   </div>
                   <div className="col-lg-4 col-xl-4">
                     <h3>Development</h3>
-                    <p className="service-item">HTML/CSS, JavaScript, PHP<br/>Client &amp; Server-Side Scripting<br/>CMS &amp; Cloud Services<br/>SEO &amp; Bandwidth Optimization</p>
+                    <p className="service-item">HTML/CSS, JavaScript, PHP<br/>Client + Server-Side Scripting<br/>Animation + Accessibility<br/>CMS Training</p>
                   </div>
                   <div className="col-lg-4 col-xl-4">
                     <h3>Strategy</h3>
-                    <p className="service-item">Art Direction<br/>User Research<br/>Branding &amp; Identity<br/>Digital Marketing &amp; Copy</p>
+                    <p className="service-item">Art Direction<br/>Branding + Identity<br/>SEO Optimization<br/>Digital Marketing + Copy</p>
                   </div>
                 </Fade>
               </div>
@@ -183,7 +179,7 @@ class App extends Component {
             <Fade bottom>
             <a href="mailto:leonela.dev@gmail.com?subject=Let's talk.">
             <button type="button" className="btn btn-primary">
-            Let's get started</button></a></Fade>
+            Request a quote</button></a></Fade>
           </div>
 
           {/* <div className="col-md-11 col-lg-8 work">
@@ -285,11 +281,10 @@ class App extends Component {
         <div className="col-md-8 col-lg-8 inner">
           <Fade bottom>
             <h1>The Next Step</h1>
-            <p className="contact-details">I engage only a few projects at once to ensure each one gets my complete attention and creative commitment.
-              Contact me today to inquire about availability.</p>
+            <p className="contact-details">"What are you waiting for?" — Gwen Stefani, 2004.</p>
             <a href="mailto:leonela.dev@gmail.com?subject=Let's talk.">
             <button type="button" className="btn btn-primary">
-            Vámonos</button></a>
+            Get started</button></a>
           </Fade>
         </div>
       </div>

@@ -73,12 +73,14 @@ body {
   .App .navbar .navbar-brand {
     font-family: "Gotham Bold", Helvetica, sans-serif; }
   .App .navbar .mobile-social {
-    margin: 0 auto;
-    margin-top: 5em;
-    margin-left: .75em; }
-    .App .navbar .mobile-social img {
-      margin-right: 1em;
-      width: 40px; }
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center; }
+    .App .navbar .mobile-social a {
+      margin: 1rem; }
+      .App .navbar .mobile-social a:hover {
+        color: #999ade; }
 
 .App .navbar-dark .navbar-nav .nav-link {
   color: rgba(255, 255, 255, 0.9); }
@@ -325,16 +327,17 @@ body {
     margin-top: 0; }
 
 .App .page-footer {
-  margin-bottom: 1em;
+  margin-bottom: 6em;
   font-size: 14px;
   line-height: 28px; }
   .App .page-footer .mobile-social {
     margin: 0 auto;
     margin-top: 2em; }
-    .App .page-footer .mobile-social img {
+    .App .page-footer .mobile-social a {
       margin-right: 1em;
-      margin-left: 1em;
-      width: 30px; }
+      margin-left: 1em; }
+      .App .page-footer .mobile-social a:hover {
+        color: #999ade; }
 
 @media (min-width: 576px) {
   .App .navbar {
@@ -351,15 +354,14 @@ body {
       margin: 0 auto;
       margin-top: 3em;
       margin-left: 7.5em; }
-      .App .navbar .mobile-social img {
-        margin-right: 2em;
-        width: 40px; }
   .App .navbar-dark .navbar-nav .nav-link {
     color: rgba(255, 255, 255, 0.9); }
   .App .nav-link {
     font-size: 32px;
     line-height: 32px;
     margin-left: 4em; }
+    .App .nav-link:hover {
+      color: gold; }
   .App #tab p {
     font-size: 11px;
     letter-spacing: 3px;
@@ -567,7 +569,7 @@ body {
   .App .page-footer .mobile-social {
     margin: 0 auto;
     margin-top: 2em; }
-    .App .page-footer .mobile-social img {
+    .App .page-footer .mobile-social a {
       margin-right: .5em;
       width: 30px; } }
 
@@ -602,6 +604,8 @@ body {
       font-size: 32px;
       line-height: 46px;
       margin-left: 2em; }
+      .App .nav-link:hover {
+        color: gold; }
     .App #tab p {
       font-size: 11px;
       letter-spacing: 3px;
@@ -699,7 +703,7 @@ body {
     .App .page-footer .mobile-social {
       margin: 0 auto;
       margin-top: 2em; }
-      .App .page-footer .mobile-social img {
+      .App .page-footer .mobile-social a {
         margin-right: .5em;
         width: 30px; } }
 
@@ -728,6 +732,8 @@ body {
     font-size: 48px;
     line-height: 56px;
     margin-left: 2em; }
+    .App .nav-link:hover {
+      color: gold; }
   .App #tab p {
     font-size: 11px;
     letter-spacing: 3px;
@@ -806,7 +812,7 @@ body {
       font-size: 20px;
       line-height: 36px;
       letter-spacing: .025em; }
-  .App .page-footer .mobile-social img {
+  .App .page-footer .mobile-social a {
     margin-right: 1.5em; } }
 
 @media (min-width: 1200px) {
@@ -829,6 +835,8 @@ body {
         width: 40px; }
   .App .nav-link {
     margin-left: 4em; }
+    .App .nav-link:hover {
+      color: gold; }
   .App #tab p {
     font-size: 11px;
     letter-spacing: 3px;
@@ -840,7 +848,7 @@ body {
       left: 1.15em;
       bottom: 61px; }
     .App .page-header .loader {
-      bottom: 1em; }
+      bottom: 0; }
     .App .page-header .page-title, .App .page-header .page-subtitle {
       font-size: 90px;
       line-height: 110px; }
@@ -920,7 +928,7 @@ body {
   .App .page-footer .mobile-social {
     margin: 0 auto;
     margin-top: 2em; }
-    .App .page-footer .mobile-social img {
+    .App .page-footer .mobile-social a {
       margin-right: .5em;
       width: 30px; } }
 
@@ -1013,6 +1021,10 @@ body {
   .App .page-footer .mobile-social {
     margin: 0 auto;
     margin-top: 2em; }
-    .App .page-footer .mobile-social img {
+    .App .page-footer .mobile-social a {
       margin-right: 1em;
       width: 30px; } }
+
+@media (min-width: 1500px) {
+  .App .page-header .loader {
+    left: 0.5rem; } }

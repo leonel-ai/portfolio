@@ -1,12 +1,18 @@
 import React  from 'react';
-// social icons
-import tw from '../assets/icons/twitter.png';
-import li from '../assets/icons/linkedin.png';
-import behance from '../assets/icons/behance.png';
-import insta from '../assets/icons/instagram.png';
-import git from '../assets/icons/github.png';
-
 import Fade from 'react-reveal/Fade';
+
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import { faLinkedin, faGithub, faWhatsapp, faBehance} from '@fortawesome/free-brands-svg-icons';
+
+library.add(
+  faEnvelope,
+  faLinkedin,
+  faGithub,
+  faWhatsapp,
+  faBehance
+);
 
 const Footer = () => {
   return (
@@ -24,39 +30,30 @@ const Footer = () => {
 
         {/* <hr class="w-100 clearfix d-md-none mt-0 mb-1"/> */}
 
-        <div className="col-md-3 col-lg-4 col-xl-2 mx-auto mt-3">
-          <h6 className="text-uppercase mb-2">Contact</h6>
-          <p>
-            <i className="fa fa-home "></i>Based in Houston, TX 77006<br/>
-            <i className="fa fa-envelope"></i>Reach me by <a href="mailto:leonela.dev@gmail.com?subject=Let's talk.&body=Psst! Be sure to include the essentials: Name, Contact, Company and Website (if it exists)!"><span className="cta"> Email</span></a> or
-            <i className="fa fa-phone"></i><a href="sms:3372400858"> <span className="cta">Text</span></a></p>
+        <div className="col-md-3 col-lg-4 col-xl-8 mx-auto mt-3">
         </div>
 
           {/* <hr class="w-100 clearfix d-md-none mt-0 mb-1"/> */}
 
-        <div className="col-md-6 col-lg-5 col-xl-6 mt-3">
+        <div className="col-md-6 col-lg-5 col-xl-4 mt-3">
           <h6 className="text-uppercase mb-2">Social</h6>
 
           <div className="mobile-social">
                 <Fade top delay={500} duration={1000}>
-              <a href="http://linkedin.com/in/leonelaguzman/" target="_blank" rel="noopener noreferrer"><span>
-                <img src={li} alt=""/></span></a>
+                  <a className="icon-linkedin" href="http://linkedin.com/in/leonelaguzman/" target="_blank" rel="noopener noreferrer">
+                  <FontAwesomeIcon icon={['fab', 'linkedin']} size="3x" /></a>
+                </Fade>
+                <Fade top delay={540} duration={1000}>
+                  <a className="icon-email"href="mailto:leonela.dev@gmail.com?subject=Let's talk." target="_blank" rel="noopener noreferrer">
+                  <FontAwesomeIcon icon={['fas', 'envelope']} size="3x" /></a>
                 </Fade>
                 <Fade top delay={560} duration={1000}>
-                <a href="http://github.com/leonel-ai/" target="_blank" rel="noopener noreferrer"><span>
-                <img src={git} alt=""/></span></a>
+                  <a className="icon-git" href="http://github.com/leonel-ai/" target="_blank" rel="noopener noreferrer">
+                  <FontAwesomeIcon icon={['fab', 'github']} size="3x" /></a>
                 </Fade>
-                <Fade top delay={680} duration={1000}>
-                <a href="https://www.behance.net/leonelaguzman" target="_blank" rel="noopener noreferrer"><span>
-                <img src={behance} alt=""/></span></a>
-                </Fade>
-                <Fade top delay={620} duration={1000}>
-              <a href="http://twitter.com/leonel_ai/" target="_blank" rel="noopener noreferrer"><span>
-                <img src={tw} alt=""/></span></a>
-                </Fade>
-                <Fade top delay={800} duration={1000}>
-              <a href="http://instagram.com/leonel.ai/" target="_blank" rel="noopener noreferrer"><span>
-                <img src={insta} alt=""/></span></a>
+                <Fade top delay={600} duration={1000}>
+                  <a className="icon-whatsapp" href="http://github.com/leonel-ai/" target="_blank" rel="noopener noreferrer">
+                  <FontAwesomeIcon icon={['fab', 'whatsapp']} size="3x" /></a>
                 </Fade>
             </div>
         </div>
